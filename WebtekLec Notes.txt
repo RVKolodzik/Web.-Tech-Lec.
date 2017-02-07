@@ -1,0 +1,144 @@
+	1/23/17
+World Wide Web
+1969, DARPA, ARPANET
+
+The Internet(work)
+	-> Global Information System
+		i) Logically linked together by a globally unique address space based on the Internet Protocol (IP)
+			1) "Nodes" 
+				-> devices being connected
+			2) Interconnection Technology
+				-> wire, wireless via electromagnetic waves, etc
+			3) Protocols
+				-> communication standards > representing a way to get data
+		ii) Able to support communications using Transmission Control Protocol (TCP)
+		iii) Provides high level services layered, on the communications and related infrastructure
+
+packet-switched
+	-> store-and-from
+
+1972 -> e-mail
+1989 -> WWW (Sir Tim Berners-Lee)
+			-> CERN (Nuclear Reasearch Center)
+				-> HTTP, HTML, URL, webserver, web client
+
+*extra side notes*
+	IP Address
+		-> uniquely > nodes
+	IOT
+		-> Internet of Things
+	USENET
+	WAIS
+		->Wide Area Info Server
+
+
+	1/30/17
+HTTP
+	-> Tim Berners-Lee, W3C, IETF
+	-> Application layer communications protocol used to access resources (hypertext, hypermedia) on the WWW
+
+	Version History
+		-> HTTP 0.9 (1991)
+		-> HTTP 1.0 (RFC 1945, May 1996)
+		-> HTTP 1.1 (RFC 2068, Jan 1997 & RFC 2616 Jun 1999 & RFC 7235 Jun 2014)
+		-> HTTP 2 (RFC 7540 May 2015)
+			-> Patterned fom SPDY
+			-> backwards compatible with HTTP 1.1
+			-> "push"
+
+HTTP Fundamentals
+
+-> Runs on top of TCP/IP, using TCP port 80 by default, or TCP Port 440 for HTTPS (HTTP over SSL(Secure Socket Layer)/TLS)
+-> HTTPS > encrypted communication
+
+-> HTTP is based on a client-server architecture
+	- clients a.k.a. user agents (UA):
+		> web browsers, web crawlers/spiders, other end user tools and applications
+	- servers:
+		> origin servers
+		> proxy servers, gateways, tunnel
+
+-> HTTP uses Request-Response standard protocol
+	- the client sends an http request message to the server
+	- the server processes the request and replies with an HTTP response message
+
+-> HTTP is a stateless communication protocol
+	- servers do not keep info about clients in-between requests
+
+-> HTTp provides support for other functionalities:
+	- cache control
+	- content media type (MIME *Multipurpose Internet Mail Extension*) specifications
+	- language and character set specifications (UNICODE, ASCII)
+	- content/transfer codings
+	- content negotiation
+	- client-server protocol negotiations (can upgrade or downgrade http based on request)
+	- persistent connections (keep connection open)
+	- request pipelining (sending request one after another)
+	- authentication/authorization
+	- etc.
+
+*extra side notes*
+- IP address and Port number -> Network Socket
+- IANA
+- ICANN
+
+	2/3/17
+HTTP resourse addressing
+	-> HTTP resources are identified using URIs (Uniform Resource Identifier), or more, specifically, HTTP URLs (Uniform Resource Locator)
+		- scheme (HTTP/HTTPS)
+		- authority
+			> used information for authentication credentials (deprecated)
+			> host
+				>> domain name (resolved into an IP address using DNS) of the server where the resources resides (or will be created)
+				>> port number
+		- path to resoure (resolved relative to the document root on the server)
+			> may refer to a static or dynamic resource
+		- query (starts with '?')
+			> typically provided as key=value pairs, with ampersand (&) separators between key/value pairs
+			> may be url-encoded
+		- fragment identifier (#) (client side) (also called bookmark)
+
+	2/7/17
+HTTP request message
+	-> request line (CRLF - terminated line consisting of three space-separated values)
+		- method
+		- request URI
+		- HTTP protocol version
+	-> message headers (general, request, and/or entity headers)
+		- HTTP 1.1 requires at least the HOST request header to be provided
+			*extra side notes*
+				> Header Fields
+					1. General
+					2. Request
+					3. Response
+					4. Entity
+
+	-> empty line (CRLF)
+	-> message body a.k.a. payload (optional)
+
+HTTP response message
+	-> status line (CRLF - terminated line consisting of three space-separated value)
+		- HTTP protocol version
+		- status code:
+			1xx > Informational
+			2xx > Success
+			3xx > Redirection
+			4xx > Client error
+			5xx > Server error
+		- reason phrase
+	-> message headers (general, response, and/or entity headers)
+	-> empty line (CRLF)
+	-> message body (optional)
+
+HTTP request method
+	-> standard methods
+		1) GET
+			> transfer a current selected representation of the resource identified by the request URI; the retrieved resources is returned in the message body of the responseas an entity
+			> most commonly used HTTP method
+			> must be supported by all compliant general-purpose servers
+		2) HEAD
+			> same as GET, except that the netity is not included in the response (i.e., returns only the status line and headers returned by a GET request, without the message body)
+			> used to retrieve metadata about the entity implied by the request without transferring the entity itself (i.e., to test for link validity or resource modification)
+			> like GET, must be supported by all general-purpose servers
+		3) POST
+			> perform resource-specific processing of the entities enclosed in the message body by the resource identified by the request URI
