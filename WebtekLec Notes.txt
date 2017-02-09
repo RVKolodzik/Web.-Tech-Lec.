@@ -142,3 +142,48 @@ HTTP request method
 			> like GET, must be supported by all general-purpose servers
 		3) POST
 			> perform resource-specific processing of the entities enclosed in the message body by the resource identified by the request URI
+
+	2/9/17
+
+		4) PUT
+			> store the enclosed entity in the message body under the specified Request of the URI (i.e., the resource identified by the Request URI is either created or replaced, using the enclosed entity)
+		5) DELETE
+			> remove the resource associated with the Request URI
+		6) OPTIONS (Special version -> using '*' > asking for the general)
+			>
+		7) TRACE
+			> request a loopback of the request message (i.e., request the server to echo back to the client the received request message)
+			> typically used for testing/diagnostics of the request/response chain
+		8) CONNECT
+			> request the establihment of a tunnel to the destination origin server, if successful, thereafter restrict its behavior to blind-for waiting of packets, in both directions, until the tunnel is closed
+			> commonly used to an end-to-end virtual connection through one or more...
+
+	HTTP Message Headers (Describe Payload)
+		-> General Header Fields
+			- cache-control
+			- pragma
+			- connection
+			- date
+			- upgrade
+			- via
+			- warning
+			- trailer
+			- transfer-encoding
+		-> Request Header Fields
+			- Accept
+			- Accept-Charset
+			- Accept-Encoding
+			- Accept-Language
+			- Host
+			- If-Match
+			- If-Modified-Since
+			- If-None-Match
+			- If-Range
+			- Max-forwards
+			- Proxy-Authorization
+			- Range
+			- Referer
+
+	*extra side notes*
+		-> Transfer-encoding: chunked (not know how long the data is)
+		-> Filter proxy
