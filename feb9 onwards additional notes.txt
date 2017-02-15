@@ -1,0 +1,63 @@
+2/9/2017
+
+* chunked encoding - when you don't know how long the data is so you send it in chunks 
+
+8.) CONNECT 
+	- used to establish a tunnel (ex. HTTPS)
+	- restrict its behavior to blind-forwarding packets
+
+Kinds of Methods
+
+a. safe methods - does not modify any resources in the server (GET, HEAD, OPTIONS, TRACE)
+b. idempotent - method can be used many times and the result will be the same (GET, HEAD, OPTIONS, TRACE, PUT, DELETE)
+c. cacheable methods - if the method can be cache
+
+HTTP MESSAGE HEADERS
+
+1.) General Header Fields
+	-Cache-Control -
+	-Connection - Establish persistent/non-persistent connection
+	-date
+	-pragma - http i.o general directive (ex. pragrma no cache)
+	-trailer - headers at the end
+	-transfer-encoding
+	-upgrade - converting to a different version of protocol
+	-via-indentifier / stamp identify
+	-warning - warns error that are originally present
+
+2.) REQUEST HEADER FIELDS
+	*Negotiation Headers
+		- Accept
+		- Accept-Charset
+		- Accept-Encoding
+		- Accept-Language
+		- Authorization
+			-> WWW-Authenticate
+			-> WWW-Proxy
+		- Expect
+		- From
+			-> Email address of user who requested
+		- Host
+			-> required header
+			-> support virtual host
+				-> host multiple websites in one computer/machine
+		- If-None-Match
+			-> entity types
+			-> check if file/resource was modified/already stored
+		- If-Match/If-Modified-Since
+			-> reverse of If-None-Match
+		- Range
+			-> 206 - partial content
+		- If-Range
+			-> "If what I have is only a portion of what you have"
+		- Max-Forwards
+			-> tells until where traces reach
+		- Referer
+			-> site where resource came from
+			-> helps know where traffic is coming from
+
+TE
+	- Trailer Encoding (Encoded Trailer)
+
+User Agent
+	- device used to browse the website
