@@ -183,7 +183,91 @@ HTTP request method
 			- Proxy-Authorization
 			- Range
 			- Referer
+			- TE (Trailer Encoder)
+			- User-Agent
+			- Expect
+			- If-unmodified-Since
+			- From
 
 	*extra side notes*
 		-> Transfer-encoding: chunked (not know how long the data is)
 		-> Filter proxy
+
+	2/13
+
+		-> Response Header Fields
+			- Accept-Ranges
+			- Age
+			- E-Tag (Entity Tag)
+			- Location 
+			- Proxy-Authenticate
+			- Retry After
+			- Server
+			- Vary 
+			- WWW-Authentication
+
+	2/16
+		-> Entity Header Fields
+			- Allow
+			- Content-encoding
+			- Content-language
+			- Content-length
+			- Content-location
+			- Content MD5 (Message Digest v. 5)
+			- Content-Range (Partial Request)
+			- Content-type
+			- Expires
+			- Last-Modified
+
+	HTTP Status Code
+		-> Informational (1xx)
+			- 100: Continue
+			- 101: Switching Protocol
+
+		-> Success (2xx)
+			- 200: Okay
+			- 201: Created
+			- 202: Accepted
+			- 203: Non-Authoritative Information
+			- 204: No Content
+			- 205: Reset Content
+			- 206: Partial Content
+		
+		-> Redirection (3xx)
+			- 300: Multiple Choices
+			- 301: Moved Permanently
+			- 302: Found
+			- 303: See Other
+			- 304: Not Modified
+			- 305: Use Proxy
+			- 306: (Unused)
+			- 307: Temporary Redirect
+
+		-> Client Error (2xx)
+			- 400: Bad Request
+			- 401: Unauthorized
+			- 402: Payment Required
+			- 403: Forbidden
+			- 404: Not Found
+			- 405: Method Not Allowed
+			- 406: Not Acceptable
+			- 407: Proxy Authentication Required
+			- 408: Request Time-out
+			- 409: Conflict
+			- 410: Gone
+			- 411: Length Required
+			- 412: Precondition Failed
+			- 413: Request Entity Too Large
+			- 414: Request-URI Too Large
+			- 415: Unsupported Media Type
+			- 416: Requested Range not Satisfiable
+			- 417: Expectation Failed
+			- 426: Upgrade Required *New*
+
+		-> Server Error (5xx)
+			- 500: Internal Server Error
+			- 501: Not Implemented
+			- 502: Bad Gateway
+			- 503: Serice Unavailable
+			- 504: Gateway Time-Out
+			- 505: HTTP version not supported
