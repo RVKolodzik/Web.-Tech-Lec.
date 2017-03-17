@@ -1,0 +1,280 @@
+Midterms Coverage
+1) What is HTML?
+2) What is HTML's role in modern web dev.
+3) Who invented HTML?
+4) Who oversees the dev. of HTML?
+5) What are the versions of HTML?
+6) Which documents specify the html standards?
+7) What is the syntax of HTML?
+
+1) What is HTML?
+	-> Hypertext Mark-up Language
+	-> Webpages
+	-> Derived from SGML
+
+2) What is the role of HTML in modern web dev.?
+	-> Stucture & Content --> Modern HTML
+	-> Presentational Aspects/Aethetics --> CSS
+	-> Behavioral --> JS
+
+3) Who Invented HTML?
+	-> Sir Tim Berners-Lee
+
+4) Who oversees the dev. of HTML?
+	-> W3C
+
+5) What are the versions of HTML?
+	-> HTML 1.0 (original)
+	-> HTML 2.0 - RFC 1866
+  ----(After HTML 2.0 W3C handles recommendations)----
+  	-> HTML 3.0
+  			3.2
+  			4.0
+  			4.01 > Strict
+  				 > Transitional
+  				 > Frameset
+  	-> XHTML (Extensible)
+  		> Data Interchange
+  			ex: <?xml ....?>
+  				<student>
+  					<idno>215...</idno>
+  					<name>Sam...</name>
+  				</student>
+  		> 1.0
+  		> 1.1
+  		> 2.0
+
+6) Which documents specify the HTML standards?
+	-> W3C
+
+7) What is the syntax of HTML?
+	<!DOCTYPE html> ----> "standards", "quirks"
+	<html> 			----> root element
+	<head>			----> meta-information
+	<body>			----> start tag; 'body' --> tag name
+	</body>			----> end tag
+
+
+	*Extra notes:
+		Ian Hickson
+			-> whatwg
+			-> worked in evolution of html 4.01 to html5 2014
+		Metadata
+			-> not shown in html document
+		DOM
+			-> Document Object Model (extends in Java)
+
+HTML Elements:
+	html
+		head
+			title, base, link, meta, style
+		body
+			article, aside, have, section, header, footer, main
+			address
+			dw
+
+			h1, h2, h3, h4, h5, h6
+			p
+			hr
+			blockquote
+			ol, ul
+				li
+			dl
+				dt, dd
+			figure
+				figcaption
+			a
+			em, strong, small
+			dfn, abbr
+			ruby, rla, r#, rtc, rp
+			date, time
+			code, var, sawp, ksd
+			sp, sub
+			i, b, u, mark
+			bdi, bdo
+			span
+			br, wbr
+			ins, del
+			table
+				caption
+				colgroup, col
+				thead, tbody, tfoot
+					tr
+						th, td
+			form
+				label
+				input
+
+HTML Attributes:
+	Global Attributes
+	Element-Specific Attributes
+	Data-* Attributes
+	role, aria-* Attributes
+
+WAIARIA, WCAG
+
+=========================================================
+
+Cascading Style Sheets (CSS)
+	-> language used to specify the presentation aspects (eg. layout and formatting) of structurally marked up documents
+	-> developed by Haikon Wium Lie (CHSS) and Bert Bos (SSP)
+	-> reasons:
+		- CSS1 (1996)
+		- CSS 2.1 (2011) (Updated 2016)
+		------(CSS1 and CSS 2.1 had centralized repo)--------
+		- CSS 3 *(modules)* (Last Version)
+			-> can be recommended if matured enough
+			-> if not tagged with level 3 it is entirely new which was not added in CSS 2.1
+	-> CSS Preprocessors, CSS Frameworks
+
+HTML/XHTML Stylesheets
+	-> author styles
+	-> user style (overrides the author's style)
+	-> user agent style (example default CSS 2.1 stylesheet for HTML 4)
+
+CSS Statements
+	-> @ - Rules
+		> @charset
+		> @import
+		> @media
+		> @font-face
+		> @keyframes
+		> @page
+
+Author Styles
+	-> external stylesheets (recommended --> link)
+	-> embedded styles
+	-> inline styles
+
+Media
+	-> screen
+	-> print
+	-> speech
+
+CSS Rule Sets (aka CSS Rules, Style Rules)
+	-> consists of a selection, followed by a brace-enclosed declaration block which contains zero or more semi-colon separated by .....
+
+
+CSS Selectors
+	-> selector
+		> Structure used as a condition in a CSS rule to determine which elements in the document tree are matched by the selector and are thus targeted by the formatting specified in the CSS rule
+	-> Selector Syntax
+		> chain of one or more sequences of simple selectors separated by combinators, with one psuedo-element possibly appended to the last sequence
+		> sequence of simple selectors
+			--> chain of simple selectors but separated by combinators
+			--> always start with a type selector or a universal selector
+			--> cannot contain other type selectors or universal selectors
+		> group selectors
+			--> comma-separated list of selectors representing the union of all elements selected by each of the selectors in the list
+		> sipmle selectors
+			-->type selectors (ex: p, div, span)
+			--> universal selectors (ex: *)
+			--> attribute selectors
+				[attr]
+					[attr = value]
+					[attr ~= value] (one value *class*)
+					[attr |= value] (lang attr. ex: [lang |= en])
+					[attr ^= value] (css 3)
+					[attr $= value] (css 3)
+					[attr *= value] (css 3)
+
+						^ = start
+						$ = end
+						* = anywhere between
+
+			--> class selectors
+			--> ID selectors
+			--> pseudo-class
+				.) dynamic pseudo-class
+					> link pseudo-class
+						-> :link
+						-> :visited
+					> user action pseudo-classes
+						-> :hover
+						-> :active
+						-> :focus
+				.) target pseudo-class
+					> :target (css3)
+
+				.) language pseudo-class
+					>: lang()
+
+				.) UI element states pseudo-classes
+					> :enabled
+					> :disabled
+					> :checked
+					> :intermidiate
+					--------(all UI element states -> css3)---------
+
+				.) structural pseudo-classes
+					> :root
+					> :first-child
+					> :last-child
+					> :only-child
+					> :nth-child()
+					> :nth-last-child()
+					> :first-of-type
+					> :last-of-type
+					> :only-of-type
+					> :nth-of-type()
+					> :nth-last-of-type()
+					> :empty
+
+					*nth = a(n) + b, odd, even
+					--------(all but :first-child are introduced in css3)----------
+
+		> combinators
+			--> descendant combinator (whitespace, ie. space, tab, line feed, carriage return, form feed)
+			--> child combinator (>)
+			--> sibling combinators
+				.) adjacent sibling combinator (+)
+				.) general sibling combinator (~) *css3
+		> pseudo-elements
+			--> ::first-letter
+			--> ::first-line
+			--> ::before
+			--> ::after
+			----------(css3)-----------
+			--> :first-letter
+			--> :first-line
+			--> :before
+			--> :after
+			----------(css2)-----------
+
+CSS Rule Precedence
+	1) by origin and importance (cascading origins, !important)
+		- user agent important declarations
+		- user important declarations
+		- author important declarations
+		- author normal declarations
+		- user normal declarations
+		- user agent normal declarations
+	2) by specificity
+		- inline style
+		- # of ID selectors
+		- # of class selectors, attriute selectors, and pseudo-classes
+		- # of type selectors and pseudo-elements
+	3) by order (last declaration)
+
+CSS Declarations
+	-> properties
+		- shorthand properties
+		- vendor-specific extensions (aka vendor prefixes)
+	-> values
+		- keywords
+		- numbers (integers and reals in decimal notation)
+		- dimensions
+			> lenght, angle, duration, frequency, resolution
+			> length units:
+				.) font-relative: em ex ch rem
+				.) viewport-percentage: vw vmin vmax
+				.) absolute lengths: cm mm q in pt pc px
+			> angle units: deg grad rad turn
+			> duration units: s ms
+			> frequency units: hz khz
+			> resolution units: dpi dpcm dppx
+		- percentages
+		- URLs and URIs
+		- colors
+		- strings
+	-> functions: calc() attr() counter() counters() linear-gradient() radial-gradient() translate() scale() rotate() etc.
