@@ -1,0 +1,439 @@
+<!doctype html>
+<html class="no-js" lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Webtek Prelims</title>
+        <link rel="stylesheet" href="css/foundation.css">
+        <link rel="stylesheet" href="css/app.css">
+    </head>
+    <body>
+        <div class="row align-center">
+            <div class="columns large-2"><p></p></div>
+            <div class="columns large-8">
+                <ul class="accordion" data-accordion data-allow-all-closed="true">
+                    <li class="accordion-item" data-accordion-item>
+                        <a href="#" class="accordion-title">HTTP</a>
+                        <div class="accordion-content" data-tab-content>
+                            <ul>
+                                <li>Tim Berners-lee, W3C, IETF</li>
+                                <li>Application layer communications protocol used to access resources (hypertext, hypermedia) on the WWW</li>
+                                <li>Version History</li>
+                                    <ul>
+                                        <li>HTTP 0.9 (1991)</li>
+                                        <li>HTTP 1.0 (RFC 1945, May 1996)</li>
+                                        <li>HTTP 1.1 (RFC 2068, Jan 1997 & RFC 2616 Jun 1999 & RFC 7235 Jun 2014)</li>
+                                        <li>HTTP 2 (RFC 7540 May 2015)</li>
+                                    </ul>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+
+                <ul class="accordion" data-accordion data-allow-all-closed="true">
+                    <li class="accordion-item" data-accordion-item>
+                        <a href="#" class="accordion-title">HTTP Fundamentals</a>
+                        <div class="accordion-content" data-tab-content>
+                            <ul>
+                                <li>Runs on top of TCP/IP, using TCP port 80 by default, or TCP Port 440 for HTTPS (HTTP over SSL(Secure Socket Layer)/TLS)</li>
+                                <li>HTTPS (encrypted communication)</li>
+                                <li>HTTP is based on a client-server architecture</li>
+                                    <ul>
+                                        <li>clients a.k.a user agents (UA):</li>
+                                            <ul>
+                                                <li> web browsers, web crawlers/spiders, other end user tools and applications</li>
+                                            </ul>
+                                        <li>servers:</li>
+                                            <ul>
+                                                <li>origin servers</li>
+                                                <li>proxy servers, gateways, tunnel</li>
+                                            </ul>
+                                    </ul>
+                                <li>HTTP uses Request-Response standard protocol</li>
+                                    <ul>
+                                        <li>the client sends an HTTP request message to the server</li>
+                                        <li>the server processes the request and replies with an HTTP response message</li>
+                                    </ul>
+                                <li>HTTP is a stateless communication protocol</li>
+                                    <ul>
+                                        <li>servers do not keep information about clients in-between requests</li>
+                                    </ul>
+                                <li>HTTP provides support for other functionalities</li>
+                                    <ul>
+                                        <li>cache control</li>
+                                        <li>content media type (MIME *Multipurpose Internet Mail Extension*) specifications</li>
+                                        <li>language and character set specifications (UNICODE, ASCII)</li>
+                                        <li>content/transfer codings</li>
+                                        <li>content negotiation</li>
+                                        <li>client-server protocol negotiations (can upgrade or downgrade http based on request)</li>
+                                        <li>persistent connections (keep connection open)</li>
+                                        <li>request pipelining (sending request one after another)</li>
+                                        <li>authentication/authorization</li>
+                                        <li>etc.</li>
+                                    </ul>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+
+                <ul class="accordion" data-accordion data-allow-all-closed="true">
+                    <li class="accordion-item" data-accordion-item>
+                        <a href="#" class="accordion-title">HTTP resource addressing</a>
+                        <div class="accordion-content" data-tab-content>
+                            <ul>
+                                <li>HTTP resources are identified using URIs (Uniform Resource Identifier), or more, specifically, HTTP URLs (Uniform Resource Locator)</li>
+                                <ul>
+                                    <li>scheme (HTTP/HTTPS)</li>
+                                    <li>authority</li>
+                                        <ul>
+                                            <li>used information for authentication credentials (deprecated)</li>
+                                            <li>host</li>
+                                                <ul>
+                                                    <li>domain name (resolved into an IP address using DNS) of the server where the resources resides (or will be created)</li>
+                                                    <li>port number</li>
+                                                </ul>
+                                        </ul>
+                                    <li>path to resource (resolved relative to the document root on the server)</li>
+                                        <ul>
+                                            <li>may refer to a static or dynamic resource</li>
+                                        </ul>
+                                    <li>query (starts with '?')</li>
+                                        <ul>
+                                            <li>typically provided as key=value pairs, with ampersand (&) separators between key/value pairs</li>
+                                            <li>may be url-encoded</li>
+                                        </ul>
+                                    <li>fragment identifier a.k.a. bookmark (#) *client side*</li>
+                                </ul>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+
+                <ul class="accordion" data-accordion data-allow-all-closed="true">
+                    <li class="accordion-item" data-accordion-item>
+                        <a href="#" class="accordion-title">HTTP request message</a>
+                        <div class="accordion-content" data-tab-content>
+                            <ul>
+                                <li>request line (CRLF - terminated line consisting of three space-separated values)</li>
+                                    <ul>
+                                        <li>method</li>
+                                        <li>request URI</li>
+                                        <li>HTTP protocol version</li>
+                                    </ul>
+                                <li>message headers (general, request, and/or entity headers)</li>
+                                    <ul>
+                                        <li>HTTP 1.1 requires at least the HOST request header to be provided</li>
+                                        <li>Header Fields</li>
+                                            <ul>
+                                                <li>General</li>
+                                                <li>Request</li>
+                                                <li>Response</li>
+                                                <li>Entity</li>
+                                            </ul>
+                                    </ul>
+                                <li>empty line (CRLF)</li>
+                                <li>message body a.k.a. payload (optional)</li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+
+                <ul class="accordion" data-accordion data-allow-all-closed="true">
+                    <li class="accordion-item" data-accordion-item>
+                        <a href="#" class="accordion-title">HTTP response message</a>
+                        <div class="accordion-content" data-tab-content>
+                            <ul>
+                                <li>status line (CRLF - terminated line consisting of three space-separated value)</li>
+                                <ul>
+                                    <li>HTTP protocl version</li>
+                                    <li>Status Code:</li>
+                                        <ul>
+                                            <li>1xx - Informational</li>
+                                            <li>2xx - Success</li>
+                                            <li>3xx - Redirection</li>
+                                            <li>4xx - Client error</li>
+                                            <li>5xx - Server error</li>
+                                        </ul>
+                                    <li>reason phrase</li>
+                                </ul>
+                                <li>message headers (general, response, and/or entity headers)</li>
+                                <li>empty line (CRLF)</li>
+                                <li>message body (optional)</li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+
+                <ul class="accordion" data-accordion data-allow-all-closed="true">
+                    <li class="accordion-item" data-accordion-item>
+                        <a href="#" class="accordion-title">HTTP request method</a>
+                        <div class="accordion-content" data-tab-content>
+                            <ul>
+                                <li>standard methods</li>
+                            </ul>
+                            <ul class="tabs" data-tabs id="sm-tabs">
+                                <li class="tabs-title is-active"><a href="#panel1" aria-selected="true">GET</a></li>
+                                <li class="tabs-title"><a href="#panel2">HEAD</a></li>
+                                <li class="tabs-title"><a href="#panel3">POST</a></li>
+                                <li class="tabs-title"><a href="#panel4">PUT</a></li>
+                                <li class="tabs-title"><a href="#panel5">DELETE</a></li>
+                                <li class="tabs-title"><a href="#panel6">OPTIONS</a></li>
+                                <li class="tabs-title"><a href="#panel7">TRACE</a></li>
+                                <li class="tabs-title"><a href="#panel8">CONNECT</a></li>
+                            </ul>
+
+                            <div class="tabs-content" data-tabs-content="sm-tabs">
+                                <div class="tabs-panel is-active" id="panel1">
+                                    <ul>
+                                        <li>transfer a current selected representation of the resource identified by the request URI; the retrieved resources is returned in the message body of the responseas an entity</li>
+                                        <li>most commonly used HTTP method</li>
+                                        <li>must be supported by all compliant general-purpose servers</li>
+                                    </ul>
+                                </div>
+                                <div class="tabs-panel" id="panel2">
+                                    <ul>
+                                        <li>same as GET, except that the netity is not included in the response (i.e., returns only the status line and headers returned by a GET request, without the message body)</li>
+                                        <li>used to retrieve metadata about the entity implied by the request without transferring the entity itself (i.e., to test for link validity or resource modification)</li>
+                                        <li>like GET, must be supported by all general-purpose servers</li>
+                                    </ul>
+                                </div>
+                                <div class="tabs-panel" id="panel3">
+                                    <ul>
+                                        <li>perform resource-specific processing of the entities enclosed in the message body by the resource identified by the request URI</li>
+                                    </ul>
+                                </div>
+                                <div class="tabs-panel" id="panel4">
+                                    <ul>
+                                        <li>store the enclosed entity in the message body under the specified Request of the URI (i.e., the resource identified by the Request URI is either created or replaced, using the enclosed entity)</li>
+                                    </ul>
+                                </div>
+                                <div class="tabs-panel" id="panel5">
+                                    <ul>
+                                        <li>remove the resource associated with the Request URI</li>
+                                    </ul>
+                                </div>
+                                <div class="tabs-panel" id="panel6">
+                                    <ul>
+                                        <li></li>
+                                    </ul>
+                                </div>
+                                <div class="tabs-panel" id="panel7">
+                                    <ul>
+                                        <li>request a loopback of the request message (i.e., request the server to echo back to the client the received request message)</li>
+                                        <li>typically used for testing/diagnostics of the request/response chain</li>
+                                    </ul>
+                                </div>
+                                <div class="tabs-panel" id="panel8">
+                                    <ul>
+                                        <li>request the establihment of a tunnel to the destination origin server, if successful, thereafter restrict its behavior to blind-for waiting of packets, in both directions, until the tunnel is closed</li>
+                                        <li>commonly used to an end-to-end virtual connection through one or more...</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+
+                <ul class="accordion" data-accordion data-allow-all-closed="true">
+                    <li class="accordion-item" data-accordion-item>
+                        <a href="#" class="accordion-title">HTTP Message Headers (Describes Payload)</a>
+                        <div class="accordion-content" data-tab-content>
+                            <ul class="accordion" data-accordion data-allow-all-closed="true">
+                                <li class="accordion-item" data-accordion-item>
+                                    <a href="#" class="accordion-title">General Header Fields</a>
+                                    <div class="accordion-content" data-tab-content>
+                                        <ul>
+                                            <li>cache-control</li>
+                                            <li>pragma</li>
+                                            <li>connection</li>
+                                            <li>date</li>
+                                            <li>upgrade</li>
+                                            <li>via</li>
+                                            <li>warning</li>
+                                            <li>trailer</li>
+                                            <li>transfer-encoding</li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
+
+                            <ul class="accordion" data-accordion data-allow-all-closed="true">
+                                <li class="accordion-item" data-accordion-item>
+                                    <a href="#" class="accordion-title">Request Header Fields</a>
+                                    <div class="accordion-content" data-tab-content>
+                                        <ul>
+                                            <li>Accept</li>
+                                            <li> Accept-Charset</li>
+                                            <li>Accept-Encoding</li>
+                                            <li> Accept-Language</li>
+                                            <li>Host</li>
+                                            <li>If-Match</li>
+                                            <li>If-Modified-Since</li>
+                                            <li>If-None-Match</li>
+                                            <li>If-Range</li>
+                                            <li>Max-forwards</li>
+                                            <li>Proxy-Authorization</li>
+                                            <li>Range</li>
+                                            <li>Referer</li>
+                                            <li>TE (Trailer Encoder)</li>
+                                            <li>User-Agent</li>
+                                            <li>Expect</li>
+                                            <li>If-unmodified-Since</li>
+                                            <li>	From</li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
+
+                            <ul class="accordion" data-accordion data-allow-all-closed="true">
+                                <li class="accordion-item" data-accordion-item>
+                                    <a href="#" class="accordion-title">Response Header Fields</a>
+                                    <div class="accordion-content" data-tab-content>
+                                        <ul>
+                                            <li>Accept-Ranges</li>
+                                            <li>Age</li>
+                                            <li>E-Tag (Entity Tag)</li>
+                                            <li>Location </li>
+                                            <li>Proxy-Authenticate</li>
+                                            <li>Retry After</li>
+                                            <li>Server</li>
+                                            <li>Vary </li>
+                                            <li>WWW-Authentication</li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
+
+                            <ul class="accordion" data-accordion data-allow-all-closed="true">
+                                <li class="accordion-item" data-accordion-item>
+                                    <a href="#" class="accordion-title">Entity Header Fields</a>
+                                    <div class="accordion-content" data-tab-content>
+                                        <ul>
+                                            <li>Allow</li>
+                                            <li>Content-encoding</li>
+                                            <li>Content-language</li>
+                                            <li>Content-length</li>
+                                            <li>Content-location</li>
+                                            <li>Content MD5 (Message Digest v. 5)</li>
+                                            <li>Content-Range (Partial Request)</li>
+                                            <li>Content-type</li>
+                                            <li>Expires</li>
+                                            <li>Last-Modified</li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+
+                <ul class="accordion" data-accordion data-allow-all-closed="true">
+                    <li class="accordion-item" data-accordion-item>
+                        <a href="#" class="accordion-title">HTTP Status Code</a>
+                        <div class="accordion-content" data-tab-content>
+                            <ul class="accordion" data-accordion data-allow-all-closed="true">
+                                <li class="accordion-item" data-accordion-item>
+                                <a href="#" class="accordion-title">Informational</a>
+                                <div class="accordion-content" data-tab-content>
+                                    <ul>
+                                        <li>100: Continue</li>
+                                        <li>101: Switching Protocol</li>
+                                    </ul>
+                                </div>
+                                </li>
+                            </ul>
+                            
+                            <ul class="accordion" data-accordion data-allow-all-closed="true">
+                                <li class="accordion-item" data-accordion-item>
+                                <a href="#" class="accordion-title">Success</a>
+                                <div class="accordion-content" data-tab-content>
+                                    <ul>
+                                        <li>200: Okay</li>
+                                        <li>201: Created</li>
+                                        <li>202: Accepted</li>
+                                        <li>203: Non-Authoritative Information</li>
+                                        <li>204: No Content</li>
+                                        <li>205: Reset Content</li>
+                                        <li>206: Partial Content</li>
+                                    </ul>
+                                </div>
+                                </li>
+                            </ul>
+                            
+                            <ul class="accordion" data-accordion data-allow-all-closed="true">
+                                <li class="accordion-item" data-accordion-item>
+                                <a href="#" class="accordion-title">Redirection</a>
+                                <div class="accordion-content" data-tab-content>
+                                    <ul>
+                                        <li>300: Multiple Choices</li>
+                                        <li>301: Moved Permanently</li>
+                                        <li>302: Found</li>
+                                        <li>303: See Other</li>
+                                        <li>304: Not Modified</li>
+                                        <li>305: Use Proxy</li>
+                                        <li>306: (Unused)</li>
+                                        <li>307: Temporary Redirect</li>
+                                    </ul>
+                                </div>
+                                </li>
+                            </ul>
+                            
+                            <ul class="accordion" data-accordion data-allow-all-closed="true">
+                                <li class="accordion-item" data-accordion-item>
+                                <a href="#" class="accordion-title">Client Error</a>
+                                <div class="accordion-content" data-tab-content>
+                                    <ul>
+                                        <li>400: Bad Request</li>
+                                        <li>401: Unauthorized</li>
+                                        <li>402: Payment Required</li>
+                                        <li>403: Forbidden</li>
+                                        <li>404: Not Found</li>
+                                        <li>405: Method Not Allowed</li>
+                                        <li>406: Not Acceptable</li>
+                                        <li>407: Proxy Authentication Required</li>
+                                        <li>408: Request Time-out</li>
+                                        <li>409: Conflict</li>
+                                        <li>410: Gone</li>
+                                        <li>411: Length Required</li>
+                                        <li>412: Precondition Failed</li>
+                                        <li>413: Request Entity Too Large</li>
+                                        <li>414: Request-URI Too Large</li>
+                                        <li>415: Unsupported Media Type</li>
+                                        <li>416: Requested Range not Satisfiable</li>
+                                        <li>417: Expectation Failed</li>
+                                        <li>426: Upgrade Required *New*</li>
+                                    </ul>
+                                </div>
+                                </li>
+                            </ul>
+                            
+                            <ul class="accordion" data-accordion data-allow-all-closed="true">
+                                <li class="accordion-item" data-accordion-item>
+                                <a href="#" class="accordion-title">Server Error</a>
+                                <div class="accordion-content" data-tab-content>
+                                    <ul>
+                                        <li>500: Internal Server Error</li>
+                                        <li>501: Not Implemented</li>
+                                        <li>502: Bad Gateway</li>
+                                        <li>503: Serice Unavailable</li>
+                                        <li>504: Gateway Time-Out</li>
+                                        <li>505: HTTP version not supported</li>
+                                    </ul>
+                                </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            
+            <div class="columns large-2"><p></p></div>
+        </div>
+        
+        <script src="js/vendor/jquery.js"></script>
+        <script src="js/vendor/what-input.js"></script>
+        <script src="js/vendor/foundation.js"></script>
+        <script src="js/app.js"></script>
+    </body>
+</html>
