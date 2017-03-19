@@ -17,14 +17,61 @@
                         <a href="#" class="accordion-title">HTTP</a>
                         <div class="accordion-content" data-tab-content>
                             <ul>
-                                <li>Tim Berners-lee, W3C, IETF</li>
+                                <li>Tim Berners-Lee, W3C, IETF</li>
                                 <li>Application layer communications protocol used to access resources (hypertext, hypermedia) on the WWW</li>
-                                <li>Version History</li>
+                                <li class="bold_text">History</li>
+                                    <ul>
+                                        <li class="bold_text">1960</li>
+                                            <ul>
+                                                <li>Packet-Switches (store and form)</li>
+                                                    <p>
+                                                        An approach used by some computer network protocols to deliver data across or long distance connection.
+                                                    </p>
+                                            </ul>
+                                        <li class="bold_text">1969</li>
+                                            <ul>
+                                                <li>Birth of the internet</li>
+                                                <li class="bold_text">ARPANET (Advanced Research Projects Agency Network)</li>
+                                                    <p>
+                                                        A network for sharing digital resources among geographically separated computers.
+                                                    </p>
+                                                <li class="bold_text">DARPA (Defense Advanced Research Projects Agency)</li>
+                                                    <p>
+                                                        An agency of the U.S. Department of Defense responsible for the development of emerging technologies for use by the military.
+                                                    </p>
+                                            </ul>
+                                        <li class="bold_text">1972</li>
+                                            <ul>
+                                                <li class="bold_text">E-Mail</li>
+                                                    <p>
+                                                        Scripted application base
+                                                    </p>
+                                            </ul>
+                                        <li class="bold_text">1989</li>
+                                            <ul>
+                                                <li class="bold_text">World Wide Web (WWW)</li>
+                                                    <ul>
+                                                        <li>Found by Tim Berners-Lee at CERN</li>
+                                                            <ul>
+                                                                <li class="bold_text">Semantic Web</li>
+                                                                    <p>
+                                                                        W3C's version of the Web of linked data. Semantic Web technologies enable people to create data stores on the Web, build vocabularies, and write rules for handling data. Linked data are empowered by technologies such as RDF, SPARQL, OWL, and SKOS.
+                                                                    </p>
+                                                                <li class="bold_text">HTTP, HTML, URL, Web Server, Web Client</li>
+                                                                    <p>
+                                                                        Foundation of the World Wide Web
+                                                                    </p>
+                                                            </ul>
+                                                    </ul>
+                                            </ul>
+                                    </ul>
+                                <li class="bold_text">Version History</li>
                                     <ul>
                                         <li>HTTP 0.9 (1991)</li>
                                         <li>HTTP 1.0 (RFC 1945, May 1996)</li>
                                         <li>HTTP 1.1 (RFC 2068, Jan 1997 & RFC 2616 Jun 1999 & RFC 7235 Jun 2014)</li>
                                         <li>HTTP 2 (RFC 7540 May 2015)</li>
+										<p>The server now has the ability to request files ususaly needed for the client</p>
                                     </ul>
                             </ul>
                         </div>
@@ -36,7 +83,7 @@
                         <a href="#" class="accordion-title">HTTP Fundamentals</a>
                         <div class="accordion-content" data-tab-content>
                             <ul>
-                                <li>Runs on top of TCP/IP, using TCP port 80 by default, or TCP Port 440 for HTTPS (HTTP over SSL(Secure Socket Layer)/TLS)</li>
+                                <li>Runs on top of TCP/IP, using TCP port 80 by default, or TCP Port 443 for HTTPS (HTTP over SSL(Secure Socket Layer)/TLS)</li>
                                 <li>HTTPS (encrypted communication)</li>
                                 <li>HTTP is based on a client-server architecture</li>
                                     <ul>
@@ -79,32 +126,48 @@
 
                 <ul class="accordion" data-accordion data-allow-all-closed="true">
                     <li class="accordion-item" data-accordion-item>
-                        <a href="#" class="accordion-title">HTTP resource addressing</a>
+                        <a href="#" class="accordion-title">HTTP Resource Addressing</a>
                         <div class="accordion-content" data-tab-content>
                             <ul>
                                 <li>HTTP resources are identified using URIs (Uniform Resource Identifier), or more, specifically, HTTP URLs (Uniform Resource Locator)</li>
+                                <li class="bold_text">Parts of an Address:</li>
                                 <ul>
-                                    <li>scheme (HTTP/HTTPS)</li>
-                                    <li>authority</li>
+                                    <li class="bold_text">Scheme (HTTP/HTTPS)</li>
+                                    <li class="bold_text">Authority</li>
                                         <ul>
                                             <li>used information for authentication credentials (deprecated)</li>
-                                            <li>host</li>
+                                            <li class="bold_text">host</li>
                                                 <ul>
                                                     <li>domain name (resolved into an IP address using DNS) of the server where the resources resides (or will be created)</li>
                                                     <li>port number</li>
                                                 </ul>
                                         </ul>
-                                    <li>path to resource (resolved relative to the document root on the server)</li>
+                                    <li class="bold_text">Path to Resource</li>
                                         <ul>
-                                            <li>may refer to a static or dynamic resource</li>
+                                            <li>Resolved relative to the document root on the server</li>
+                                            <li>May refer to a static or dynamic resource</li>
                                         </ul>
-                                    <li>query (starts with '?')</li>
+                                    <li class="bold_text">Query</li>
                                         <ul>
-                                            <li>typically provided as key=value pairs, with ampersand (&) separators between key/value pairs</li>
-                                            <li>may be url-encoded</li>
+                                            <li>Starts with '?'</li>
+                                            <li>Typically provided as key=value pairs, with ampersand (&) separators between key/value pairs</li>
+                                            <li>May be url-encoded</li>
                                         </ul>
-                                    <li>fragment identifier a.k.a. bookmark (#) *client side*</li>
+                                    <li class="bold_text">Fragment identifier a.k.a. bookmark (#)</li>
+                                        <ul>
+                                            <li>Client side</li>
+                                        </ul>
                                 </ul>
+                                <li class="bold_text">Example</li>
+                                    <p>https://usr:pwd@server.org:81/info/profile.php?id=1234#adr</p>
+                                    <ul>
+                                        <li>Scheme - http://</li>
+                                            <p class="bold_text">NOTE: </p><p>"file:///" and "ftp:///" are also a scheme</p>
+                                        <li>Authority - usr:pwd@server.org:81</li>
+                                        <li>Path - /info.profile.php</li>
+                                        <li>Query - ?id=1234</li>
+										<li>Fragment Identifier - #adr</li>
+                                    </ul>
                             </ul>
                         </div>
                     </li>
@@ -112,7 +175,7 @@
 
                 <ul class="accordion" data-accordion data-allow-all-closed="true">
                     <li class="accordion-item" data-accordion-item>
-                        <a href="#" class="accordion-title">HTTP request message</a>
+                        <a href="#" class="accordion-title">HTTP Request Message</a>
                         <div class="accordion-content" data-tab-content>
                             <ul>
                                 <li>request line (CRLF - terminated line consisting of three space-separated values)</li>
@@ -141,12 +204,12 @@
 
                 <ul class="accordion" data-accordion data-allow-all-closed="true">
                     <li class="accordion-item" data-accordion-item>
-                        <a href="#" class="accordion-title">HTTP response message</a>
+                        <a href="#" class="accordion-title">HTTP Response Message</a>
                         <div class="accordion-content" data-tab-content>
                             <ul>
                                 <li>status line (CRLF - terminated line consisting of three space-separated value)</li>
                                 <ul>
-                                    <li>HTTP protocl version</li>
+                                    <li>HTTP protocol version</li>
                                     <li>Status Code:</li>
                                         <ul>
                                             <li>1xx - Informational</li>
@@ -167,7 +230,7 @@
 
                 <ul class="accordion" data-accordion data-allow-all-closed="true">
                     <li class="accordion-item" data-accordion-item>
-                        <a href="#" class="accordion-title">HTTP request method</a>
+                        <a href="#" class="accordion-title">HTTP Request Method</a>
                         <div class="accordion-content" data-tab-content>
                             <ul>
                                 <li>standard methods</li>
@@ -186,14 +249,14 @@
                             <div class="tabs-content" data-tabs-content="sm-tabs">
                                 <div class="tabs-panel is-active" id="panel1">
                                     <ul>
-                                        <li>transfer a current selected representation of the resource identified by the request URI; the retrieved resources is returned in the message body of the responseas an entity</li>
+                                        <li>transfer a current selected representation of the resource identified by the request URI; the retrieved resources is returned in the message body of the response as an entity</li>
                                         <li>most commonly used HTTP method</li>
                                         <li>must be supported by all compliant general-purpose servers</li>
                                     </ul>
                                 </div>
                                 <div class="tabs-panel" id="panel2">
                                     <ul>
-                                        <li>same as GET, except that the netity is not included in the response (i.e., returns only the status line and headers returned by a GET request, without the message body)</li>
+                                        <li>same as GET, except that the entity is not included in the response (i.e., returns only the status line and headers returned by a GET request, without the message body)</li>
                                         <li>used to retrieve metadata about the entity implied by the request without transferring the entity itself (i.e., to test for link validity or resource modification)</li>
                                         <li>like GET, must be supported by all general-purpose servers</li>
                                     </ul>
@@ -220,17 +283,34 @@
                                 </div>
                                 <div class="tabs-panel" id="panel7">
                                     <ul>
-                                        <li>request a loopback of the request message (i.e., request the server to echo back to the client the received request message)</li>
+                                        <li>request a loopback of the request message (i.e. request the server to echo back to the client the received request message)</li>
                                         <li>typically used for testing/diagnostics of the request/response chain</li>
                                     </ul>
                                 </div>
                                 <div class="tabs-panel" id="panel8">
                                     <ul>
-                                        <li>request the establihment of a tunnel to the destination origin server, if successful, thereafter restrict its behavior to blind-for waiting of packets, in both directions, until the tunnel is closed</li>
+                                        <li>request the establishment of a tunnel to the destination origin server, if successful, thereafter restrict its behavior to blind-for waiting of packets, in both directions, until the tunnel is closed</li>
                                         <li>commonly used to an end-to-end virtual connection through one or more...</li>
                                     </ul>
                                 </div>
                             </div>
+							
+							<ul>
+                                <li>safe methods</li>
+									<ul>
+										<li>methods that does not modify any resources in the server</li>
+										<li>GET, HEAD, OPTIONS, TRACE</li>
+									</ul>
+								<li>idempotent methods</li>
+									<ul>
+										<li>methods that can be used many times and the result will be the same</li>
+										<li>GET, HEAD, OPTIONS, TRACE, PUT, DELETE</li>
+									</ul>
+								<li>cacheable methods</li>
+									<ul>
+										<li> methods that can ce cached </li>
+									</ul>
+                            </ul>
                         </div>
                     </li>
                 </ul>
@@ -244,15 +324,46 @@
                                     <a href="#" class="accordion-title">General Header Fields</a>
                                     <div class="accordion-content" data-tab-content>
                                         <ul>
-                                            <li>cache-control</li>
-                                            <li>pragma</li>
-                                            <li>connection</li>
-                                            <li>date</li>
-                                            <li>upgrade</li>
-                                            <li>via</li>
-                                            <li>warning</li>
-                                            <li>trailer</li>
-                                            <li>transfer-encoding</li>
+                                            <p class="status_definition">
+                                                There are a few header fields which have general applicability for both request and response messages, but which do
+                                                not apply to the entity being transferred. These header fields apply only to the message being transmitted.
+                                            </p>
+                                            <li>Cache-Control</li>
+                                                <p class="header_definition">
+                                                    Used to specify the instruction that needs to be followed by the caching system.
+                                                </p>
+                                            <li>Pragma</li>
+                                                <p class="header_definition">
+                                                    Shows the caching instructions for the client and can have different kinds of effects throughout the request-response chain.
+                                                </p>
+                                            <li>Connection</li>
+                                                <p class="header_definition">
+                                                    Used by the sender to specify the options for the connection being made.
+                                                </p>
+                                            <li>Date</li>
+                                                <p class="header_definition">
+                                                    Shows the HTTP date/time stamps in Greenwich Mean Time (GMT).
+                                                </p>
+                                            <li>Upgrade</li>
+                                                <p class="header_definition">
+                                                    Used by the client to specify what other communication protocol it can support and would be changed to if server finds the need to switch the protocols.
+                                                </p>
+                                            <li>Via</li>
+                                                <p class="header_definition">
+                                                    Used by the gateways and proxies to know the information about the protocols and recipients.
+                                                </p>
+                                            <li>Warning</li>
+                                                <p class="header_definition">
+                                                    Shows any other information about the status of the message which may not have been included in the messages.
+                                                </p>
+                                            <li>Trailer</li>
+                                                <p class="header_definition">
+                                                    Shows that the header fields that was given is present in the trailer of a certain message which is encoded with chunked transfer-coding.
+                                                </p>
+                                            <li>Transfer-Encoding</li>
+                                                <p class="header_definition">
+                                                    It shows the information about what type the message body has been transformed to in order to be able to safely transfer from the sender to the recipient.
+                                                </p>
                                         </ul>
                                     </div>
                                 </li>
@@ -263,24 +374,91 @@
                                     <a href="#" class="accordion-title">Request Header Fields</a>
                                     <div class="accordion-content" data-tab-content>
                                         <ul>
+                                            <p class="status_definition">
+                                                The request-header fields allow the client to pass additional information about the request, and about the client itself,
+                                                to the server. These fields act as request modifiers, with semantics equivalent to the parameters on a programming
+                                                language method invocation.
+                                            </p>
                                             <li>Accept</li>
+                                                <p class="header_definition">
+                                                    Shows the acceptable media types for the response.
+                                                </p>
                                             <li> Accept-Charset</li>
+                                                <p class="header_definition">
+                                                    Shows the acceptable character set for the response.
+                                                </p>
                                             <li>Accept-Encoding</li>
+                                                <p class="header_definition">
+                                                    Shows the acceptable content-coding for the response.
+                                                </p>
                                             <li> Accept-Language</li>
-                                            <li>Host</li>
-                                            <li>If-Match</li>
-                                            <li>If-Modified-Since</li>
-                                            <li>If-None-Match</li>
-                                            <li>If-Range</li>
-                                            <li>Max-forwards</li>
-                                            <li>Proxy-Authorization</li>
-                                            <li>Range</li>
-                                            <li>Referer</li>
-                                            <li>TE (Trailer Encoder)</li>
-                                            <li>User-Agent</li>
+                                                <p class="header_definition">
+                                                    Shows the preferred natural languages for the response.
+                                                </p>
+                                            <li>Authorization</li>
+                                                <p class="header_definition">
+                                                    Contains the authenticatioin information of the user agent that is trying to access a resource.
+                                                </p>
+                                            <li>Cookie</li>
+                                                <p class="header_definition">
+                                                    Contains information stored for the URL
+                                                </p>
                                             <li>Expect</li>
-                                            <li>If-unmodified-Since</li>
-                                            <li>	From</li>
+                                                <p class="header_definition">
+                                                    Shows the particular response that is being expected by the client.
+                                                </p>
+                                            <li>From</li>
+                                                <p class="header_definition">
+                                                    Shows the e-mail address of the human user who made the request.
+                                                </p>
+                                            <li>Host</li>
+                                                <p class="header_definition">
+                                                   Shows the host and port number of the resource that is being requested.
+                                                </p> 
+                                            <li>If-Match</li>
+                                                <p class="header_definition">
+                                                    It will ask the server to perform a certain method that was requested when the given value matches an entity in ETag.
+                                                </p>
+                                            <li>If-Modified-Since</li>
+                                                <p class="header_definition">
+                                                    The entity from a requested URL will not be returned if nothing has been modified since the time that was specified in the field. Instead, the "304 Not Modified" status code will be returned.
+                                                </p>
+                                            <li>If-None-Match</li>
+                                                <p class="header_definition">
+                                                    It will ask the server to perform a certain method that was requested when the given value does not match any entity in ETag.
+                                                </p>
+                                            <li>If-Range</li>
+                                                <p class="header_definition">
+                                                    Used to ask for a particular portion of a certain entity that has been missing.
+                                                </p>
+                                            <li>If-Unmodified-Since</li>
+                                                <p class="header_definition">
+                                                    It will ask the server to perform a certain method that was requested when the requested resource was not modified since the time specified in the field.
+                                                </p>
+                                            <li>Max-Forward</li>
+                                                <p class="header_definition">
+                                                    It will limit number of proxies or gateway that the request can be forwarded to.
+                                                </p>
+                                            <li>Proxy-Authorization</li>
+                                                <p class="header_definition">
+                                                    When a server requires an authentication, this allows the client to be able to identify itself or the user.
+                                                </p>
+                                             <li>Range</li>
+                                                <p class="header_definition">
+                                                    Shows information in what the partial range of the content was specified by a request.
+                                                </p>
+                                            <li>Referer</li>
+                                                <p class="header_definition">
+                                                    This allows a user or client to specify the URI of a certain resource.
+                                                </p>
+                                            <li>TE</li>
+                                                <p class="header_definition">
+                                                    It will tell what extension transfer-coding it will be accepting in the response and also whether or not it will be accepting any trailer fields that is in a chunked transfer-coding.
+                                                </p>
+                                            <li>User-Agent</li>
+                                                <p class="header_definition">
+                                                    Shows the information of the user who made the request.
+                                                </p>   
                                         </ul>
                                     </div>
                                 </li>
@@ -291,15 +469,49 @@
                                     <a href="#" class="accordion-title">Response Header Fields</a>
                                     <div class="accordion-content" data-tab-content>
                                         <ul>
+                                            <p class="status_definition">
+                                                The response-header fields allow the server to pass additional information about the response which cannot be placed in the Status-Line. These header fields give information about the server and about further access to the resource identified by the Request-URI.
+                                            </p>
                                             <li>Accept-Ranges</li>
+                                                <p class="header_definition">
+                                                    Shows the acceptance of the range request for a certain resource by a server.
+                                                </p>
                                             <li>Age</li>
+                                                <p class="header_definition">
+                                                    Shows the estimated amount of time since the generation of the response at the origin server.
+                                                </p>
                                             <li>E-Tag (Entity Tag)</li>
-                                            <li>Location </li>
+                                                <p class="header_definition">
+                                                    Shows the value of the entity tag for the variant that was requested.
+                                                </p>
+                                            <li>Location</li>
+                                                <p class="header_definition">
+                                                    This is used to redirect the recipient to another location that is not the Request-URI.
+                                                </p>
                                             <li>Proxy-Authenticate</li>
-                                            <li>Retry After</li>
+                                                <p class="header_definition">
+                                                    Included in the "407 Proxy Authentication Required" response.
+                                                </p>
+                                            <li>Retry-After</li>
+                                                <p class="header_definition">
+                                                    Together with the "503 Service Unavailable" response, it shows how long the service will be not available to the client that made the request.
+                                                </p>
                                             <li>Server</li>
-                                            <li>Vary </li>
+                                                <p class="header_definition">
+                                                    Shows the information about the software that was used by the origin server that handles the request.
+                                                </p>
+                                            <li>Set-Cookie</li>
+                                                <p class="header_definition">
+                                                    Shows information (name/value) to retain for the URL.
+                                                </p>
+                                            <li>Vary</li>
+                                                <p class="header_definition">
+                                                    Shows that the entity has available multiple sources and can vary depending on the request headers that was specified.
+                                                </p>
                                             <li>WWW-Authentication</li>
+                                                <p class="header_definition">
+                                                    Together with the "401 Unauthorized" response, it shows at least one challenge in which it shows what parameter and authentication schemes are applicable to the Request-URI.
+                                                </p>
                                         </ul>
                                     </div>
                                 </li>
@@ -310,16 +522,49 @@
                                     <a href="#" class="accordion-title">Entity Header Fields</a>
                                     <div class="accordion-content" data-tab-content>
                                         <ul>
+                                            <p class="status_definition">
+                                                Entity-header fields define metainformation about the entity-body or, if no body is present, about the resource identified by the request.
+                                            </p>
                                             <li>Allow</li>
-                                            <li>Content-encoding</li>
-                                            <li>Content-language</li>
-                                            <li>Content-length</li>
-                                            <li>Content-location</li>
+                                                <p class="header_definition">
+                                                    Show a list of the methods that are supported by the resource that is being identified by the Request-URI.
+                                                </p>
+                                            <li>Content-Encoding</li>
+                                                <p class="header_definition">
+                                                    Used to show what the characteristic of the entity that is being identified by the Request-URI is or also known as the content-coding.
+                                                </p>
+                                            <li>Content-Language</li>
+                                                <p class="header_definition">
+                                                    Shows what the language of the entity is and also be able to differentiate entities that will go with the user's preferred language.
+                                                </p>
+                                            <li>Content-Length</li>
+                                                <p class="header_definition">
+                                                    Shows what the size of the entity-body that was sent to the recipient is in decimal number of OCTETs if used in the HEAD method. But if used in the GET method, it will only show the size of the entity-body that would've be sent.
+                                                </p>
+                                            <li>Content-Location</li>
+                                                <p class="header_definition">
+                                                    Used to provide the resource location when the entity that has been requested is accessible in another location other than the resource's URI.
+                                                </p>
                                             <li>Content MD5 (Message Digest v. 5)</li>
+                                                <p class="header_definition">
+                                                    Checks the integrity of the message and provide MD5 digest of the entity.
+                                                </p>
                                             <li>Content-Range (Partial Request)</li>
-                                            <li>Content-type</li>
+                                                <p class="header_definition">
+                                                    When partial entity-body is sent, this is used to specify in what part of the full entity-body should the partial body should go to.
+                                                </p>
+                                            <li>Content-Type</li>
+                                                <p class="header_definition">
+                                                    Shows what media type is the entity-body that was sent if used in the HEAD method. But if used in the GET method, it will show what media type is the entity-body that is supposed to be sent.
+                                                </p>
                                             <li>Expires</li>
+                                                <p class="header_definition">
+                                                    Shows when and/or what time the response will be considered stale.
+                                                </p>
                                             <li>Last-Modified</li>
+                                                <p class="header_definition">
+                                                    Shows the date and time at which the entity or resource was last modified.
+                                                </p>
                                         </ul>
                                     </div>
                                 </li>
@@ -336,9 +581,18 @@
                                 <li class="accordion-item" data-accordion-item>
                                 <a href="#" class="accordion-title">Informational</a>
                                 <div class="accordion-content" data-tab-content>
+                                    <p class="status_definition">
+                                        This class of status shows a temporary response which is a status-line with optional headers. Headers are not required in this class of status code.
+                                    </p>
                                     <ul>
                                         <li>100: Continue</li>
+                                            <p class="status_definition">
+                                                This status states that the request by the client has been received and has not been rejected yet by the server so the client should continue by providing the remainder of the request. But if the request was already completed, this response can be ignored.
+                                            </p>
                                         <li>101: Switching Protocol</li>
+                                            <p class="status_definition">
+                                                This status states that the server is willing to change the application protocol that is being used for the connection as requested by the client.
+                                            </p>
                                     </ul>
                                 </div>
                                 </li>
@@ -348,14 +602,38 @@
                                 <li class="accordion-item" data-accordion-item>
                                 <a href="#" class="accordion-title">Success</a>
                                 <div class="accordion-content" data-tab-content>
+                                    <p class="status_definition">
+                                        This class of status states that the request that was made by the client was received, accepted, and understood successfully.
+                                    </p>
                                     <ul>
                                         <li>200: Okay</li>
+                                            <p class="status_definition">
+                                                The request that was made has succeeded.
+                                            </p>
                                         <li>201: Created</li>
+                                            <p class="status_definition">
+                                                A new resource was successfully created after a request has been accepted.
+                                            </p>
                                         <li>202: Accepted</li>
+                                            <p class="status_definition">
+                                                The request was accepted for processing but the processing has not been done yet.
+                                            </p>
                                         <li>203: Non-Authoritative Information</li>
+                                            <p class="status_definition">
+                                                The request was accepted by the payload was changed from the one in the origin server.
+                                            </p>
                                         <li>204: No Content</li>
+                                            <p class="status_definition">
+                                                The request was accepted by the server but it is not needed to return an entity-body.
+                                            </p>
                                         <li>205: Reset Content</li>
+                                            <p class="status_definition">
+                                                The request was accepted by the server and would want the user to reset the document view to the state that was originally received from the origin server.
+                                            </p>
                                         <li>206: Partial Content</li>
+                                            <p class="status_definition">
+                                                The request was accepted by the server and partial content was sent using the GET request.
+                                            </p>
                                     </ul>
                                 </div>
                                 </li>
@@ -365,15 +643,42 @@
                                 <li class="accordion-item" data-accordion-item>
                                 <a href="#" class="accordion-title">Redirection</a>
                                 <div class="accordion-content" data-tab-content>
+                                    <p class="status_definition">
+                                        This class of status states that further action is required from the user agent for the request to be fulfilled.
+                                    </p>
                                     <ul>
                                         <li>300: Multiple Choices</li>
+                                            <p class="status_definition">
+                                                The resource that was being requested has multiple set of presentation with its own specific location and the user can select the preferred presentation using the provided agent-driven negotiation information.
+                                            </p>
                                         <li>301: Moved Permanently</li>
+                                            <p class="status_definition">
+                                                The resource that was being requested has been assigned a new URI.
+                                            </p>
                                         <li>302: Found</li>
+                                            <p class="status_definition">
+                                                The resource that was being requested has been moved under a different URI but temporarily only so the same Request-URI can still be used.
+                                            </p>
                                         <li>303: See Other</li>
+                                            <p class="status_definition">
+                                                The resource that was being requested can be found in a different URI and it should be retrieved with the GET method on that resource.
+                                            </p>
                                         <li>304: Not Modified</li>
+                                            <p class="status_definition">
+                                                The document in which the client made a request to has not been modified.
+                                            </p>
                                         <li>305: Use Proxy</li>
+                                            <p class="status_definition">
+                                                The resource that is being requested has to be accessed through proxy.
+                                            </p>
                                         <li>306: (Unused)</li>
+                                            <p class="status_definition">
+                                                This status code is no longer used and it is being reserved.
+                                            </p>
                                         <li>307: Temporary Redirect</li>
+                                            <p class="status_definition"> 
+                                                The resource that was being requested has been moved under a different URI but temporarily only so the same Request-URI can still be used.
+                                            </p>
                                     </ul>
                                 </div>
                                 </li>
@@ -383,26 +688,86 @@
                                 <li class="accordion-item" data-accordion-item>
                                 <a href="#" class="accordion-title">Client Error</a>
                                 <div class="accordion-content" data-tab-content>
+                                    <p class="status_definition">
+                                        This class of status is used as a response in situations where the client made an error.
+                                    </p>
                                     <ul>
                                         <li>400: Bad Request</li>
+                                            <p class="status_definition">
+                                                The request made by the client can't be understood by the server.
+                                            </p>
                                         <li>401: Unauthorized</li>
+                                            <p class="status_definition">
+                                                The request the client made needs a user authentication in order for it to be accepted.
+                                            </p>
                                         <li>402: Payment Required</li>
+                                            <p class="status_definition">
+                                                This status code is reserved for future use.
+                                            </p>
                                         <li>403: Forbidden</li>
+                                            <p class="status_definition">
+                                                The request was understood by the server but it refuses to fulfill it and authorization won't work.
+                                            </p>
                                         <li>404: Not Found</li>
+                                            <p class="status_definition">
+                                                The Request-URI that was requested can't be found by the server.
+                                            </p>
                                         <li>405: Method Not Allowed</li>
+                                            <p class="status_definition">
+                                                The method requested by the client is not allowed for the resource that is being requested.
+                                            </p>
                                         <li>406: Not Acceptable</li>
+                                            <p class="status_definition">
+                                                The resource that is being requested does have content characteristics which is not acceptable by the accept headers sent in the request.
+                                            </p>
                                         <li>407: Proxy Authentication Required</li>
+                                            <p class="status_definition">
+                                                The client is required to authenticate first itself with the proxy before accessing the resource.
+                                            </p>
                                         <li>408: Request Time-out</li>
+                                            <p class="status_definition">
+                                                The client was not able to make a request during the time the server was waiting for one.
+                                            </p>
                                         <li>409: Conflict</li>
+                                            <p class="status_definition">
+                                                There was a conflict with the current state of the source when the request was made.
+                                            </p>
                                         <li>410: Gone</li>
+                                            <p class="status_definition">
+                                                The resource that was requested is no longer available at the server.
+                                            </p>
                                         <li>411: Length Required</li>
+                                            <p class="status_definition">
+                                                If no Content-Length was defined, the server will not accept the request.
+                                            </p>
                                         <li>412: Precondition Failed</li>
+                                            <p class="status_definition">
+                                                The precondition which was requested in the previous request-headers failed when tested on the server.
+                                            </p>
                                         <li>413: Request Entity Too Large</li>
+                                            <p class="status_definition">
+                                                The request entity by the client is too large for the server to be able to process.
+                                            </p>
                                         <li>414: Request-URI Too Large</li>
+                                            <p class="status_definition">
+                                                The Request-URI by the client is too long for the server to be able to interpret.
+                                            </p>
                                         <li>415: Unsupported Media Type</li>
-                                        <li>416: Requested Range not Satisfiable</li>
+                                            <p class="status_definition">
+                                                The entity that is being requested is not a format that is supported by the requested resource for the requested method.
+                                            </p>
+                                        <li>416: Requested Range Not Satisfiable</li>
+                                            <p class="status_definition">
+                                                The range-specifier value in the Range-Request-Header field does not overlap the selected resource.
+                                            </p>
                                         <li>417: Expectation Failed</li>
+                                            <p class="status_definition">
+                                                The expection which was given in the Expect request-header field was not met by the server.
+                                            </p>
                                         <li>426: Upgrade Required *New*</li>
+                                            <p class="status_definition">
+                                                The server is only willing to perform the request after the client upgrades to a different protocol and not use the current one.
+                                            </p>
                                     </ul>
                                 </div>
                                 </li>
@@ -412,17 +777,171 @@
                                 <li class="accordion-item" data-accordion-item>
                                 <a href="#" class="accordion-title">Server Error</a>
                                 <div class="accordion-content" data-tab-content>
+                                    <p class="status_definition">
+                                        This class of status is used as a response in situations where the server made an error.
+                                    </p>
                                     <ul>
                                         <li>500: Internal Server Error</li>
+                                            <p class="status_definition">
+                                                The server couldn't fulfill the request due to an unexpected condition.
+                                            </p>
                                         <li>501: Not Implemented</li>
+                                            <p class="status_definition">
+                                                The server couldn't fulfill the request due to the support for the functionality required.
+                                            </p>
                                         <li>502: Bad Gateway</li>
-                                        <li>503: Serice Unavailable</li>
+                                            <p class="status_definition">
+                                                The server encountered an invalid response from the upstream server it was trying to access in order to fulfill the request.
+                                            </p>
+                                        <li>503: Service Unavailable</li>
+                                            <p class="status_definition">
+                                                The server couldn't fulfill the request due to it being temporarily overloaded or being under maintenance.
+                                            </p>
                                         <li>504: Gateway Time-Out</li>
-                                        <li>505: HTTP version not supported</li>
+                                            <p class="status_definition">
+                                                The server did not receive any response from the upstream server while it was acting as a gateway or proxy.
+                                            </p>
+                                        <li>505: HTTP Version Not Supported</li>
+                                            <p class="status_definition">
+                                                The server can't support or is refusing to support the HTTP protocol version that was used in the request message.
+                                            </p>
                                     </ul>
                                 </div>
                                 </li>
                             </ul>
+                        </div>
+                    </li>
+                </ul>
+				
+				<ul class="accordion" data-accordion data-allow-all-closed="true">
+                    <li class="accordion-item" data-accordion-item>
+                        <a href="#" class="accordion-title">Additional Terms</a>
+                        <div class="accordion-content" data-tab-content>
+                            <ul>
+								<li class="bold_text">Internet of Things (IoT)</li>
+								<p>
+									“The IoT links objects to the Internet, enabling data and insights never available before.” (Cisco)
+								</p>
+								<p>
+									“IoT is accelerating the digital world at a pace the industry has never seen. Businesses are faced with the 
+									ever increasing number of smart things interacting with their line of business (LOB) 
+									operations in a manner that was never fully realized.” (Oberon)
+								</p>
+								
+								<li class="bold_text">Network Transceiver</li>
+								<p>
+									Network Transceivers connect network nodes.
+								</p>
+								<p>
+									Network Transceivers sends and recieves analog and digital signals.
+								</p>
+								
+								<li class="bold_text">Circuit Switch Network</li>
+								<p>
+									“Circuit-switched is a type of network in which a physical path is obtained for and dedicated to a 
+									single connection between two end-points in the network for the duration of the connection.” (Rouse)
+								</p>
+								
+								<li class="bold_text">WAIS (Wide Area Information Servers)</li>
+								<p>
+									“An Internet system in which specialized subject databases are created at multiple server locations, 
+									kept track of by a directory of servers at one location, and made accessible for searching by users with WAIS client programs.” (Rouse)
+								</p>
+								
+								<li class="bold_text">GOPHER</li>
+								<p>
+									Gopher is a hierarchy of information.
+								</p>
+								<p>
+									“Gopher was an Internet application in which hierarchically-organized text files could be brought from servers all over the world 
+									to a viewer on your computer.” (Rouse)
+								</p>
+								
+								<li class="bold_text">UsNet</li>
+								<p>
+									“UsNet connects credit unions with thousands of national and international locations to give your members the convenience they want, 
+									flexibility they need and the service they deserve, no matter their location.” (UsNet)
+								</p>
+								
+								<li class="bold_text">FTP (File Transfer Protocol)</li>
+								<p>
+									"FTP is A protocol used for transferring files over the internet.” (Rouse)
+								</p>
+								
+								<li class="bold_text">Network Socket</li>
+								<p>
+									The Network Socket is composed of the IP Address and the Port Number
+								</p>
+								
+								<li class="bold_text">Tunnels</li>
+								<p>
+									An Encryption of HTTP to HTTPS
+								</p>
+								
+								<li class="bold_text">IANA</li>
+								<p>
+									“The global coordination of the DNS Root, IP addressing, and other Internet protocol 
+									resources is performed as the Internet Assigned Numbers Authority (IANA) functions.” (iana)
+								</p>
+								
+								<li class="bold_text">ICANN</li>
+								<p>
+									"ICANN coordinates the Internet Assigned Numbers Authority (IANA) functions, which are key technical services critical to the continued 
+									operations of the Internet's underlying address book, the Domain Name System (DNS).” (ICANN)
+								</p>
+								
+								<li class="bold_text">Pull Protocol</li>
+								<p>
+									“Pull Protocol means that the client periodically connects to the server.” (Gheysari)
+								</p>
+								
+								<li class="bold_text">Push Protocol</li>
+								<p>
+									"Push Protocol means that the client opens a connection to the server and keeps it alive.” (Gheysari)"
+								</p>
+							</ul>
+                        </div>
+                    </li>
+                </ul>
+				
+				<ul class="accordion" data-accordion data-allow-all-closed="true">
+                    <li class="accordion-item" data-accordion-item>
+                        <a href="#" class="accordion-title">References</a>
+                        <div class="accordion-content" data-tab-content>
+                            <ul>
+								<li>Cisco. (n.d.). Internet of Things (IoT). Retrieved from </li>
+								<a href="http://www.cisco.com/c/en/us/solutions/internet-of-things/overview.html">http://www.cisco.com/c/en/us/solutions/internet-of-things/overview.html</a>
+								<li>DARPA. (n.d.). ARPANET and the Origins of the Internet. Retrieved from </li>
+								<a href="http://www.darpa.mil/about-us/timeline/arpanet">http://www.darpa.mil/about-us/timeline/arpanet</a>
+								<li>Engineering 360. (n.d). Network Transceivers Information. Retrieved from</li>
+								<a href="http://www.globalspec.com/learnmore/communications_networking/networking_equipment/network_transceivers">
+									http://www.globalspec.com/learnmore/communications_networking/networking_equipment/
+								</a>
+								<li>Gheysari. (2014). What is the difference between push and pull protocols?. Retrieved from</li>
+								<a href="https://www.quora.com/Whats-the-difference-between-push-and-pull-protocols">https://www.quora.com/Whats-the-difference-between-push-and-pull-protocols</a>
+								<li>Mitchell, B. (2016). What Is Packet Switching on Computer Networks?. Retrieved from</li>
+								<a href="https://www.lifewire.com/packet-switching-on-computer-networks-817938">https://www.lifewire.com/packet-switching-on-computer-networks-817938</a>		
+								<li>iana. (n.d). iana. Retrieved from </li>
+								<a href="https://www.iana.org/">https://www.iana.org/</a>
+								<li>ICANN. (n.d.). What does ICANN do?. Retrieved from</li> 
+								<a href="https://www.icann.org/resources/pages/welcome-2012-02-25-en">https://www.icann.org/resources/pages/welcome-2012-02-25-en</a>
+								<li>Oberon, J. (n.d). The IoT Journey: Are We There Yet?. Retrieved from</li>
+								<a href="http://www.cisco.com/c/en/us/solutions/internet-of-things/overview.html">http://www.cisco.com/c/en/us/solutions/internet-of-things/overview.html</a>
+								<li>Rouse, M. (n.d.). Circuit-switched. Retrieved from</li>
+								<a href="http://searchnetworking.techtarget.com/definition/circuit-switched">http://searchnetworking.techtarget.com/definition/circuit-switched</a>
+								<li>Rouse, M. (n.d.). File Transfer Protocol (FTP). Retrieved from</li>
+								<a href="http://searchenterprisewan.techtarget.com/definition/File-Transfer-Protocol">http://searchenterprisewan.techtarget.com/definition/File-Transfer-Protocol</a>
+								<li>Rouse, M. (n.d.).  Gopher. Retrieved from</li>
+								<a href="http://whatis.techtarget.com/definition/Gopher">http://whatis.techtarget.com/definition/Gopher</a>
+								<li>Rouse, M. (n.d.). WAIS (Wide Area Information Servers). Retrieved from</li>
+								<a href="http://whatis.techtarget.com/definition/WAIS-Wide-Area-Information-Servers">http://whatis.techtarget.com/definition/WAIS-Wide-Area-Information-Servers</a>
+								<li>UsNet. (n.d.). BETTER SERVICE FOR MEMBERS. BETTER BUSINESS FOR CREDIT UNIONS. Retrieved from</li>
+								<a href="http://www.universalsharing.com/">http://www.universalsharing.com/</a>
+								<li>WhatIsMyIPAdress. (n.d.). What is an Internet Service Provider?. Retrieved from</li>
+								<a href="http://whatismyipaddress.com/isp">http://whatismyipaddress.com/isp</a>
+								<li>W3C. (n.d.). SEMANTIC WEB. Retrieved from</li>
+								<a href="https://www.w3.org/standards/semanticweb/">https://www.w3.org/standards/semanticweb/</a>
+							</ul>
                         </div>
                     </li>
                 </ul>
