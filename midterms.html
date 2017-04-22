@@ -945,6 +945,330 @@
                                     </div>
                                 </li>
                             </ul>
+
+                            <!-- Added Jay's notes -->
+                            <h2>Associating Scripts To Your HTML file</h2>
+                            <ul>
+                                <li>External Linking</li>
+                                <ul>
+                                    <li><'script type=’text/javascript’ src=’script.js’><'/script></li>
+                                </ul>
+                                <li>Embedded</li>
+                                <ul>
+                                    <li>&ltscript&gt*/JavaScript Codes/*&lt/script&gt</li>
+                                </ul>
+                            </ul>
+
+                            <h2>Types of Codes</h2>
+                            <ul>
+                                <li>1. Top Level / Global Code</li>
+                                <ul>
+                                    <li>outside the function, executes on the fly</li>
+                                </ul>
+                                <li>2. Function</li>
+                                <ul>
+                                    <li>When function is invoked</li>
+                                </ul>
+                            </ul>
+
+                            <h2>Executions of Scripts may be:</h2>
+                            <ul>
+                                <li>1. Defer</li>
+                                <ul>
+                                    <li>Fetch the script then continue rendering the HTML</li>
+                                </ul>
+
+                                <li>2. Async</li>
+                                <ul>
+                                    <li>Execution will be asynchronous</li>
+                                </ul>
+                            </ul>
+
+                            <h2>Interacting with HTML content</h2>
+                            <ul>
+                                <li>Window Content</li>
+                                <ul>
+                                    <li>Enables interaction with the document</li>
+                                </ul>
+
+                                <li>Window (Global Object)</li>
+                                <ul>
+                                    Examples:
+                                    <li>window.navigator</li>
+                                    <li>window.screen.width</li>
+                                    <li>window.document</li>
+                                    <li>It is also noted that when you declare a variable without the var, let, or const keyword. You just created a global window object variable.</li>
+                                </ul>
+
+                                Examples:
+                                <ul>
+                                    <li>h.innerText</li>
+                                    <li>h.innerHTML – java &ltem&gt script &lt/em&gt</li>
+                                    <li>h.outerHTML - &lth1 id=’h’&gt Java &ltem&gt script &lt/em&gt &lt/h1&gt</li>
+                                    <li>h.lang - ‘en-US’</li>
+                                    <li>h[“lang”] – ‘en-UK’</li>
+                                    <li>h.setAttribute(‘data-extra’, ‘value’)</li>
+                                    <li>h.title – access attributes special for one/two property</li>
+                                    <li>h.style.color = value(‘red’)</li>
+                                    <li>p.style=’color:blue’</li>
+                                    <li>p.style.color=’red’</li>
+                                    <li>p.style.backgroundColor=’yellow’</li>
+                                    <li>p.style[‘color’]</li>
+                                    <li>h.className = ‘green-text’</li>
+                                    <li>h.style = ‘‘ -> remove style</li>
+                                    <li>getElementByID - &ltp id=’ ’&gt</li>
+                                    <li>getElementsByClassName - &ltp class=’ ’&gt</li>
+                                    <li>getElementsByName - &lta name=’ ‘&gt</li>
+                                    <li>getElementsByTagName - &lta name= ‘ ‘&gt</li>
+                                    <li>getElementsByNS</li>
+                                    <li>document.querySelector(‘p’)</li>
+                                    <ul>
+                                        <li>output: &ltp&gt loren ipsum &lt/p&gt</li>
+                                    </ul>   
+                                    <li>document.querySelectorAll(‘p’)</li>
+                                    <ul>
+                                        <li>output: [p, p, p, p, p]</li>
+                                    </ul>
+                                    <li>document.querySelectorAll(‘h1+p’)</li>
+                                    <li>h1 immediately followed by p</li>
+                                    <li>p.matches(‘p’)</li>
+                                    <ul>
+                                        <li>output: true</li>
+                                    </ul>
+                                    <li>p.matches(‘body p’)</li>
+                                    <ul>
+                                        <li>output: true</li>
+                                    </ul>
+                                </ul>
+                            </ul>
+
+                            <h2>Programmatic construct of JavaScript</h2>
+                            <ul>
+                                <li>Script</li>
+                                <ul>
+                                    <li>Manipulate Content</li>
+                                </ul>
+
+                                <li>JavaScript is Imperative</li>
+                                <ul>
+                                    <li>Sequence of instructions are decided by programmer, variables are storage areas</li>
+                                </ul>
+
+                                <li>Data Type</li>
+                                <ul>
+                                    <li>Different values that can be associated and possible operations that can be applied</li>
+                                </ul>
+                            </ul>
+
+                            <h2>Falsy and Truthy Values</h2>
+                            <ul>
+                                <table>
+                                    <tr>
+                                        <td>Falsy Values</td>
+                                        <td>Truthy values</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Not really false but is equivalent to true</td>
+                                        <td>Not really true but is equivalent to false</td>
+                                    </tr>
+                                    <tr>
+                                        <td>0</td>
+                                        <td>Other numbers</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Empty string</td>
+                                        <td>Other strings</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Undefined</td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>null</td>
+                                        <td></td>
+                                    </tr>
+                                </table>
+                            </ul>
+
+                            <h2>Standard Objects</h2>
+                            <ul>
+                                Example:
+                                function sayHello(){
+                                    console.log(‘hello’);
+                                }
+
+                                <li>Abstraction – name a method then call the method through its name</li>
+                                <li>Function = object</li>
+                                <li>sayHello(); - invocation</li>
+                                <li>sayHello – referencing</li>
+                                <li>anonymous function – function without a name</li>
+                                Example:
+                                (function(a,b){return a+b;})(10,20);
+                                <li>Can throw anyting/try-and-catch</li>
+                            </ul>
+
+                            <h2>Sample Codes</h2>
+                            <ul>
+                                <p>/* add */</p>
+                                <p>var add = new function(‘a,b’,’return a+b’);</p>
+                                <p>var sum = add(10,20);</p>
+
+                                <h3>Arrow Syntax</h3>
+                                <p>var multiply = (a,b) => {return a*b;}</p>
+                                <p>var product = multiply(10,20);</p>
+
+                                <h3>Recursive Functions</h3>
+                                <p>function factorial(n){</p>
+                                    <p>if (n<0){</p>
+                                        <p>throw “Invalid argument”;</p>
+                                    <p>} else  if (n==0) {</p>
+                                        <p>return 1;</p>
+                                    <p>} else {</p>
+                                        <p>Return n*factorial(n-1);</p>
+                                    <p>}</p>
+                                <p>}</p>
+
+                                <h3>Nested Functions</h3>
+                                <p>function outer(){</p>
+                                    <p>//codes here</p>
+
+                                    <p>function inner(){</p>
+                                        <p>//inner codes here</p>
+                                    <p>}</p>
+
+                                    <p>//some more codes here</p>
+                                <p>}</p>
+
+                                <h3>Giving default values for variables</h3>
+                                <p>function fn(a=10, b=20, c, d=40, e){</p>
+                                    <p>// codes here</p>
+                                <p>}</p>
+
+                                <h3>Function Rest Parameters</h3>
+                                    <p>function fn(a, b, … others) {</p>
+                                        <p>console.log(`a=${a}`);</p>
+                                        <p>console.log(`b=${b}`);</p>
+                                        <p>console.log(`others=` ,others);</p>
+                                    <p>}</p>
+                            </ul>
+
+                            <h2>Arrays</h2>
+                            <ul>
+                                <li>JavaScript Arrays are dynamic in size</li>
+                                <h3>Sample Codes</h3>
+                                <p>var emptyArray = new Array();</p>
+                                <p>var alsoEmptyArray = [];</p>
+
+                                <p>var arrayWithLengthFive = new Array(5);</p>
+                                <p>var arrayWithOneElementWithValueFive = [5];</p>
+
+                                <p>var array = new Array(‘5’) – number of elements</p>
+                                <p>var sameArray = [‘5’];</p>
+
+                                <p>var multiDimArray = [</p>
+                                    <p>[‘apple’, ‘banana’, ‘orange’],</p>
+                                    <p>[4, 5, 6, [true, false, false], 7, 8],</p>
+                                    <p>[];  // I don’t know how to close this array</p>
+
+                                <h4>Deconstructing an array</h4>
+                                <p>var array=[1,2,3,4,5];</p>
+                                <p>var [a,b,c,d,e] = array;</p>
+                                <p>var [m,n,… others] = array;</p>
+                                <p>var [, x ,, y] = array;</p>
+
+                                <h4>Array indices can be non-contiguous</h4>
+                                <p>var array=[1,2,3,4,5]</p>
+                                <p>array[10]=10;</p>
+                                <p>for(let i in array){</p>
+                                    <p>console.log(i, array[i]);</p>
+                                <p>}</p>
+                            </ul>
+
+                            <h2>Methods</h2>
+                            <ul>
+                                <li>Mutator methods</li>
+                                Example
+                                <ul>
+                                    <li>reverse()</li>
+                                    <p>a = [1,2,3]</p>
+                                    <p>a.reverse();</p>
+                                    <p>-> [3,2,1]</p>
+
+                                    <li>sort()</li>
+                                    <p>(v1,v2) /* if v1<v2 then -, if v1>v2 then +, else empty set */</v2></p>
+
+                                    <li>splice()</li>
+                                    <p>splice(2, 1,  1, 2, 3)</p>
+                                    <p>-> index, 1 element, *add these elements</p>
+                                </ul>
+
+                                <li>Accessor methods</li>
+                                <ul>
+                                    <li>.join(“ <li></li> “)</li>
+                                </ul>
+
+                                <li>Heration methods</li>
+                                <ul>
+                                    <p>a.filter(function)</p>
+                                    <p>-> value, index, array</p>
+
+                                    <p>a = [1,5,4,8,9,10,12,4,6,7,9]</p>
+                                    <p>a.filter(v => v%2 == 0)</p>
+                                    <p>-> [4,8,10,2,4,6]</p>
+
+                                    <p>a.every(v => v>0)</p>
+                                    <p>-> true</p>
+                                    <p>a.every(v => v%4 == 0)</p>
+                                    <p>-> false</p>
+
+                                    <p>.forEach() – do it for each element</p>
+                                    <p>.reduce – accumulator, v, i, a</p>
+                                    
+                                    <p>Example:</p>
+                                    <p> a.reduce ((acc, v) => acc += v)</p>
+                                    <p> -> 75 (sum of all elements)</p>
+
+                                </ul>
+
+                                <h2>Objects</h2>
+                                <ul>
+                                    <li>Objects are prototyped based</li>
+                                    <h3>Sample Codes</h3>
+                                    <ul>
+                                        <p>var emptyObj = new object();</p>
+                                        <p>var alsoEmpty = {};</p>
+
+                                        <p>var student = {};</p>
+                                            <p>student.idno = 121;</p>
+                                            <p>student[‘name’] = ‘JDC’;</p>
+                                            <p>student.toString = function(){</p>
+                                                <p>return `${this.idno}. ${this.name}`;</p>
+                                            <p>} </p>
+                                        <p>console.log(JSON.stringify(student, null, 2);</p>
+                                        <p>S = localStorage.getItem(‘213134’);</p>
+                                    </ul>
+                                </ul>
+
+                                <h2>Constructor</h2>
+                                <ul>
+                                    <li>Function in ECMA script = class</li>
+
+                                    <h3>Sample Code</h3>
+                                    <p>function Person(name, age){</p>
+                                        <p>this.name = name;</p>
+                                        <p>this.age = age;</p>
+                                        <p>this.speak = function(){</p>
+                                            <p>console.log(`Hello! I’m ${this.name}`);</p>
+                                        <p>}</p>
+                                    <p>}</p>
+
+                                    <p>p = new Person(‘ako’, 100)</p>
+                                    <p>p1 = {name: ‘ikaw’, age:20}</p>
+                                </ul>  
+                            </ul>  
+
+                            <!-- End of Jay's Notes -->
+
                             
                         </div>
                     </li>
