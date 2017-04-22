@@ -278,3 +278,241 @@ CSS Declarations
 		- colors
 		- strings
 	-> functions: calc() attr() counter() counters() linear-gradient() radial-gradient() translate() scale() rotate() etc.
+
+=======================================================
+
+- Web app becoming the norm
+- Javascript global object at runtime environment
+	-> window
+	ex: window.navigator.vendor
+		window.document
+		   ^
+		(implied)document
+		document.getElementById('p')
+
+- Document Object Model(DOM) defines the tree structure
+- Element -> createElement();
+	ex: h1.document.createElement('h1')
+			<h1></h1>
+		document.body.appendChild(h1)
+		t = document.createText("header1")
+			"header1"
+		document.body.appendChild(h1)
+
+Javascript 
+	> Imperative mode of computation
+		-> sequence of instructions in what the programmer wants
+		-> variables
+		-> "var" - implicitely from the value declares its data type
+		-> implicitely typed
+
+Variables
+	> var
+	> let
+	> const
+
+	- if it's just a variable without a type and using var, creates a new windows property
+		let and const does not, it's simply stand alone objects
+	- function scope
+		-> local variable
+
+Data Types
+	- simple/primitive
+
+Procedural abstraction
+	- function (like method)
+	- function is also an object
+	- any non empty string are true
+		ex: function sayHello(){
+				console.log('Hello!');
+			}
+
+			sayHello() <- invoking
+			sayHello   <- window object
+
+	- all functions return a value anythign not defined is already defaulted as undefined
+
+		ex:
+			function greater(v1, v2){
+				if(v1 > v2){
+					return v1;
+				}else if(v2 > v1){
+					return v2;
+				}
+			}
+
+			*returns undefined if the numbers are equal
+	- a function is an anonymous function when the function is not given any name associated with the function
+
+/* Function expressions ... */ (cannot be invoked)
+(function (a,b){return a +b;})(10, 20);
+								^ direct call
+
+Name conflict
+	-> same name of window object, the more objects the higher chance of name conflict (the less names, the better)
+
+var add = new Function(a,b,'return a+b');
+var sum = add(10,20);
+
+----------------------------------------------
+
+/* arrow syntax */
+var multiply = (a,b) => {return a * b;}
+				^ just like function(a,b){...}
+var product = multiply(10,2);
+
+var divide = (a,b) => a/b;
+var quotient = divide(10,20);
+
+functino with one argument:
+var triple = n => 3*n;
+var thrice = triple(5);
+
+var zero = () => 0;
+	^ function f(){return 0;}
+
+----------------------------------------------
+
+/* functions can be recursive... */
+function factorial(n){
+	if(n<0){
+		throw "invalid argument";
+	}else if(n == 0){
+		return 1;
+	} else {
+		return n*factorial(n-1);
+	}
+}
+
+----------------------------------------------
+
+/* functions can be nested... */
+function outer(){
+	//some code here
+	function inner(){		//function inner() can only be called within the function outer()
+ 		//some code here
+	}
+}
+
+----------------------------------------------
+
+/* 'this','arguments', and 'apply'... */
+function args(){
+	console.log(this);
+	console.log(arguments.length);
+	for(let I = 0; i < arguments.length; i++){
+		console.log(aruments[i]);
+	}
+}
+
+args();
+args(1,2,3);
+args.apply('hi',[1,2,3,4]);
+
+*arguments object only exists inside the function
+
+----------------------------------------------
+
+/* function arguments can have default values */
+functino fn(a = 10, b=20,c,d=40,e){
+	console.log(`a = ${a}`);
+	console.log(`b = ${b}`);
+	console.log(`c = ${c}`);
+	console.log(`d = ${d}`);
+	console.log(`e = ${e}`);
+}
+
+----------------------------------------------
+
+/* functino nest parameters */
+function fn(a,b,...others){ 	//...others <- array
+	console.log(`a = ${a}`);
+	console.log(`b = ${b}`);
+	console.log('others = ');
+}
+
+----------------------------------------------
+
+/* Arrays */
+var empty Array = new Array(); 	//array object constructor
+var alsoEmptyArray = []; 		//array literal
+
+var arrayWithLengthFive = new Array(5);
+var arrayWithOneElement = [5];
+
+var array = new Array('5');
+var sameArray = ['5'];
+
+*length value can be changed, not just read only; exists but not allocated, set of undefined
+*Arrays are dynamic
+* ... <- spread syntax
+
+----------------------------------------------
+
+/* array destructoring */
+var array = [1,2,3,4,5];
+var [a,b,c,d,e] = array;
+var [,x,,y] = array;
+var [m,n,...others] = array;
+
+----------------------------------------------
+
+/* array indices can be non-contiguous */
+var array = [1,2,3,4,5];
+array [10] = 10;
+for(let i in array){
+	console.log(i,array[i]);
+}
+
+var array = [1,2,3];
+array.length = 10;
+
+----------------------------------------------
+
+Mutator Methods
+	-> pop
+	-> push
+	-> reverse
+	-> fill
+	-> shift, unshift
+	-> sort
+
+Accessor Methods
+	-> concat
+	-> includes
+	-> indexof
+	-> join
+
+Iteration Methods
+	-> filter
+	-> map
+	-> findIndex
+	-> every
+	-> some
+	-> reduce
+
+----------------------------------------------
+
+/* objects */
+var emptyObj = new Object();	//object constructor
+var alsoEmptyObj = {};			//object literal
+var ObjObj = Object({});
+
+----------------------------------------------
+
+/* Object Properties and Methods */
+var student = {};
+student.idno = '21583921';
+student['name'] = 'Doe';
+
+----------------------------------------------
+
+/* Constructor function */
+function Person(name, age){
+	this.name = name;
+	this.age = age;
+	this.speak = function () {
+		console.log('Hello, I'm ${this.name}');
+	}
+	var p = new Person('me', 21);	//must be with new if not with new, it's a window obj
+}
