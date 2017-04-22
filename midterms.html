@@ -59,7 +59,7 @@
                                 <li class="accordion-item" data-accordion-item>
                                     <a href="#" class="accordion-title">Who oversees the development of HTML?</a>
                                     <div class="accordion-content" data-tab-content>
-                                        <p>Wolrd Wide Web Consortium (W3C)</p>
+                                        <p>World Wide Web Consortium (W3C)</p>
                                     </div>
                                 </li>
                             </ul>         
@@ -111,7 +111,7 @@
                                 <div class="accordion-content" data-tab-content>
                                     <p>&lt;!DOCTYPE html&gt; ("standards","quirks")</p>
                                     <p>&lt;html&gt; (root element)</p>
-                                    <p>&lt;head&gt; (meta-information</p>
+                                    <p>&lt;head&gt; (meta-information)</p>
                                     <p>&lt;body&gt; (start tag, 'body' - tag name)</p>
                                     <p>&lt;/body&gt; (end tag)</p>
                                 </div>
@@ -238,16 +238,16 @@
                                                 <li>CSS 3 - modules (Last Version)</li>
                                                 <ul>
                                                     <li>To allow browser vendors implement what they want to implement and features can become recommendations when they are already mature enough</li>
-                                                    <li>if not tagged with "level 3" it is entirely new which was not added in CSS 2.1/li>
+                                                    <li>if not tagged with "level 3" it is entirely new which was not added in CSS 2.1</li>
                                                 </ul>
                                             </ul>
                                             <li>CSS Preprocessors and Frameworks</li>
                                             <ul>
-                                                <li>Use advance syntax, then convert it to flat hierarchy when compiled</li>
-                                                <li>Syntactically Awesome Style Sheet (SASS), LESS, 960 Grid System, Bootsrap, Foundation, Materialize, etc.</li>
+                                                <li>Uses advance syntax, then convert it to flat hierarchy when compiled</li>
+                                                <li>Syntactically Awesome Style Sheet (SASS), LESS, 960 Grid System, Bootstrap, Foundation, Materialize, etc.</li>
                                                 <li>@mixin</li>
                                                 <ul>
-                                                    <li>mixing a block of properties in anotehr block of properties</li>
+                                                    <li>mixing a block of properties in another block of properties</li>
                                                     <li>used with @include</li>
                                                 </ul>
                                                 <li>CSS Frameworks</li>
@@ -302,14 +302,14 @@
                                                 <li>@import - import stylesheet</li>
                                                 <li>@media - media query</li>
                                                 <li>@font-face - key frame animation</li>
-                                                <li>@page</li>
+                                                <li>@page - specifies dimensions, orientations, margins, etc., of  page box</li>
                                                 <li>@document - stylesheet for specific page/domain</li>
-                                                <li>@namespace</li>
-                                                <li>@suports</li>
-                                                <li>@keyframes</li>
-                                                <li>@viewport</li>
-                                                <li>@counter-style</li>
-                                                <li>@font-feature-values</li>
+                                                <li>@namespace - defines XML namespaces to be used and @namespace define the default namespace for the style sheet</li>
+                                                <li>@supports - gives CSS the ability to perform a feature query</li>
+                                                <li>@keyframes - controls the intermediate steps in a CSS animation sequence by defining styles for keyframes</li>
+                                                <li>@viewport - control viewport settings, primarily on mobile devices</li>
+                                                <li>@counter-style - defines how to convert a counter value into a string</li>
+                                                <li>@font-feature-values - allows authors to use a common name in font-variant-alternates for feature activated differently in OpenType</li>
                                             </ul>
                                             <li>CSS Rule Sets (a.k.a. CSS rules, Style Rules)</li>
                                             <ul>
@@ -327,11 +327,11 @@
                                         <ul>
                                             <li>Selector</li>
                                             <ul>
-                                                <li>Structure used as a condition in a CSS rule to determine which elements in the document tree are meatched by the selector and are thus targeted by the formatting specified in the CSS rule
+                                                <li>Structure used as a condition in a CSS rule to determine which elements in the document tree are matched by the selector and are thus targeted by the formatting specified in the CSS rule
                                             </ul>
                                             <li>Selector Syntax</li>
                                             <ul>
-                                                <li>chain of one or more sequences or simple selectors separated by combinators, with one psuedo-element possibly appended to the last sequence</li>
+                                                <li>chain of one or more sequences or simple selectors separated by combinators, with one pseudo-element possibly appended to the last sequence</li>
                                                 <li>Sequence of simple selectors</li>
                                                 <ul>
                                                     <li>chain of simple selectors but separated by combinators</li>
@@ -405,7 +405,7 @@
                                                                             <li>:first-child (not CSS3)</li>
                                                                             <li>:last-child</li>
                                                                             <li>:only-child</li>
-                                                                            <li>:nth-child() (ex: nth-child(2n+1)</li>
+                                                                            <li>:nth-child() (ex: nth-child(2n+1))</li>
                                                                             <li>:first-of-type</li>
                                                                             <li>:last-of-type</li>
                                                                             <li>:only-of-type</li>
@@ -480,7 +480,7 @@
                                         
                             <ul class="accordion" data-accordion data-allow-all-closed="true">
                                 <li class="accordion-item" data-accordion-item>
-                                    <a href="#" class="accordion-title">CSS Rule Precendence</a>
+                                    <a href="#" class="accordion-title">CSS Rule Precedence</a>
                                     <div class="accordion-content" data-tab-content>
                             <!--<p>Ways to refer and format an HTML element:</p>
                             <ul>
@@ -501,7 +501,7 @@
                                                 <a href="#" class="accordion-title">By origin and importance</a>
                                                 <div class="accordion-content" data-tab-content>
                                                     <ul>
-                                                        <li>user agent importance declaration</li>
+                                                        <li>user agent important declaration</li>
                                                         <li>user important declarations</li>
                                                         <li>author important declarations</li>
                                                         <li>author normal declarations</li>
@@ -549,8 +549,8 @@
                                                 <li>vendor-specific extensions (a.k.a. vendor prefixes)</li>
                                                 <li>initial - explicitly set the initial value of a property</li>
                                                 <li>inherit - explicitly setting property value inherited</li>
-                                                <li>unset</li>
-                                                <li>revert</li>
+                                                <li>unset - combination of the initial and inherit</li>
+                                                <li>revert - rolls back the cascade to no style</li>
                                             </ul>
                                             <li>Values (values and units)</li>
                                             <ul>
@@ -1043,7 +1043,7 @@
                                                 <li>getElementsByNS</li>
                                                 <li>document.querySelector(‘p’)</li>
                                                 <ul>
-                                                    <li>output: &ltp&gt loren ipsum &lt/p&gt</li>
+                                                    <li>output: &ltp&gt lorem ipsum &lt/p&gt</li>
                                                 </ul>   
                                                 <li>document.querySelectorAll(‘p’)</li>
                                                 <ul>
@@ -1142,7 +1142,7 @@
                                             <li>anonymous function – function without a name</li>
                                             <li class="nb">ex:</li>
                                             <p>(function(a,b){return a+b;})(10,20);</p>
-                                            <li>Can throw anyting/try-and-catch</li>
+                                            <li>Can throw anything/try-and-catch</li>
                                         </ul>
                                     </div>
                                 </li>
@@ -1221,7 +1221,7 @@
                                                         <p>function args(){</p>
                                                         <p class="tb">console.log(this);</p>
                                                         <p class="tb">console.log(arguments.length);</p>
-                                                        <p class="tb">for(let i=0; i&lt;aruments.length; i++){</p>
+                                                        <p class="tb">for(let i=0; i&lt;arguments.length; i++){</p>
                                                         <p class="tb2">console.log(arguments[i]);</p>
                                                         <p class="tb">}</p>
                                                         <p>}</p>
@@ -1490,8 +1490,12 @@
                         <a href="#" class="accordion-title">References</a>
                         <div class="accordion-content" data-tab-content>
                             <ul>
+								<li>MDN. CSS. Retrieved from </li>
+								<a href="https://developer.mozilla.org/en-US/docs/Web/CSS">https://developer.mozilla.org/en-US/docs/Web/CSS</a>
+								<li>W3C. ALL STANDARDS AND DRAFTS. Retrieved from </li>
+								<a href="https://www.w3.org/TR/#tr_CSS">https://www.w3.org/TR/#tr_CSS</a>
                                 <li>W3C. JAVASCRIPT. Retrieved from</li>
-                                <a href="https://www.w3schools.com/js/default.asp">https://www.w3schools.com/js/default.asp</a>
+                                <a href="https://www.w3schools.com/js/default.asp">https://www.w3schools.com/js/default.asp</a>	
                             </ul>
                         </div>
                     </li>
