@@ -1,0 +1,426 @@
+Hyper text Markup Language (HTML)
+
+A. What is HTML?
+	- Specify structure and content
+	- Use to create and mark up web pages
+
+B. What’s HTML’s role in modern web development?
+	- structure and content
+
+C. Who invented HTML?
+	- Sir Tim Berners-Lee
+
+D. Who oversee the development of HTML?
+	- World Wide Web Consortium (W3C)
+
+E. What are the versions of HTML?
+	- HTML 1.0 – very limited, no formal specifications
+	- HTML 2.0 – RFC 1866
+	- Evolution of HTML ? W3C
+	Recommentdation – publications
+	- HTML 3.0 – immediately super seeded by 
+		= 3.2 
+		= 4.0 (1997)
+		= 4.01 (1999) – XHTML (1.0, 1.1, 2.0)
+
+F. Which documents specify the HTML standards?
+	- World Wide Web Consortium (W3C)
+
+
+
+HTML5
+
+A. HTML ELEMENTS
+
+	html
+		title, base, link, meta, style
+
+	body
+		article, aside, have, section, header, footer, main
+		address
+		div
+
+		h1, h2, h3, h4, h5, h6
+
+		p
+		hr
+         	pre
+         	blockquote
+
+          	ol, ul
+			li
+          	dl
+			dt, dd
+
+	  	figure
+			figcaption
+
+         	a
+	      	em, strong, small, s
+	        cite, q
+              	dfn, abbr
+	       	ruby, rb, rt, rtc, rp
+         	data, time
+	       	code, var, samp, kbd
+	       	sup, sub
+	       	i, b, u, mark
+	      	bdi, bdo
+	       	span
+	       	br, wbr
+  	       	ins, del
+	
+	table
+		caption
+		colgroup ,col
+		thead, tbody, tfoot
+			tr
+			th, td
+
+	form
+		label
+		input
+		button
+
+
+HTML Attributes:
+
+A. Global Attributes
+B. Element – Specific Attribute
+c. Data -* Attribute
+D. Role, Aria - * Attribute
+
+
+------------------------------------------------------------------------------------------------------------------------------
+
+
+Cascading Stylesheets (CSS)
+	- language used to specify the presentation aspects (e.g. layout and formatting) of structually marked-up documents
+	- developed by Haikon Wium Lie (CHSS) and Bert Bos (SSP)
+	- versions:
+		a. CSS 1 (1996)
+		b. CSS 2.1 (2011)
+		c. CSS 3
+   	- CSS Preprocessors, CSS Frameworks
+		- Sass, Less, 960 Grid System, Bootsrap
+		- predefined for classes, buttons, etc.
+
+
+XHTML/HTML Stylesheets
+	- author styles
+		- CSS created by the author
+	- user style
+		- used by the user
+	- user agent style (example defult CSS 2.1 stylesheet for HTML 4)
+
+
+Author Styles
+	- inline styles
+	- external stylesheets (recommended)
+	- embedded styles
+
+CSS Statements
+	- @ - Rules = An at-rule is an instruction or directive to the CSS parser.
+	     - @charset
+	     - @import
+	     - @media
+	     - @font-face
+	     - @keyframes
+	     - @page
+
+
+CSS Rule Sets
+	- consists of a selector, followed by a braces-encoded declaration block; the rule set applies the declarations listed in the declaration block to all elements matched by the selector.
+
+
+CSS Selectors
+   A. Selector
+	- Structure used as a condition in a CSS rule to determine which elements in the document tree are matched by the selector and are thus targeted by the formatting specified in the CSS rule
+
+   B. Selector Syntax
+	- chain of one or more sequences of simple selectors separated by combinators, with one psuedo-element possibly appended to the last sequence
+	- sequence of simple selectors
+		> chain of simple selectors but separated by combinators
+		> always start with a type selector or a universal selector
+		> cannot contain other type selectors or universal selectors
+	- group selectors
+		> comma-separated list of selectors representing the union of all elements selected by each of the selectors in the list
+
+   C. Sipmle Selectors
+	- type selectors (ex: p, div, span)
+	- universal selectors (ex: *) - selecting all elements on a page
+	- attribute selectors - eclared using square brackets
+	- class selector - declared with a dot preceding a string of one or more characters
+	- ID selector - declared using a hash, or pound symbol (#) preceding a string of characters
+	- pseudo-class - uses a colon character to identify a pseudo-state that an element might be in—for example, the state of being hovered, or the state of being activated
+
+
+CSS Rule Precedence
+	A. by origin and importance (cascading origins, !important)
+		- user agent important declarations
+		- user important declarations
+		- author important declarations
+		- author normal declarations
+		- user normal declarations
+		- user agent normal declarations
+
+	B. by specificity
+		- inline style
+		- # of ID selectors
+		- # of class selectors, attriute selectors, and pseudo-classes
+		- # of type selectors and pseudo-elements
+
+	C. by order (last declaration)
+
+CSS Declarations
+	A. Properties
+		- shorthand properties
+			* initial			 <-		        <-
+			* inherit   <-inheritable	  | non-inheritable      | global
+ 			* unset	    <-inheritable        <-			 | keyword
+			* revert						<-
+		- vendor-specific extensions (aka vendor prefixes)
+	B. Values
+		- keywords
+		- numbers (integers and reals in decimal notation)
+		- dimensions
+			> length, angle, duration, frequency, resolution
+			> length units:
+				o font-relative: em ex ch rem
+				o viewport-percentage: vw vmin vmax
+				o absolute lengths: cm mm q in pt pc px
+			> angle units: deg grad rad turn
+			> duration units: s ms
+			> frequency units: hz khz
+			> resolution units: dpi dpcm dppx
+		- percentages
+		- URLs and URIs
+		- colors
+		- strings
+		- functions: calc() attr() counter() counters() linear-gradient() radial-gradient() translate() scale() rotate() etc.
+
+
+CSS Preprocessord and CSS Frameworks
+	- Sass, Less, 960 Grid System, Bootstrap
+
+A. Preprocessors
+	- CSS preprocessors take code written in the preprocessed language and then convert that code into the same old css.
+
+B. Frameeworks
+	- CSS framework is a pre-prepared software framework that is meant to allow for easier, more standards-compliant web design using the Cascading Style Sheets language
+
+
+---------------------------------------------------------
+
+
+JavaScript
+
+Client-side Scripting 
+	- Running the program in the website
+	- Execution of program in the browser
+
+Associating Scripts
+	a. Embedding script in the HTML document
+	b. External script
+	c. Inline Scripts
+
+Two Types of Codes
+1. Top Level / Global Code - execute on the fly
+2. Function - execute when function is invoked
+
+* Externally linked script
+	- Defer = loading time / when finished fetching the script then continue rendering the HTML
+	- Async = execution will be asynchronous
+	* Process: Normal -> fetch -> compiled -> execute
+
+The Window Object
+	- window object is supported by all browsers
+	- All global JavaScript objects, functions, and variables automatically become members of the window object.
+	- Global variables are properties of the window object.
+	Examples:
+		window.document.getElementById("header");
+		document.getElementById("header");
+
+
+Programmatic Construct
+	- do not use strongly type variables
+		= implicit and dynamic typing
+	Variables
+		- var, let, const
+		* top-level
+			- can create a window property
+		* functions code (function code variable)
+		* let
+			- can create local variable and available in a block
+		* const
+			- same behavior as let; constants cannot be reassigned
+
+	Data Types
+		- simple / primitive
+		* boolean ('falsy', 'truthly')
+
+
+Standard Objects
+
+/* Functions */
+
+ 	functions sayHello() {
+		console.log('hello');
+	}
+
+* function is also an object
+* say Hello() 	- invoking the method
+* sayhello 	- retriving variable
+
+
+	function greater(v1, v2) {
+		if (v1 > v2) {
+			return v1;
+		} else if(v2 > v1){
+			return v2;
+		}
+	}
+
+------------------------------------------
+
+	function fun (arg) {
+		switch (arg) {
+			case 0: return true;
+			case 1: return 100;
+			case 2: return 'hello';
+			case 3; return (1, 2, 3);
+			case 4: return {name:'ako', age:10};
+			case 5: return function (num) {return num * 2};
+
+		}
+	}
+
+-------------------------------------------
+
+/* Function Expressions */
+
+Examples:
+
+	(function(a, b) {return a+b;} (10,20))
+
+	*ADD
+	var add = new function(‘a,b’,’return a+b’);
+	var sum = add(10,20);
+
+	*SUBTRACT
+	var subtract = function(a,b){
+		return a-b;
+	}
+	var difference = subtract(10,20);
+
+
+/* Arrow Syntax */
+
+	var multiply = (a,b) => {return a*b;}
+	var product = multiply(10,20);
+
+	var divide = (a,b) => a/b;
+	var quotient = divide(20,10);
+
+	var triple = n => 3*n;
+	var thrice = triple(5);
+
+	var zero = () => 0;
+
+
+/* Functions can be Recursive */ (not safe)
+
+	function factorial(n){
+		if (n<0){
+			throw “Invalid argument”;
+		} else  if (n==0) {
+			return 1;
+		} else {
+			return n*factorial(n-1);
+		}
+	}
+
+*throw - can throw anything
+* try.catch - what ever was trown will be caugth
+
+
+/* Functions can be Nested */
+
+	function outer(){
+		//some codes here ...
+
+		function inner(){
+			//inner function codes here ...
+		}
+
+		//some more codes here ...
+	}
+
+
+
+/* 'this', 'arguments', and 'apply' */
+
+	function args(){
+		console.log(this);
+		console.log(arguments.length);
+		for(let I = 0; i < arguments.length; i++){
+			console.log(aruments[i]);
+		}
+	}
+
+	args();
+	args(1,2,3);
+	args.apply('hi',[1,2,3,4]);
+
+* create and call generic functions
+
+
+
+/* Function nest parameters */
+
+	function fn(a,b,...others){ 	//...others <- array
+		console.log(`a = ${a}`);
+		console.log(`b = ${b}`);
+		console.log('others = ');
+	}
+
+----------------------------------------------
+
+/* Arrays */
+
+	var empty Array = new Array(); 	//using array object 
+	var alsoEmptyArray = []; 	//using array literal
+
+	var arrayWithLengthFive = new Array(5);
+	var arrayWithOneElement = [5];
+
+	var array = new Array('5');
+	var sameArray = ['5'];
+
+
+
+/* Array Destructoring */
+
+	var array = [1,2,3,4,5];
+	var [a,b,c,d,e] = array;
+	var [,x,,y] = array;
+	var [m,n,...others] = array;
+
+
+/* Array indices can be non-contiguous */
+	var array = [1,2,3,4,5];
+	array [10] = 10;
+	for(let i in array){
+		console.log(i,array[i]);
+	}
+
+	var array = [1,2,3];
+	array.length = 10;
+
+Mutator on Arrays
+	- change the array
+	- mutate the value
+
+	Example:
+	a = [1, 2, 3]
+	a.reverse();
+	-> [3, 2, 1]
