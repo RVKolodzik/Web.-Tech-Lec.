@@ -953,7 +953,7 @@
                                         <ul>
                                             <li>External Linking</li>
                                             <ul>
-                                                <li><'script type=’text/javascript’ src=’script.js’><'/script></li>
+                                                <li>&lt;script type=’text/javascript’ src=’script.js’&gt;&lt;/script&gt;</li>
                                             </ul>
                                             <li>Embedded</li>
                                             <ul>
@@ -1170,6 +1170,12 @@
                                                     <div class="accordion-content" data-tab-content>
                                                         <p>var multiply = (a,b) => {return a*b;}</p>
                                                         <p>var product = multiply(10,20);</p>
+                                                        <p>var divide = (a,b) => a/b;</p>
+                                                        <p>var quotient = divide(10,20);</p>
+                                                        <p>function with one argument:</p>
+                                                        <p>var triple = n => 3*n;</p>
+                                                        <p>var thrice = triple(5);</p>
+                                                        <p>var zero = () => 0;</p>
                                                     </div>
                                                 </li>
                                             </ul>
@@ -1210,10 +1216,34 @@
                                             
                                             <ul class="accordion" data-accordion data-allow-all-closed="true">
                                                 <li class="accordion-item" data-accordion-item>
-                                                    <a href="#" class="accordion-title">Giving default values for variables</a>
+                                                    <a href="#" class="accordion-title">'this', 'arguments', and 'apply'</a>
+                                                    <div class="accordion-content" data-tab-content>
+                                                        <p>function args(){</p>
+                                                        <p class="tb">console.log(this);</p>
+                                                        <p class="tb">console.log(arguments.length);</p>
+                                                        <p class="tb">for(let i=0; i&lt;aruments.length; i++){</p>
+                                                        <p class="tb2">console.log(arguments[i]);</p>
+                                                        <p class="tb">}</p>
+                                                        <p>}</p>
+                                                        <br>
+                                                        <p>args();</p>
+                                                        <p>args(1,2,3);</p>
+                                                        <p>args.apply('hi',[1,2,3,4]);</p>
+                                                        <p>Note: arguments object only exists inside the function</p>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                            
+                                            <ul class="accordion" data-accordion data-allow-all-closed="true">
+                                                <li class="accordion-item" data-accordion-item>
+                                                    <a href="#" class="accordion-title">Function arguments can have default values</a>
                                                     <div class="accordion-content" data-tab-content>
                                                         <p>function fn(a=10, b=20, c, d=40, e){</p>
-                                                            <p class="tb">// codes here</p>
+                                                            <p class="tb">console.log(`a=${a}`);</p>
+                                                            <p class="tb">console.log(`a=${b}`);</p>
+                                                            <p class="tb">console.log(`a=${c}`);</p>
+                                                            <p class="tb">console.log(`a=${d}`);</p>
+                                                            <p class="tb">console.log(`a=${3}`);</p>
                                                         <p>}</p>
                                                     </div>
                                                 </li>
@@ -1221,7 +1251,7 @@
                                             
                                             <ul class="accordion" data-accordion data-allow-all-closed="true">
                                                 <li class="accordion-item" data-accordion-item>
-                                                    <a href="#" class="accordion-title">Function Rest Parameters</a>
+                                                    <a href="#" class="accordion-title">Function Nest Parameters</a>
                                                     <div class="accordion-content" data-tab-content>
                                                         <p>function fn(a, b, … others) {</p>
                                                             <p class="tb">console.log(`a=${a}`);</p>
@@ -1241,22 +1271,22 @@
                                 <li class="accordion-item" data-accordion-item>
                                     <a href="#" class="accordion-title">Arrays</a>
                                     <div class="accordion-content" data-tab-content>
-                                        <ul>
-                                            <li class="nb">JavaScript Arrays are dynamic in size</li>
-                                            
+                                        <ul class="nb">
+                                            <li>JavaScript Arrays are dynamic in size</li>
+                                            <li>Length value of the array can be changed, not just read only; exists but not allocated, which are a set of undefined </li>
                                             <ul class="accordion" data-accordion data-allow-all-closed="true">
                                                 <li class="accordion-item" data-accordion-item>
                                                     <a href="#" class="accordion-title">Sample Codes</a>
                                                     <div class="accordion-content" data-tab-content>
                                                         <p>var emptyArray = new Array();</p>
                                                         <p>var alsoEmptyArray = [];</p>
-
+                                                        <br>
                                                         <p>var arrayWithLengthFive = new Array(5);</p>
                                                         <p>var arrayWithOneElementWithValueFive = [5];</p>
-
+                                                        <br>
                                                         <p>var array = new Array(‘5’) – number of elements</p>
                                                         <p>var sameArray = [‘5’];</p>
-
+                                                        <br>
                                                         <p>var multiDimArray = [</p>
                                                             <p class="tb">[‘apple’, ‘banana’, ‘orange’],</p>
                                                             <p class="tb">[4, 5, 6, [true, false, false], 7, 8],</p>
@@ -1267,7 +1297,7 @@
                                             
                                             <ul class="accordion" data-accordion data-allow-all-closed="true">
                                                 <li class="accordion-item" data-accordion-item>
-                                                    <a href="#" class="accordion-title">Deconstructing an array</a>
+                                                    <a href="#" class="accordion-title">Array Destructoring</a>
                                                     <div class="accordion-content" data-tab-content>
                                                         <p>var array=[1,2,3,4,5];</p>
                                                         <p>var [a,b,c,d,e] = array;</p>
@@ -1286,6 +1316,9 @@
                                                         <p>for(let i in array){</p>
                                                             <p class="tb">console.log(i, array[i]);</p>
                                                         <p>}</p>
+                                                        <br>
+                                                        <p>var array = [1,2,3];</p>
+                                                        <p>array.length= 10;</p>
                                                     </div>
                                                 </li>
                                             </ul>
@@ -1300,56 +1333,98 @@
                                     <div class="accordion-content" data-tab-content>
                                         <ul>
                                             <li>Mutator methods</li>
-                                            <li class="nb">ex:</li>
                                             <ul>
-                                                <li>reverse()</li>
-                                                <p>a = [1,2,3]</p>
-                                                <p>a.reverse();</p>
-                                                <p>-> [3,2,1]</p>
-
-                                                <li>sort()</li>
-                                                <p>(v1,v2) /* if v1<v2 then -, if v1>v2 then +, else empty set */</v2></p>
-
-                                                <li>splice()</li>
-                                                <p>splice(2, 1,  1, 2, 3)</p>
-                                                <p>-> index, 1 element, *add these elements</p>
+                                                <li>pop</li>
+                                                <li>push</li>
+                                                <li>reverse</li>
+                                                <ul>
+                                                    <li class="nb">ex:</li>
+                                                    <li>reverse()</li>
+                                                    <li>
+                                                        <p>a = [1,2,3]</p>
+                                                        <p>a.reverse();</p>
+                                                        <p>-> [3,2,1]</p>
+                                                    </li>
+                                                </ul>
+                                                
+                                                <li>fill</li>
+                                                <li>shift, unshift</li>
+                                                <li>sort</li>
+                                                <ul>
+                                                    <li class="nb">ex:</li>
+                                                    <li>sort()</li>
+                                                    <li>
+                                                        <p>(v1,v2) /* if v1&lt;v2 then -, if v1&gt;v2 then +, else empty set */</p>
+                                                    </li>
+                                                </ul>
+                                                <li>splice</li>
+                                                <ul>
+                                                    <li class="nb">ex:</li>
+                                                    <li>splice()</li>
+                                                    <li>
+                                                        <p>splice(2, 1,  1, 2, 3)</p>
+                                                        <p>-> index, 1 element, *add these elements</p>
+                                                    </li>
+                                                </ul>
                                             </ul>
 
                                             <li>Accessor methods</li>
                                             <ul>
-                                                <li>.join(“ <li></li> “)</li>
+                                                <li>concat</li>
+                                                <li>includes</li>
+                                                <li>indexOf</li>
+                                                <li>join</li>                           <ul>
+                                                    <li class="nb">ex:</li>
+                                                    <li>.join(“ “)</li>
+                                                </ul>      
                                             </ul>
 
-                                            <li>Heration methods</li>
+                                            <li>Iteration methods</li>
                                             <ul>
-                                                <li>
-                                                    <p>a.filter(function)</p>
-                                                    <p>-> value, index, array</p>
-                                                </li>
+                                                <li>map</li>
+                                                <li>findIndex</li>
+                                                <li>reduce</li>
+                                                <li>filter</li>
+                                                <ul>
+                                                    <li class="nb">ex:</li>
+                                                    <li>
+                                                        <p>a.filter(function)</p>
+                                                        <p>-> value, index, array</p>
+                                                    </li>
 
-                                                <li>
-                                                    <p>a = [1,5,4,8,9,10,12,4,6,7,9]</p>
-                                                    <p>a.filter(v => v%2 == 0)</p>
-                                                    <p>-> [4,8,10,2,4,6]</p>
-                                                </li>
-                                            
-                                                <li>
-                                                    <p>a.every(v => v>0)</p>
-                                                    <p>-> true</p>
-                                                </li>
+                                                    <li>
+                                                        <p>a = [1,5,4,8,9,10,12,4,6,7,9]</p>
+                                                        <p>a.filter(v => v%2 == 0)</p>
+                                                        <p>-> [4,8,10,2,4,6]</p>
+                                                    </li>
+                                                </ul>
                                                 
-                                                <li>
-                                                    <p>a.every(v => v%4 == 0)</p>
-                                                    <p>-> false</p>
-                                                </li>
+                                                <li>every</li>
+                                                <ul>    
+                                                    <li class="nb">ex:</li>
+                                                    <li>
+                                                        <p>a.every(v => v>0)</p>
+                                                        <p>-> true</p>
+                                                    </li>
+
+                                                    <li>
+                                                        <p>a.every(v => v%4 == 0)</p>
+                                                        <p>-> false</p>
+                                                    </li>
+                                                </ul>
                                                 
-                                                <li>
-                                                    <p>.forEach() – do it for each element</p>
-                                                    <p>.reduce – accumulator, v, i, a</p>
-                                                    <p>ex:</p>
-                                                    <p> a.reduce ((acc, v) => acc += v)</p>
-                                                    <p> -> 75 (sum of all elements)</p>
-                                                </li>
+                                                <li>forEach</li>
+                                                <ul>
+                                                    <li class="nb">ex:</li>
+                                                    <li>
+                                                        <p>.forEach() – do it for each element</p>
+                                                        <p>.reduce – accumulator, v, i, a</p>
+                                                        <p>ex:</p>
+                                                        <p> a.reduce ((acc, v) => acc += v)</p>
+                                                        <p> -> 75 (sum of all elements)</p>
+                                                    </li>
+                                                </ul>
+                                            </ul>
                                         </ul>
                                     </div>
                                 </li>
@@ -1365,6 +1440,7 @@
                                             <ul>
                                                 <p>var emptyObj = new object();</p>
                                                 <p>var alsoEmpty = {};</p>
+                                                <p>var ObjObj = Object({});</p>
 
                                                 <p>var student = {};</p>
                                                     <p>student.idno = 121;</p>
