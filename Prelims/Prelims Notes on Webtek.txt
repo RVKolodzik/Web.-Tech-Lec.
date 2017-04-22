@@ -1,0 +1,222 @@
+
+World Wide Web 
+	- The World Wide Web (abbreviated WWW or the Web) is an information space that allows documents to be connected to the other document by hyperlinks.
+
+Internet
+	- Masiive global netowrks
+	- Global information system logically connected through IP
+	- Internetwork
+
+Protocols
+	- Communication standard
+	- Standard way of represenring data
+
+IP address
+	- Able to support communication using the Transmission Control Protocol
+	- provides, uses or makes accessible, either publicy or privatel, high level publicly layered and the communications
+	
+Internet
+	- 1969 -- ARPANET - first network to implement the protocol suite TCP/IP
+	- 1972 -- Email
+	- 1989 -- Sir Tim Berners-lee
+		- CERN -- nuclear research center
+		- HTTP, HTML, URL, webserver, webcliesnts/web browser
+
+WAIS - wide area information services
+	- client-server text searching system that uses the ANSI Standard Z39.50 and Protocol Speifications to search index databases on remote computers
+
+
+HTTP
+	- application layer communication protocol
+	- W3C & IETF
+	- HTTP/2 builds on the success of SPDY, which was used as a starting point for the new protocol.
+		- it's a tunnel for the protocol and modifies the way existing HTTP requests and responses are sent
+	- usually takes place over TCP/IP connections
+	- default port is TCP 80
+	- Network socket -- combination of port & IP
+	- TLS & SSL -- TLS and his predecessor SSL (Secure Socket Layer) is the standard security technology for establishing secure communications between a web server and a browser
+
+HTTP - client server architecture 
+	a.) Server
+		- Hsting web resources
+		- waiting for clients
+		- Origin server -- server on which a given resource resides or is to be created
+		- Proxy server -- intermediary program which acts as both server and client for the purpose of making request on behalf of ohter clients
+		- Gateway -- server which acts as an intermediary for some other server
+	b.) Client (User Agent)
+		- Make request
+		- Any application that contacts a web server
+		- Web crawlers/spider -- is an Internet bot which systematically browses the World Wide Web, typically for the purpose og Web indexing
+	c.) Major Characteristics
+		1.) Request -- response protocol
+			- Pull protocol -- clients always initiates the request from the server
+			- "Polling" -- process where the computer or controlling device waits for an external device to check for its readiness or state, often with low-level hardware
+			- HTTP 2 -- server can now send information to the client
+		2.) Staleless protocol -- serve and forget protocol
+			- Server does not keep any information about clients in between request
+
+		3.) Cache control
+			- Locality of reference Principle -- phenomenon in which the same values, or related storage locations are frequently accessed depending on the memory access pattern
+			- MIME -- Multipurpose Internet MAil Extension
+
+HTTP Resource Addressing
+	- URI (Uniform Resource Identifiers)
+		- Uniform Resource Identifiers are simply formatted strings which identify--via name, location, or any other characteristics--a resource
+		- Unifirm Resource Locators (URL)
+		- Uniform Resource Names (URN)
+
+HTTP URL Components
+	a.) Scheme (HTTP or HTTPS)
+	b.) Authority
+		- User infomation (deprecated)
+		- Host -- name of the machine
+			- Domain name
+			- DNS -- domain name system
+		- Port Number
+	c.) Path -- document root -- starts in "/"
+		- Static -- serve as is
+		- Dynamic -- scripts
+	d.) Query -- starts in a "?"
+		- & separating parameters
+	e.) Fragment identifier
+		- starts in a "#"
+
+HTTP Request Message
+	a.) Request Line -- The Request Line begins with a method token, follwed by the Request-URI and the protocol version and ending with CRLF.
+		1.) Method -- indicates the method to be performed on the resource identified by the Request-URI
+		2.) Request URI -- identifies the resource upon which to apply the request
+			- Request-URI ="*" | absoluteURI | abs_path | authority
+			- * - the request does not apply to a paricular resource, but to the server itself, and is only allowed when the method used does not necessarily apply to a resource.
+		3.) HTTP Protocol
+	b.) Message Header (general, request, entity)
+		- HTTP 1.1 -- one header is required
+	c.) Empty Line -- indicating the end of the header fields
+	d.) Message Body (payload) -- used to carry the entity-body associated with the request or response
+
+
+HTTP Request Method
+	a.) Standard Method
+		1.) GET -- retrive whatever information is identified by the Request-URI
+			- most commonly used HTTP mehtod
+			- must be supported by all compliant general pupose server
+		2.) HEAD -- identical to GET except that the server MUST NOT return a message-body in the response
+			- represent metadata
+			- metainformation contained in the HTTP headers in respose to a HEAD request SHOULD be identical to the information sent in response to a ET request
+		3.) POST -- is used to request the origin server accpect the entity enclosed in the request subordinate of the resource identified by the Request-URI in the Request-Line
+		4.) PUT -- request that the enclosed entity to be stored the supplied Request-URI
+		5.) DELETE -- request that the origin server delete the resource identified by the Request-URI
+		6.) OPTION -- represents a request for information about the communication options available on the request/response chain identified by the Request-URI
+		7.) TRACE -- used to invoke a remote, application-layer loop-bak of the request message
+			- The final recipient of the request SHOULD reflect the message recieved back to the client as the entity-body of a 200 (OK) response.
+		8.) CONNECT -- use with a proxy that can dynamically switch to being a tunnel
+			- Encryption tunnel -- blind relay
+	b.) Safe Methods -- SHOULD NOT have the significance of taking an action other than retrieva
+		- Get, Head, Option, Trace
+	c.) Idempotent Methods -- can use several times
+	d.) Cacheable Methods --if a cache is allowed to store a copy of the response message for use in answering subsequent request
+
+
+HTTP Message Header
+	a.) General Header Fields
+		1.) Cache Control -- used to specify directives that MUST  be obeyed by all caging mechanisms along the request/response chian
+		2.) Connection -- allows the sender to specify opstions that are desired for that particular connection and MUST NOT be communicated by proxies over further connections
+		3.) Date -- represents the date and time at whic the message was originated, having the same semantics as orig-date in RFC 822
+		4.) Pragma -- is used to include implementation- specific direcives that might apply to any recipient along the request/response chain
+		5.) Trailer -- indicates that the given set of header fields is present in the trailer of a message encoded with chunked transfer-coding
+		6.) Transer-Encoding -- indicate what (if any) type of transformation has been applied to the message body in order to safely transfer it betwee the sender and the recipient
+		7.) Upgrade -- allows the client to specify what additional communication protocols it supports and would like to use if the server finds it appropriate to switch protocols.
+		8.) Via -- MUST be used b gateways and proxies to indicate the intermediate protocols and recipients between the user agent and the server on requests, and between the origin server and the client on responses
+		9.) Warning -- used to carry additional information about the status of a message
+	b.) Request Header Fields
+		- Accept-request		- If-Mofdified-Since
+		- Accept-Charset		- If-None-Match
+		- Accept-Encoding		- If-Range
+		- Accept-Language		- If-Unmodified-Since
+		- Authorization			- Max-Forwards
+		- Expect			- Proxy-Authorization
+		- Host				- Range
+		- From				- Referer
+		- If-match
+	c.) Respose Header Fields
+		- Accept-Ranges
+		- Age
+		- E-Tag
+		- Location
+		- Retry-After
+		- Server
+		- Vary
+		- WWW-Authentication
+	d.) Entity Header Fields
+		- Allow
+		- Content-Encoding
+		- Content-Length
+		- Content-location
+		- Content MD5
+		- Content-Range
+		- Content-type
+		- Expires
+		- Last-Modified
+
+HTTP Status Codes
+	a.) Information (1xx)
+		- 100 Continue -- The client SHOULD continue with its request.
+		- 101 Switching -- The server understands and is willing to comply with the client's request, via the Upgrade message header field(section 14.42)
+	b.) Successful (2xx)
+		- 200 OK -- The request has succeeded.
+		- 201 Created -- The request has been fulfilled and resulted in a new resource being created.
+		- 202 Accepted -- The request has been accepted for processing, but the processing has not been completed.
+		- 203 Non-Authorative Information -- The returned metainformation in the entity-header is not the definitive set as available from the origin server, but is gathered from a local or a third-party copy.
+		- 204 No Content -- The server has fulfilled the request but does not need to return an entity-body, and might want to return updated
+metainformation
+		- 205 Reset Content -- The server has fulfilled the request and the user agent SHOULD reset the document view which caused the request to
+be sent. 
+		- 206 Parial Content -- The server has fulfilled the partial GET request for the resource. 
+
+	c.) Redirection (3xx)
+		- 300 Multiple Choices -- The requested resource corresponds to any one of a set of representations, each with its own specific location, and
+agent-driven negotiation information (section 12) is being provided so that the user (or user agent) can select a preferred representation and redirect its request to that location.
+		- 301 Moved Permanently -- The requested resource has been assigned a new permanent URI and any future references to this resource SHOULD
+use one of the returned URIs.
+		- 302 Found -- The requested resource resides temporarily under a different URI.
+		- 303 See Other -- The response to the request can be found under a different URI and SHOULD be retrieved using a GET method on
+that resource. 
+		- 304 Not Modified -- If the client has performed a conditional GET request and access is allowed, but the document has not been
+modified, the server SHOULD respond with this status code. 
+		- 305 Use Proxy --  The requested resource MUST be accessed through the proxy given by the Location field. 
+		- 306 (Unused) -- The 306 status code was used in a previous version of the specification, is no longer used, and the code is reserved.
+		- 307 Temporary Redirect -- The requested resource resides temporarily under a different URI. 
+
+	d.) Client Error (4xx)
+		- 400 Bad Request -- The request could not be understood by the server due to malformed syntax. 
+		- 401 Unauthorized -- The request requires user authentication
+		- 402 Payment Required -- This code is reserved for future use.
+		- 403 Forbidden -- The server understood the request, but is refusing to fulfill it. 
+		- 404 Not Found -- The server has not found anything matching the Request-URI.
+		- 405 Method Not Allowed -- The method specified in the Request-Line is not allowed for the resource identified by the Request-URI. 
+		- 406 Not Acceptable -- The resource identified by the request is only capable of generating response entities which have content
+characteristics not acceptable according to the accept headers sent in the request.
+		- 407 Proxy Authentication Required -- The resource identified by the request is only capable of generating response entities which have content characteristics not acceptable according to the accept headers sent in the request.
+		- 408 Request Time-out -- The client did not produce a request within the time that the server was prepared to wait. 
+		- 409 Conflict -- The request could not be completed due to a conflict with the current state of the resource. 
+		- 410 Gone -- The requested resource is no longer available at the server and no forwarding address is known. 
+		- 411 Length Required -- The server refuses to accept the request without a defined Content-Length. 
+		- 412 Precondition Failed -- The precondition given in one or more of the request-header fields evaluated to false when it was tested on the
+server
+		- 413 Request Entity Too Large -- The server is refusing to process a request because the request entity is larger than the server is willing or able to
+process. 
+		- 414 Request-URI Too Large -- The server is refusing to service the request because the Request-URI is longer than the server is willing to
+interpret. 
+		- 415 Unsupported Media Type -- The server is refusing to service the request because the entity of the request is in a format not supported by the requested resource for the requested method.
+		- 416 Requested Range not Satisfiable -- A server SHOULD return a response with this status code if a request included a Range request-header field
+		- 417 Expectation Failed -- The expectation given in an Expect request-header field (see section 14.20) could not be met by this server, or, if
+the server is a proxy, the server has unambiguous evidence that the request could not be met by the next-hop server.
+		- 426 Upgrade Required (New)
+	e.) Server Error (5xx)
+		- 500 Internal Server Error -- The server encountered an unexpected condition which prevented it from fulfilling the request.
+		- 501 Not Implemented -- The server does not support the functionality required to fulfill the request.
+		- 502 Bad Gateway -- The server, while acting as a gateway or proxy, received an invalid response from the upstream server it accessed in
+attempting to fulfill the request.
+		- 503 Serice Unavailable -- The server is currently unable to handle the request due to a temporary overloading or maintenance of the server.
+		- 504 Gateway Time-Out -- The server, while acting as a gateway or proxy, did not receive a timely response from the upstream server specified
+by the URI
+		- 505 HTTP version not supported -- The server does not support, or refuses to support, the HTTP protocol version that was used in the request message.
