@@ -4414,3 +4414,11 @@ a.thumbnail {
 
 .long-delay {
   animation-delay: 700ms !important; }
+
+#content {
+    margin-top: 2%;
+}
+
+.nb {
+    list-style-type: none;
+}
