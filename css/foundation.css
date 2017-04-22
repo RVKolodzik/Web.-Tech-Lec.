@@ -4422,3 +4422,11 @@ a.thumbnail {
 .nb {
     list-style-type: none;
 }
+
+.tb {
+    text-indent: 2em;
+}
+
+.tb2 {
+    text-indent: 4em;
+}

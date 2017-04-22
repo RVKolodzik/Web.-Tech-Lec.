@@ -602,7 +602,7 @@
                                                 <li>JavaScript statements are composed of Values, Operators, Expressions, Keywords, and Comments</li>
                                                 <li>Fixed values are called Literals. Variable values are caller variables.</li>
                                                 <li>Variables are used to store data values.</li>
-                                                <li>Example:</li>
+                                                <li class="nb">ex:</li>
                                                 <ul>
                                                     <li>var x;</li> 
                                                     <li>x = 6;</li>
@@ -902,7 +902,7 @@
                                             <li>If you want to access any element in an HTML page, you always start with accessing the document object.</li>
                                         </ul>
                                         <ul>
-                                            <li>ex: </li>
+                                            <li class="nb">ex: </li>
                                             <table>
                                                 <tr>
                                                     <td>Method</td>
@@ -984,7 +984,7 @@
 
                             <ul class="accordion" data-accordion data-allow-all-closed="true">
                                 <li class="accordion-item" data-accordion-item>
-                                    <a href="#" class="accordion-title">Execution of Scripts my be:</a>
+                                    <a href="#" class="accordion-title">Execution of Scripts may be:</a>
                                     <div class="accordion-content" data-tab-content>
                                          <ul>
                                             <li>1. Defer</li>
@@ -1013,15 +1013,15 @@
 
                                             <li>Window (Global Object)</li>
                                             <ul>
-                                                Examples:
+                                                <li class="nb">ex:</li>
                                                 <li>window.navigator</li>
                                                 <li>window.screen.width</li>
                                                 <li>window.document</li>
                                                 <li>It is also noted that when you declare a variable without the var, let, or const keyword. You just created a global window object variable.</li>
                                             </ul>
 
-                                            Examples:
                                             <ul>
+                                                <li class="nb">ex:</li>
                                                 <li>h.innerText</li>
                                                 <li>h.innerHTML – java &ltem&gt script &lt/em&gt</li>
                                                 <li>h.outerHTML - &lth1 id=’h’&gt Java &ltem&gt script &lt/em&gt &lt/h1&gt</li>
@@ -1130,18 +1130,18 @@
                                     <a href="#" class="accordion-title">Standard Objects</a>
                                     <div class="accordion-content" data-tab-content>
                                         <ul>
-                                            Example:
-                                            function sayHello(){
-                                                console.log(‘hello’);
-                                            }
+                                            <li class="nb">ex:</li>
+                                            <p>function sayHello(){</p>
+                                            <p class="tb">console.log(‘hello’);</p>
+                                            <p>}</p>
 
                                             <li>Abstraction – name a method then call the method through its name</li>
                                             <li>Function = object</li>
                                             <li>sayHello(); - invocation</li>
                                             <li>sayHello – referencing</li>
                                             <li>anonymous function – function without a name</li>
-                                            Example:
-                                            (function(a,b){return a+b;})(10,20);
+                                            <li class="nb">ex:</li>
+                                            <p>(function(a,b){return a+b;})(10,20);</p>
                                             <li>Can throw anyting/try-and-catch</li>
                                         </ul>
                                     </div>
@@ -1153,47 +1153,84 @@
                                     <a href="#" class="accordion-title">Sample Codes</a>
                                     <div class="accordion-content" data-tab-content>
                                         <ul>
-                                            <p>/* add */</p>
-                                            <p>var add = new function(‘a,b’,’return a+b’);</p>
-                                            <p>var sum = add(10,20);</p>
+                                            
+                                            <ul class="accordion" data-accordion data-allow-all-closed="true">
+                                                <li class="accordion-item" data-accordion-item>
+                                                    <a href="#" class="accordion-title">Add</a>
+                                                    <div class="accordion-content" data-tab-content>
+                                                        <p>var add = new function(‘a,b’,’return a+b’);</p>
+                                                        <p>var sum = add(10,20);</p>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                            
+                                            <ul class="accordion" data-accordion data-allow-all-closed="true">
+                                                <li class="accordion-item" data-accordion-item>
+                                                    <a href="#" class="accordion-title">Arrow Syntax</a>
+                                                    <div class="accordion-content" data-tab-content>
+                                                        <p>var multiply = (a,b) => {return a*b;}</p>
+                                                        <p>var product = multiply(10,20);</p>
+                                                    </div>
+                                                </li>
+                                            </ul>
 
-                                            <h3>Arrow Syntax</h3>
-                                            <p>var multiply = (a,b) => {return a*b;}</p>
-                                            <p>var product = multiply(10,20);</p>
+                                            <ul class="accordion" data-accordion data-allow-all-closed="true">
+                                                <li class="accordion-item" data-accordion-item>
+                                                    <a href="#" class="accordion-title">Recursive Functions</a>
+                                                    <div class="accordion-content" data-tab-content>
+                                                        <p>function factorial(n){</p>
+                                                            <p class="tb">if (n<0){</p>
+                                                                <p class="tb2">throw “Invalid argument”;</p>
+                                                            <p class="tb">} else  if (n==0) {</p>
+                                                                <p class="tb2">return 1;</p>
+                                                            <p class="tb">} else {</p>
+                                                                <p class="tb2">Return n*factorial(n-1);</p>
+                                                            <p class="tb">}</p>
+                                                        <p>}</p>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                            
+                                            <ul class="accordion" data-accordion data-allow-all-closed="true">
+                                                <li class="accordion-item" data-accordion-item>
+                                                    <a href="#" class="accordion-title">Nested Functions</a>
+                                                    <div class="accordion-content" data-tab-content>
+                                                        <p>function outer(){</p>
+                                                            <p class="tb">//codes here</p>
 
-                                            <h3>Recursive Functions</h3>
-                                            <p>function factorial(n){</p>
-                                                <p>if (n<0){</p>
-                                                    <p>throw “Invalid argument”;</p>
-                                                <p>} else  if (n==0) {</p>
-                                                    <p>return 1;</p>
-                                                <p>} else {</p>
-                                                    <p>Return n*factorial(n-1);</p>
-                                                <p>}</p>
-                                            <p>}</p>
+                                                            <p class="tb">function inner(){</p>
+                                                                <p class="tb2">//inner codes here</p>
+                                                            <p class="tb">}</p>
 
-                                            <h3>Nested Functions</h3>
-                                            <p>function outer(){</p>
-                                                <p>//codes here</p>
-
-                                                <p>function inner(){</p>
-                                                    <p>//inner codes here</p>
-                                                <p>}</p>
-
-                                                <p>//some more codes here</p>
-                                            <p>}</p>
-
-                                            <h3>Giving default values for variables</h3>
-                                            <p>function fn(a=10, b=20, c, d=40, e){</p>
-                                                <p>// codes here</p>
-                                            <p>}</p>
-
-                                            <h3>Function Rest Parameters</h3>
-                                                <p>function fn(a, b, … others) {</p>
-                                                    <p>console.log(`a=${a}`);</p>
-                                                    <p>console.log(`b=${b}`);</p>
-                                                    <p>console.log(`others=` ,others);</p>
-                                                <p>}</p>
+                                                            <p class="tb">//some more codes here</p>
+                                                        <p>}</p>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                            
+                                            <ul class="accordion" data-accordion data-allow-all-closed="true">
+                                                <li class="accordion-item" data-accordion-item>
+                                                    <a href="#" class="accordion-title">Giving default values for variables</a>
+                                                    <div class="accordion-content" data-tab-content>
+                                                        <p>function fn(a=10, b=20, c, d=40, e){</p>
+                                                            <p class="tb">// codes here</p>
+                                                        <p>}</p>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                            
+                                            <ul class="accordion" data-accordion data-allow-all-closed="true">
+                                                <li class="accordion-item" data-accordion-item>
+                                                    <a href="#" class="accordion-title">Function Rest Parameters</a>
+                                                    <div class="accordion-content" data-tab-content>
+                                                        <p>function fn(a, b, … others) {</p>
+                                                            <p class="tb">console.log(`a=${a}`);</p>
+                                                            <p class="tb">console.log(`b=${b}`);</p>
+                                                            <p class="tb">console.log(`others=` ,others);</p>
+                                                        <p>}</p>
+                                                    </div>
+                                                </li>
+                                            </ul>
                                         </ul>
 
                                     </div>
@@ -1205,34 +1242,53 @@
                                     <a href="#" class="accordion-title">Arrays</a>
                                     <div class="accordion-content" data-tab-content>
                                         <ul>
-                                            <li>JavaScript Arrays are dynamic in size</li>
-                                            <h3>Sample Codes</h3>
-                                            <p>var emptyArray = new Array();</p>
-                                            <p>var alsoEmptyArray = [];</p>
+                                            <li class="nb">JavaScript Arrays are dynamic in size</li>
+                                            
+                                            <ul class="accordion" data-accordion data-allow-all-closed="true">
+                                                <li class="accordion-item" data-accordion-item>
+                                                    <a href="#" class="accordion-title">Sample Codes</a>
+                                                    <div class="accordion-content" data-tab-content>
+                                                        <p>var emptyArray = new Array();</p>
+                                                        <p>var alsoEmptyArray = [];</p>
 
-                                            <p>var arrayWithLengthFive = new Array(5);</p>
-                                            <p>var arrayWithOneElementWithValueFive = [5];</p>
+                                                        <p>var arrayWithLengthFive = new Array(5);</p>
+                                                        <p>var arrayWithOneElementWithValueFive = [5];</p>
 
-                                            <p>var array = new Array(‘5’) – number of elements</p>
-                                            <p>var sameArray = [‘5’];</p>
+                                                        <p>var array = new Array(‘5’) – number of elements</p>
+                                                        <p>var sameArray = [‘5’];</p>
 
-                                            <p>var multiDimArray = [</p>
-                                                <p>[‘apple’, ‘banana’, ‘orange’],</p>
-                                                <p>[4, 5, 6, [true, false, false], 7, 8],</p>
-                                                <p>[];  // I don’t know how to close this array</p>
+                                                        <p>var multiDimArray = [</p>
+                                                            <p class="tb">[‘apple’, ‘banana’, ‘orange’],</p>
+                                                            <p class="tb">[4, 5, 6, [true, false, false], 7, 8],</p>
+                                                            <p class="tb">];</p>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                            
+                                            <ul class="accordion" data-accordion data-allow-all-closed="true">
+                                                <li class="accordion-item" data-accordion-item>
+                                                    <a href="#" class="accordion-title">Deconstructing an array</a>
+                                                    <div class="accordion-content" data-tab-content>
+                                                        <p>var array=[1,2,3,4,5];</p>
+                                                        <p>var [a,b,c,d,e] = array;</p>
+                                                        <p>var [m,n,… others] = array;</p>
+                                                        <p>var [, x ,, y] = array;</p>
+                                                    </div>
+                                                </li>
+                                            </ul>
 
-                                            <h4>Deconstructing an array</h4>
-                                            <p>var array=[1,2,3,4,5];</p>
-                                            <p>var [a,b,c,d,e] = array;</p>
-                                            <p>var [m,n,… others] = array;</p>
-                                            <p>var [, x ,, y] = array;</p>
-
-                                            <h4>Array indices can be non-contiguous</h4>
-                                            <p>var array=[1,2,3,4,5]</p>
-                                            <p>array[10]=10;</p>
-                                            <p>for(let i in array){</p>
-                                                <p>console.log(i, array[i]);</p>
-                                            <p>}</p>
+                                            <ul class="accordion" data-accordion data-allow-all-closed="true">
+                                                <li class="accordion-item" data-accordion-item>
+                                                    <a href="#" class="accordion-title">Array indices can be non-congtiguous</a>
+                                                    <div class="accordion-content" data-tab-content>
+                                                        <p>var array=[1,2,3,4,5];</p>
+                                                        <p>array[10]=10;</p>
+                                                        <p>for(let i in array){</p>
+                                                            <p class="tb">console.log(i, array[i]);</p>
+                                                        <p>}</p>
+                                                    </div>
+                                                </li>
+                                            </ul>
                                         </ul>
                                     </div>
                                 </li>
@@ -1244,7 +1300,7 @@
                                     <div class="accordion-content" data-tab-content>
                                         <ul>
                                             <li>Mutator methods</li>
-                                            Example
+                                            <li class="nb">ex:</li>
                                             <ul>
                                                 <li>reverse()</li>
                                                 <p>a = [1,2,3]</p>
@@ -1266,25 +1322,34 @@
 
                                             <li>Heration methods</li>
                                             <ul>
-                                                <p>a.filter(function)</p>
-                                                <p>-> value, index, array</p>
+                                                <li>
+                                                    <p>a.filter(function)</p>
+                                                    <p>-> value, index, array</p>
+                                                </li>
 
-                                                <p>a = [1,5,4,8,9,10,12,4,6,7,9]</p>
-                                                <p>a.filter(v => v%2 == 0)</p>
-                                                <p>-> [4,8,10,2,4,6]</p>
-
-                                                <p>a.every(v => v>0)</p>
-                                                <p>-> true</p>
-                                                <p>a.every(v => v%4 == 0)</p>
-                                                <p>-> false</p>
-
-                                                <p>.forEach() – do it for each element</p>
-                                                <p>.reduce – accumulator, v, i, a</p>
+                                                <li>
+                                                    <p>a = [1,5,4,8,9,10,12,4,6,7,9]</p>
+                                                    <p>a.filter(v => v%2 == 0)</p>
+                                                    <p>-> [4,8,10,2,4,6]</p>
+                                                </li>
+                                            
+                                                <li>
+                                                    <p>a.every(v => v>0)</p>
+                                                    <p>-> true</p>
+                                                </li>
                                                 
-                                                <p>Example:</p>
-                                                <p> a.reduce ((acc, v) => acc += v)</p>
-                                                <p> -> 75 (sum of all elements)</p>
-
+                                                <li>
+                                                    <p>a.every(v => v%4 == 0)</p>
+                                                    <p>-> false</p>
+                                                </li>
+                                                
+                                                <li>
+                                                    <p>.forEach() – do it for each element</p>
+                                                    <p>.reduce – accumulator, v, i, a</p>
+                                                    <p>ex:</p>
+                                                    <p> a.reduce ((acc, v) => acc += v)</p>
+                                                    <p> -> 75 (sum of all elements)</p>
+                                                </li>
                                         </ul>
                                     </div>
                                 </li>
@@ -1296,7 +1361,7 @@
                                     <div class="accordion-content" data-tab-content>
                                         <ul>
                                             <li>Objects are prototyped based</li>
-                                            <h3>Sample Codes</h3>
+                                            <li class="nb">Sample Code:</li>
                                             <ul>
                                                 <p>var emptyObj = new object();</p>
                                                 <p>var alsoEmpty = {};</p>
@@ -1305,7 +1370,7 @@
                                                     <p>student.idno = 121;</p>
                                                     <p>student[‘name’] = ‘JDC’;</p>
                                                     <p>student.toString = function(){</p>
-                                                        <p>return `${this.idno}. ${this.name}`;</p>
+                                                        <p class="tb">return `${this.idno}. ${this.name}`;</p>
                                                     <p>} </p>
                                                 <p>console.log(JSON.stringify(student, null, 2);</p>
                                                 <p>S = localStorage.getItem(‘213134’);</p>
@@ -1322,18 +1387,18 @@
                                     <div class="accordion-content" data-tab-content>
                                         <ul>
                                             <li>Function in ECMA script = class</li>
-
-                                            <h3>Sample Code</h3>
+                                            <br>
+                                            <li class= "nb">Sample Code:</li>
                                             <p>function Person(name, age){</p>
-                                                <p>this.name = name;</p>
-                                                <p>this.age = age;</p>
-                                                <p>this.speak = function(){</p>
-                                                    <p>console.log(`Hello! I’m ${this.name}`);</p>
-                                                <p>}</p>
+                                                <p class="tb">this.name = name;</p>
+                                                <p class="tb">this.age = age;</p>
+                                                <p class="tb">this.speak = function(){</p>
+                                                    <p class="tb2">console.log(`Hello! I’m ${this.name}`);</p>
+                                                <p class="tb">}</p>
                                             <p>}</p>
 
-                                            <p>p = new Person(‘ako’, 100)</p>
-                                            <p>p1 = {name: ‘ikaw’, age:20}</p>
+                                            <p>p = new Person(‘ako’, 100);</p>
+                                            <p>p1 = {name: ‘ikaw’, age:20};</p>
                                         </ul>
                                     </div>
                                 </li>
@@ -1349,40 +1414,8 @@
                         <a href="#" class="accordion-title">References</a>
                         <div class="accordion-content" data-tab-content>
                             <ul>
-                                <li>Cisco. (n.d.). Internet of Things (IoT). Retrieved from </li>
-                                <a href="http://www.cisco.com/c/en/us/solutions/internet-of-things/overview.html">http://www.cisco.com/c/en/us/solutions/internet-of-things/overview.html</a>
-                                <li>DARPA. (n.d.). ARPANET and the Origins of the Internet. Retrieved from </li>
-                                <a href="http://www.darpa.mil/about-us/timeline/arpanet">http://www.darpa.mil/about-us/timeline/arpanet</a>
-                                <li>Engineering 360. (n.d). Network Transceivers Information. Retrieved from</li>
-                                <a href="http://www.globalspec.com/learnmore/communications_networking/networking_equipment/network_transceivers">
-                                    http://www.globalspec.com/learnmore/communications_networking/networking_equipment/
-                                </a>
-                                <li>Gheysari. (2014). What is the difference between push and pull protocols?. Retrieved from</li>
-                                <a href="https://www.quora.com/Whats-the-difference-between-push-and-pull-protocols">https://www.quora.com/Whats-the-difference-between-push-and-pull-protocols</a>
-                                <li>Mitchell, B. (2016). What Is Packet Switching on Computer Networks?. Retrieved from</li>
-                                <a href="https://www.lifewire.com/packet-switching-on-computer-networks-817938">https://www.lifewire.com/packet-switching-on-computer-networks-817938</a>       
-                                <li>iana. (n.d). iana. Retrieved from </li>
-                                <a href="https://www.iana.org/">https://www.iana.org/</a>
-                                <li>ICANN. (n.d.). What does ICANN do?. Retrieved from</li> 
-                                <a href="https://www.icann.org/resources/pages/welcome-2012-02-25-en">https://www.icann.org/resources/pages/welcome-2012-02-25-en</a>
-                                <li>Oberon, J. (n.d). The IoT Journey: Are We There Yet?. Retrieved from</li>
-                                <a href="http://www.cisco.com/c/en/us/solutions/internet-of-things/overview.html">http://www.cisco.com/c/en/us/solutions/internet-of-things/overview.html</a>
-                                <li>Rouse, M. (n.d.). Circuit-switched. Retrieved from</li>
-                                <a href="http://searchnetworking.techtarget.com/definition/circuit-switched">http://searchnetworking.techtarget.com/definition/circuit-switched</a>
-                                <li>Rouse, M. (n.d.). File Transfer Protocol (FTP). Retrieved from</li>
-                                <a href="http://searchenterprisewan.techtarget.com/definition/File-Transfer-Protocol">http://searchenterprisewan.techtarget.com/definition/File-Transfer-Protocol</a>
-                                <li>Rouse, M. (n.d.).  Gopher. Retrieved from</li>
-                                <a href="http://whatis.techtarget.com/definition/Gopher">http://whatis.techtarget.com/definition/Gopher</a>
-                                <li>Rouse, M. (n.d.). WAIS (Wide Area Information Servers). Retrieved from</li>
-                                <a href="http://whatis.techtarget.com/definition/WAIS-Wide-Area-Information-Servers">http://whatis.techtarget.com/definition/WAIS-Wide-Area-Information-Servers</a>
-                                <li>UsNet. (n.d.). BETTER SERVICE FOR MEMBERS. BETTER BUSINESS FOR CREDIT UNIONS. Retrieved from</li>
-                                <a href="http://www.universalsharing.com/">http://www.universalsharing.com/</a>
-                                <li>WhatIsMyIPAdress. (n.d.). What is an Internet Service Provider?. Retrieved from</li>
-                                <a href="http://whatismyipaddress.com/isp">http://whatismyipaddress.com/isp</a>
                                 <li>W3C. JAVASCRIPT. Retrieved from</li>
                                 <a href="https://www.w3schools.com/js/default.asp">https://www.w3schools.com/js/default.asp</a>
-                                <li>W3C. (n.d.). SEMANTIC WEB. Retrieved from</li>
-                                <a href="https://www.w3.org/standards/semanticweb/">https://www.w3.org/standards/semanticweb/</a>
                             </ul>
                         </div>
                     </li>
