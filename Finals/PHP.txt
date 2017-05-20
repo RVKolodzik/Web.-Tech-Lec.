@@ -1,0 +1,330 @@
+
+
+<ul class="accordion" data-accordion data-allow-all-closed="true">
+    <li class="accordion-item" data-accordion-item>
+        <a href="#" class="accordion-title">PHP</a>
+        <div class="accordion-content" data-tab-content>
+        	<ul>
+        		<li>general purpose programming language</li>
+        		<li>scripts are like java scriplets</li>
+        		<li>dynamic language</li>
+        		<li>associative in nature</li>
+        	<ul>
+
+        	<p>constructors:</p>
+        	<p>
+				void __construct()
+			</p>
+
+			<p>destructor:</p>
+			<p>
+				void __destruct()
+			</p>
+
+
+			<p>session_start()</p>
+			<p>
+				creates a session or resumes the current one based on a session identifier passed via a GET or a POST request, or passed via a cookie.
+			</p>
+
+			<p>session_destroy()</p>
+			<p>
+				destroys all of the data associated with the current session. It does not unset any of the global variables associated with the session, or unset the session cookie. 
+			</p>
+
+	<ul class="accordion" data-accordion data-allow-all-closed="true">
+		<li class="accordion-item" data-accordion-item>
+			<a href="#" class="accordion-title">Arrays</a>
+			<div class="accordion-content" data-tab-content>
+				<p>
+		An array in PHP is actually an ordered map. A map is a type that associates values to keys. The key can either be an integer or a string. The value can be of any type.
+		</p>
+		<p>
+		ex:
+		simple array
+		<?php
+			$array = array[
+				"fruit" => "apple",
+				"apple" => "fruit",
+			];
+		?>
+
+		type casting and overwriting
+		<?php
+			$array = array[
+				1 => "a",
+				"1" => "b",
+				1.5 => "c",
+				true => "d",
+			];
+		?>
+		</p>
+		<p>
+		mixed integer and string keys
+		<?php
+			$array = array[
+				"fruit" => "apple",
+				"apple" => "fruit",
+				100 => 100,
+				-100 => -100,
+			];
+			</p>
+			</div>
+		</li>
+	</ul>
+
+	<ul class="accordion" data-accordion data-allow-all-closed="true">
+		<li class="accordion-item" data-accordion-item>
+			<a href="#" class="accordion-title">Superglobals</a>
+			<div class="accordion-content" data-tab-content>
+			<p>Several predefined variables in PHP are "superglobals", which means that they are always accessible, regardles of scope and you can access them from any function, class or file without having to do anything special.</p>
+
+			<p>$GLOBALS</p>
+			
+			<p>
+				PHP stores all global variables in an array calleed $GLOBALS[index]. The index holds the name of the variable
+			</p>
+			<p>
+				ex:
+					<?php
+						$x = 75;
+						$y = 25;
+
+						function addition(){
+							$GLOBALS['z'] = $GLOBALS[x] + $GLOBALS['y'];
+						}
+						addition();
+					?>
+			<p>
+
+			<p>$_SERVER</p>
+			<p>
+				super global variable which holds infromation about headers, paths, and script locations
+			</p>
+			<p>
+				ex:
+					<?php
+						echo $_SERVER['PHP_SELF'];
+						echo $_SERVER['SERVER_NAME'];
+					?>
+			</p>
+
+			<p>
+				The following is a list of the most important elements that can go inside $_SERVER
+			</p>
+			<p>$_SERVER['PHP_SELF']</p>
+			<p>
+				Returns the filename of the currently executing script
+			</p>
+
+			<p>$SERVER['GATEWAY_INTERFACE']</p>
+			<p>	
+				Returns the versino of the Common Gateway Interface(CGI) the server is using
+
+			<p>$_SERVER['SERVER_ADDR']</p>
+			<p>
+				Returns the IP address of the host server
+			</p>
+
+			<p>$_SERVER['SERVER_NAME']</p>
+			<p>
+				Returns the name of the host server
+			</p>
+			<p>$_SERVER['SERVER_SOFTWARE']</p>
+			<p>
+				Returns the server identification string
+			</p>
+
+			<p>$_SERVER['SERVER_PROTOCOL']</p>
+			<p>
+				Returns the name and revision of the information protocol
+			</p>
+
+			<p>$_SERVER['REQUEST_METHOD']</p>
+			<p>
+				Returns the request method used to access the page
+			</p>
+			<p>$_SERVER['REQUEST_TIME']</p>
+			<p>
+				Returns the timestamp of the start of the request
+			</p>
+
+			<p>$_SERVER['QUERY_STRING']</p>
+			<p>
+				Returns the query string if the page is accessed via a query string
+			</p>
+
+			<p>$_SERVER['HTTP_ACCEPT']</p>
+			<p>
+				Returns the Accept header from the current request
+			</p>
+
+			<p>$_SERVER['HTTP_ACCEPT_CHARSET']</p>
+			<p>
+				Returns the Accept_Charset header from teh current request
+			</p>
+
+			<p>$_SERVER['HTTP_HOST']</p>
+			<p>
+				Returns the Host header form the current request
+			</p>
+
+			<p>$_SERVER['HTTP_REFERER']</p>
+			<p>
+				Returns the complete URL of the current page (not reliable becuase not all user-agents support it)
+			</p>
+
+			<p>$_SERVER['HTTPS']</p>
+			<p>
+				Is the script queried through a secure HTTP protocol
+			</p>
+			<p>$_SERVER['REMOTE_ADDR']</p>
+			<p>
+				Returns the IP address from where the user is vieweing the current page
+			</p>
+
+			<p>$_SERVER['REMOTE_HOST']</p>
+			<p>
+				Returns the Host name form where the user if viewing the current page
+			</p>
+
+			<p>$_SERVER['REMOTE_PORT']</p>
+			<p>
+				Returns teh port being used on the user's machien to communicate with the web server
+			</p>
+
+			<p>$_SERVER['SCRIPT_FILENAME']</p>
+			<p>
+				Returns the absolute pathname of the currently executing script
+			</p>
+
+			<p>$_SERVER['SERVER_ADMIN']</p>
+			<p>
+				Returns the value given to the SERVER_ADMIN directive in the web server configuration file
+			</p>
+
+			<p>$_SERVER['SERVER_PORT']</p>
+			<p>
+				Returns the port on the server machine being used by the web server for communication 
+			</p>
+
+			<p>$_SERVER['SERVER_SIGNATURE']</p>
+			<p>
+				Returns the server version and virtual host name which are added to server-generated pages
+			</p>
+
+			<p>$_SERVER['PATH_TRANSLATED']</p>
+			<p>
+				Returns the file system based path to the current script
+			</p>
+
+			<p>$_SERVER['SCRIPT_NAME']</p>
+			<p>
+				Returns the path of th current script
+			</p>
+
+			<p>$_SERVER['SCRIPT_URI']</p>
+			<p>
+				Returns the URI of the current page
+			</p>
+
+		<p>$_REQUEST</p>
+		<p>
+			used to collect data from submitting an html form.
+		</p>
+		<p>
+			ex:
+				<html>
+				<body>
+
+				<form method="post" action="<?php echo $_SERVER['PHP_SELF'];?>">
+				  Name: <input type="text" name="fname">
+				  <input type="submit">
+				</form>
+
+				<?php
+				if ($_SERVER["REQUEST_METHOD"] == "POST") {
+				    // collect value of input field
+				    $name = $_REQUEST['fname'];
+				    if (empty($name)) {
+				        echo "Name is empty";
+				    } else {
+				        echo $name;
+				    }
+				}
+				?>
+
+				</body>
+				</html>
+		</p>
+
+		<p>$_POST</p>
+		<p>
+			is widely used to collect form data after submitting an HTML form with method="post". $_POST is also widely used to pass variables.
+		</p>
+		<p>
+			ex:
+				<html>
+				<body>
+
+				<form method="post" action="<?php echo $_SERVER['PHP_SELF'];?>">
+				  Name: <input type="text" name="fname">
+				  <input type="submit">
+				</form>
+
+				<?php
+				if ($_SERVER["REQUEST_METHOD"] == "POST") {
+				    // collect value of input field
+				    $name = $_POST['fname'];
+				    if (empty($name)) {
+				        echo "Name is empty";
+				    } else {
+				        echo $name;
+				    }
+				}
+				?>
+
+				</body>
+				</html>
+		</p>
+
+		<p>$_GET</p>
+		<p>
+			can also be uased to collect form data after submitting an HTML form with method="get".
+			$_GET can also collect data sent in the URL
+		</p>
+		<p>
+			ex: 
+				<html>
+				<body>
+
+				<?php 
+				echo "Study " . $_GET['subject'] . " at " . $_GET['web'];
+				?>
+
+				</body>
+				</html>
+		</p>
+		<p>$_FILES</p>
+		<p>
+			an associative array of items uploaded to the current script via the HTTP POST method.
+		</p>
+		<p>$_COOKIE</p>
+		<p>
+			an associative array of variables passed to the current script via HTTP Cookies
+		</p>
+		<p>$_SESSION</p>
+		<p>
+			An associative array containing session variables available to teh current script
+		<p>
+		<p>$_ENV</p>
+		<p>
+			An associative array of variables passed to the current script via the environment method
+		</p>
+				</div>
+			</li>
+		</ul>
+
+		</div>
+	</li>
+</ul>
