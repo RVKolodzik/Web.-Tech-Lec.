@@ -471,46 +471,6 @@
                             </li>
                         </ul>
                         
-                            <ul class="accordion" data-accordion data-allow-all-closed="true">
-                                <li class="accordion-item" data-accordion-item>
-                                    <a href="#" class="accordion-title">Who oversees the development of HTML?</a>
-                                    <div class="accordion-content" data-tab-content>
-                                        <p>World Wide Web Consortium (W3C)</p>
-                                    </div>
-                                </li>
-                            </ul>         
-
-                            <ul class="accordion" data-accordion data-allow-all-closed="true">
-                                <li class="accordion-item" data-accordion-item>
-                                    <a href="#" class="accordion-title">What are the versions of HTML?</a>
-                                    <div class="accordion-content" data-tab-content>
-                                        <ul>
-                                            <li>HTML 1.0 was very limited, there was no formal specifications</li>
-                                            <li>HTML 2.0</li>
-                                            <ul>
-                                                <li>RFC 1866</li>
-                                                <li>Evolution of HTML: W3C</li>
-                                                <li>Recommendation - publication</li>
-                                            </ul>
-                                            <p>Note: After HTML 2.0 W3C handles recommendations</p>
-                                            <li>HTML 3.0 - immediately super seeded by 3.2, 4.0 (1997), and 4.01 (1999)</li>
-                                            <li>HTML 4.01</li>
-                                                <ul>
-                                                    <li>Strict</li><li>Transitional</li>
-                                                    <li>Frameset</li>
-                                                </ul>
-                                            
-                                            <li>XHTML                       <ul>
-                                                    <li>Ian Hickson - WHATWG</li>
-                                                    <li>Extensible</li>
-                                                    <li>Data Interchange</li>
-                                                    <li>Evolution of HTML 4.01 - HTML 5 (2014)</li>
-                                                </ul>
-                                            <li>HTML 5 (2014)</li>
-                                        </ul>
-                                </div>
-                            </li>
-                        </ul>
                             
                         <ul class="accordion" data-accordion data-allow-all-closed="true">
                             <li class="accordion-item" data-accordion-item>
@@ -793,79 +753,79 @@
                                         <p>
                                             used to collect data from submitting an html form.
                                         </p>
-                                        <p>
-                                            ex:
-                                                <html>
-                                                <body>
+                                        <pre>
+ex:
+    &lt;html&gt;
+    &lt;body&lt;
 
-                                                <form method="post" action="<?php echo $_SERVER['PHP_SELF'];?>">
-                                                  Name: <input type="text" name="fname">
-                                                  <input type="submit">
-                                                </form>
+    &lt;form method="post" action="<?php echo $_SERVER['PHP_SELF'];?>"&gt;
+    Name: &lt;input type="text" name="fname"&gt;
+    &lt;input type="submit"&gt;
+    &lt;/form&gt;
 
-                                                <?php
-                                                if ($_SERVER["REQUEST_METHOD"] == "POST") {
-                                                    // collect value of input field
-                                                    $name = $_REQUEST['fname'];
-                                                    if (empty($name)) {
-                                                        echo "Name is empty";
-                                                    } else {
-                                                        echo $name;
-                                                    }
-                                                }
-                                                ?>
+    &lt;?php
+        if ($_SERVER["REQUEST_METHOD"] == "POST") {
+            // collect value of input field
+            $name = $_REQUEST['fname'];
+            if (empty($name)) {
+                echo "Name is empty";
+            } else {
+                echo $name;
+            }
+        }
+    ?&gt;
 
-                                                </body>
-                                                </html>
-                                        </p>
+    &lt;/body&gt;
+    &lt;/html&gt;
+                                        </pre>
 
                                         <p>$_POST</p>
                                         <p>
                                             is widely used to collect form data after submitting an HTML form with method="post". $_POST is also widely used to pass variables.
                                         </p>
-                                        <p>
-                                            ex:
-                                                <html>
-                                                <body>
+                                        <pre>
+ex:
+    &lt;html&gt;
+    &lt;body&gt;
 
-                                                <form method="post" action="<?php echo $_SERVER['PHP_SELF'];?>">
-                                                  Name: <input type="text" name="fname">
-                                                  <input type="submit">
-                                                </form>
+    &lt;form method="post" action="<?php echo $_SERVER['PHP_SELF'];?>"&gt;
+    Name: &lt;input type="text" name="fname"&gt;
+    &lt;input type="submit"&gt;
+    &lt;/form&gt;
 
-                                                <?php
-                                                if ($_SERVER["REQUEST_METHOD"] == "POST") {
-                                                    // collect value of input field
-                                                    $name = $_POST['fname'];
-                                                    if (empty($name)) {
-                                                        echo "Name is empty";
-                                                    } else {
-                                                        echo $name;
-                                                    }
-                                                }
-                                                ?>
+    &lt;?php
+        if ($_SERVER["REQUEST_METHOD"] == "POST") {
+            // collect value of input field
+            $name = $_POST['fname'];
+            if (empty($name)) {
+                echo "Name is empty";
+            } else {
+                echo $name;
+            }
+        }
+    ?&gt;
 
-                                                </body>
-                                                </html>
-                                        </p>
+    &lt;/body&gt;
+    &lt;/html&gt;
+                                        </pre>
 
                                         <p>$_GET</p>
                                         <p>
                                             can also be uased to collect form data after submitting an HTML form with method="get".
                                             $_GET can also collect data sent in the URL
                                         </p>
-                                        <p>
-                                            ex: 
-                                                <html>
-                                                <body>
+                                        <pre>
+ ex: 
+    &lt;html&gt;
+    &lt;body&gt;
 
-                                                <?php 
-                                                echo "Study " . $_GET['subject'] . " at " . $_GET['web'];
-                                                ?>
+    &lt;?php 
+        echo "Study " . $_GET['subject'] . " at " . $_GET['web'];
+    ?&gt;
 
-                                                </body>
-                                                </html>
-                                        </p>
+    &lt;/body&gt;
+    &lt;/html&gt;
+                                        </pre>
                                         <p>$_FILES</p>
                                         <p>
                                             an associative array of items uploaded to the current script via the HTTP POST method.
