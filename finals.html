@@ -213,15 +213,98 @@
                                                         </li>
                                                     </ul>
                                                 </div>
-                                            </li>   
+                                            </li>
+
+                                            
+                                            <li class="accordion-item" data-accordion-item>
+                                                <a href="#" class="accordion-title">Information Sharing Using Scope Objects</a>
+                                                <div class="accordion-content" data-tab-content>
+                                                    <p>A request may be processed by several web application components (e.g. through calls to RequestDispatcher forward/include) and there may be a need for one component to communicate information to the other components in the request processing chain.</p>
+                                                    <p>A client session typically consists of multiple requests, which due to the stateless nature of HTTP, will appear to the application as being “unrelated” to one another; the HttpSession object can be used to “relate” these requests together, but there may still be a need to share information created in one request with a subsequent request.</p>
+                                                    <p>Different web application components may require access to common resources or information (e.g. page counters, shared database connection). </p>
+                                                    <p>Information sharing is accomplished by creating attribute objects and exposing these objects in the appropriate scope.</p>
+                                                    
+                                                    <ul>
+                                                        <li>Scopes: </li>
+                                                            <ul>
+                                                                <li>Request scope (HttpServletRequest)</li>
+                                                                <li>Session scope (HttpSession)</li>
+                                                                <li>Web Application or Web Context scope (ServletContext)</li>
+                                                                <li>Page scope (local objects in a servlet)</li>
+                                                            </ul><br>
+                                                        <li>Creating, accessing, and removing attribute objects </li>
+                                                            <ul>
+                                                                <li>Creating, accessing, and removing attribute objects</li>
+                                                                <li>getAttribute (String attrName)</li>
+                                                                <li>getAttributeNames()</li>
+                                                                <li>removeAttribute (String attrName)</li>
+                                                            </ul>
+                                                    </ul>
+                                                </div>
+                                            </li>
+                                            
+                                            
+                                            
+                                             <li class="accordion-item" data-accordion-item>
+                                                <a href="#" class="accordion-title">Advance Servlet Topics</a>
+                                                <div class="accordion-content" data-tab-content>
+                                                    <ul>
+                                                        <li>Listeners 
+                                                            <ul>
+                                                                <p>java objects used to “subscribe” to application “events” in order to be “notified” when these events occur</p>
+                                                                <li>context-related events - context initialized, context destroyed, context attribute changes</li>    
+                                                                <li>session-related events - session created, session destroyed, session attribute changes</li>
+                                                                <li>request-related events - request initialized, request destroyed, request attribute changes </li>
+                                                            </ul>
+                                                        </li><br>
+                                                        <li>
+                                                            javax.servlet
+                                                            <ul>
+                                                                <li>ServletContextListener</li>
+                                                                <li>ServletContextAttributelistener</li>
+                                                                <li>ServletRequestListener</li>
+                                                                <li>ServletRequestAttributeListener </li>
+                                                            </ul>
+                                                        </li><br>
+                                                        <li>javax.servlet.http
+                                                            <ul>
+                                                                <li>HttpSessionListener</li>
+                                                                <li>HttpSessionAttributeListener </li>
+                                                            </ul>
+                                                        </li><br>
+                                                        <li>Filters
+                                                            <ul>
+                                                                <p>Java objects used to intercept incoming requests and outgoing responses in order to perform various tasks such as: </p>
+                                                                <li>Authentication and access control</li>
+                                                                <li>Logging, auditing</li>
+                                                                <li>Caching, data compression</li>
+                                                                <li>Content Transformation</li><br>
+                                                                <p>Filter objects are mapped to the URL patterns they are intended to intercept. Filter objects can be “chained” together.</p>
+                                                            </ul>
+                                                        </li><br>
+                                                        <li>javax.servlet 
+                                                            <ul>
+                                                                <li>Filter</li>
+                                                                <li>FilterChain</li>
+                                                                <li>FilterConfig </li>
+                                                            </ul>
+                                                        </li>
+                                                        
+                                                    </ul>
+                                                </div>
+                                            </li>
+                                            
+                                            
+                                            
+                                            
                                         </ul>
                                     </li>
                                 </ul>
                             </div>
-                                    </li>
-                            </ul>
+                         </li>
+                        </ul>
 
-                            <ul class="accordion" data-accordion data-allow-all-closed="true">
+                        <ul class="accordion" data-accordion data-allow-all-closed="true">
                             
                             <li class="accordion-item" data-accordion-item>
                                 <a href="#" class="accordion-title">JavaServer Pages</a>
@@ -387,7 +470,7 @@
                                 </div>
                             </li>
                         </ul>
-
+                        
                             <ul class="accordion" data-accordion data-allow-all-closed="true">
                                 <li class="accordion-item" data-accordion-item>
                                     <a href="#" class="accordion-title">Who oversees the development of HTML?</a>
@@ -431,121 +514,37 @@
                             
                         <ul class="accordion" data-accordion data-allow-all-closed="true">
                             <li class="accordion-item" data-accordion-item>
-                                <a href="#" class="accordion-title">Which documents specify the HTML Standards?</a>
+                                <a href="#" class="accordion-title">Model-View-Controller (MVC) Design Pattern</a>
                                 <div class="accordion-content" data-tab-content>
-                                    <p>W3C</p>
+                                  <ul>
+                                      <li>Model - Represents business objects (logic and state)</li>
+                                      <li>View - Presentation of the model in some appropriate way</li>
+                                      <li>Controller - Mediates application flow </li>
+                                </ul>
+                                    <ul>A sample web MVC framework can use 
+                                        <li>JavaBeans for the model</li>
+                                        <li>JSPs for the View</li>
+                                        <li>Servlets for the controller </li>
+                                    </ul>
                                 </div>
                             </li>
                         </ul>
                             
                         <ul class="accordion" data-accordion data-allow-all-closed="true">
                             <li class="accordion-item" data-accordion-item>
-                                <a href="#" class="accordion-title">What is the syntax of HTML?</a>
+                                <a href="#" class="accordion-title">JSP Standard Tag Library (JSTL)</a>
                                 <div class="accordion-content" data-tab-content>
-                                    <p>&lt;!DOCTYPE html&gt; ("standards","quirks")</p>
-                                    <p>&lt;html&gt; (root element)</p>
-                                    <p>&lt;head&gt; (meta-information)</p>
-                                    <p>&lt;body&gt; (start tag, 'body' - tag name)</p>
-                                    <p>&lt;/body&gt; (end tag)</p>
-                                </div>
-                            </li>
-                        </ul>
-                            
-                        <ul class="accordion" data-accordion data-allow-all-closed="true">
-                            <li class="accordion-item" data-accordion-item>
-                                <a href="#" class="accordion-title">HTML Elements</a>
-                                <div class="accordion-content" data-tab-content>
+                                    <p>Set of custom JSP elements that provide various programmatic functionality via markup syntax</p>
                                     <ul>
-                                        <li>head</li>
-                                        <ul class="nb">
-                                            <li>title - website name</li>
-                                            <li>base - specify a url relative to other html</li>
-                                            <li>link - links to other resource (stylesheet, icon, etc.)</li>
-                                            <li>meta - meta information (keyword, author, etc.)</li>
-                                            <li>style - embedded style element</li>
-                                        </ul>
-                                    </ul>
-                                    <ul>    
-                                        <li>body</li>
-                                        <ul>
-                                            <li>article</li>
-                                            <li>aside</li>
-                                            <li>nav</li>
-                                            <li>section</li>
-                                            <li>header</li>
-                                            <li>footer</li>
-                                            <li>main</li>
-                                            <li>address</li>
-                                            <li>div</li>
-                                            <li>h1 - h6</li>
-                                            <li>p - paragraph</li>
-                                            <li>hr - thematic break</li>
-                                            <li>pre - preformatted text</li>
-                                            <li>blockquote - quotation</li>
-                                            <li>ol, ul</li>
-                                            <ul>
-                                                <li>li</li>
-                                            </ul>
-                                            <li>dl</li>
-                                            <ul>
-                                                <li>dt, dd</li>
-                                            </ul>
-                                            <li>figure - figure inside content</li>
-                                            <ul>
-                                                <li>figcaption</li>
-                                            </ul>
-                                            <li>a - links</li>
-                                            <li>em, strong, small, s</li>
-                                            <li>cite, q</li>
-                                            <li>dfn, abbr</li>
-                                            <li>ruby, rb, rt, rtc, rp</li>
-                                            <li>data, time - machine readable information</li>
-                                            <li>code, var, samp, kdb</li>
-                                            <li>sup sub</li>
-                                            <li>i, b, u, mark</li>
-                                            <li>bdi, bdo - bidirectional text</li>
-                                            <li>span - for text level elements</li>
-                                            <li>br, wbr - word break</li>
-                                            <li>ins, del - to show edited content</li>
-                                            <li>table</li>
-                                            <ul>
-                                                <li>caption</li>
-                                                <li>colgroup, col</li>
-                                                <li>thead, tbody, tfoot</li>
-                                                <ul>
-                                                    <li>tr</li>
-                                                    <li>th, td</li>
-                                                </ul>
-                                            </ul>
-                                            <li>form</li>
-                                            <ul>
-                                                <li>label</li>
-                                                <li>input</li>
-                                                <li>button</li>
-                                                <li>select, datalist</li>
-                                                <ul>
-                                                    <li>optgroup</li>
-                                                </ul>
-                                            </ul>
-                                        </ul>
-                                    </ul>
-                                </div>
-                            </li>    
-                        </ul>
-                            
-                        <ul class="accordion" data-accordion data-allow-all-closed="true">
-                            <li class="accordion-item" data-accordion-item>
-                                <a href="#" class="accordion-title">HTML Attribute</a>
-                                <div class="accordion-content" data-tab-content>
-                                    <ul class="nb">
-                                        <li>Global Attribute</li>
-                                        <li>Element - specific attribute</li>
-                                        <li>Data - * attribute</li>
-                                        <li>Role, Aria - * attribute</li>
+                                        <li>Core Tag Library - variable support, flow control, URL management</li>
+                                        <li>SQL Tag Library - Database connections, queries, updates</li>
+                                        <li>Internationalization Tag Library - Locate setting, message bundling, number formatting, date formatting</li>
+                                        <li>XML - Core XML processing, flow control, transformation</li>
+                                        <li>JSTL Function - String functions, collection lengths</li>
                                     </ul>
                                 </div>
                             </li>
-                        </ul>
+                            </ul>
                         
                         </div>
                     </li>
@@ -1156,7 +1155,16 @@ app.use(session({
 								<li>SHA-1. (n.d.). Retrieved from </li>
 								<a href="https://en.wikipedia.org/wiki/SHA-1">https://en.wikipedia.org/wiki/SHA-1</a>
                                 <li>The Ten Most Critical Web Application Security Risks. (2017). Retrieved from</li>
-                                <a href="https://www.owasp.org/images/3/3c/OWASP_Top_10_-_2017_Release_Candidate1_English.pdf">https://www.owasp.org/images/3/3c/OWASP_Top_10_-_2017_Release_Candidate1_English.pdf</a>	
+                                <a href="https://www.owasp.org/images/3/3c/OWASP_Top_10_-_2017_Release_Candidate1_English.pdf">https://www.owasp.org/images/3/3c/OWASP_Top_10_-_2017_Release_Candidate1_English.pdf</a>	<li>Oracle (2010). Retrieved from</li>
+                                <a href="http://docs.oracle.com/javaee/5/tutorial/doc/bnaos.html">http://docs.oracle.com/javaee/5/tutorial/doc/bnaos.html</a>
+                                <li>Oracle (n.d.). Retrieved from</li>
+                                <a href="http://www.oracle.com/technetwork/java/javaee/jsp/index.html">http://www.oracle.com/technetwork/java/javaee/jsp/index.html</a>
+                                <li>Pankaj (2016). Retrieved from</li>
+                                <a href="http://www.journaldev.com/2044/jsp-directives-page-include-taglib-example">http://www.journaldev.com/2044/jsp-directives-page-include-taglib-example</a>
+                                <li>tutorialpoints (n.d.). Retrieved from</li>
+                                <a href="https://www.tutorialspoint.com/jsp/">https://www.tutorialspoint.com/jsp/</a>
+                                <li>JavaTPoint (n.d.). Retrieved from</li>
+                                <a href="https://www.javatpoint.com/jsp-action-tags-forward-action">https://www.javatpoint.com/jsp-action-tags-forward-action</a>
                             </ul>
                         </div>
                     </li>
