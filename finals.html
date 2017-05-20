@@ -16,33 +16,61 @@
             <div class="columns large-8" id="content">
                 <ul class="accordion" data-accordion data-allow-all-closed="true">
                     <li class="accordion-item" data-accordion-item>
-                        <a href="#" class="accordion-title">JAVA</a>
+                         <a href="#" class="accordion-title">JAVA</a>
                         <div class="accordion-content" data-tab-content>
                         
                             <ul class="accordion" data-accordion data-allow-all-closed="true">
                                 <li class="accordion-item" data-accordion-item>
-                                <a href="#" class="accordion-title">What is HTML?</a>
+                                <a href="#" class="accordion-title">Java EE</a>
                                 <div class="accordion-content" data-tab-content>
-                                    <ul>
-                                        <li>Specify structure and content</li>
-                                        <li>Used to create and mark up web pages</li>
+                                    <p> Java <abbr title="Enterprise Edition">EE</abbr> is an open, standard-based development and deployment platform for creating distributed, transactional, reliable, secure, multitier, web-based, server-centric, component-based enterprise applications. </p>
+                                
+                                
+                                <ul class="accordion" data-accordion data-allow-all-closed="true">
+                                <li class="accordion-item" data-accordion-item>
+                                    <a href="#" class="accordion-title">Java EE Application Model</a>
+                                    <div class="accordion-content" data-tab-content>
+                                            
                                             <ul>
-                                                <li>Markup Language - used to get resource and identify sections of the resource</li>
+                                                <li>Java programming language, Java Virtual Machine (JVM)</li>
+                                                <li>Java EE Components</li>
+                                                <ul>
+                                                    <li>Java EE Components</li>
+                                                        <ul>
+                                                            <li>Application Clients, Applets (embedded in web clients)</li>
+                                                        </ul>
+                                                    <li>Web Components</li>
+                                                        <ul>
+                                                            <li>Servlets, JavaServer Pages (JSP), JavaServer Faces (JSF) </li>
+                                                        </ul>
+                                                    <li>Enterprise JavaBeans (EJBM)</li>
+                                                </ul>
+                                                <li>Java EE Containers</li>
+                                                <ul>
+                                                    <li>Client containers, web container, EJB container</li>
+                                                </ul>
+                                                <li>Java EE Server</li>
                                             </ul>
-                                        <li>Derived from SGML</li>
-                                    </ul>
-                                </div>
+                                    </div>
                                 </li>
                             </ul>
 
                             <ul class="accordion" data-accordion data-allow-all-closed="true">
                                 <li class="accordion-item" data-accordion-item>
-                                    <a href="#" class="accordion-title">What is HTML's role in modern web development?</a>
+                                    <a href="#" class="accordion-title">Java EE Web Application</a>
                                     <div class="accordion-content" data-tab-content>
-                                        <ul class="nb">
-                                            <li>Structure/content ( Modern HTML)</li>
-                                            <li>Presentation/aesthetics (CSS)</li>
-                                            <li>Behavioral (JS)</li>
+                                        <p>Collection of resources installed under a specific subset of the URL namespace of a web application server compliant with the Java EE Specification (e.g. Apache‟s Tomcat, Apache‟s Geronimo, Sun Microsystems‟ Glassfish, IBM‟s WebSphere, etc.)</p>
+                                        <ul>
+                                            <li>Resources</li>
+                                                <ul>
+                                                    <li>Static resources: web pages, images, stylesheets, etc. (serves as is)</li>
+                                                    <li>Dynamic resources: servlets, JSPs</li>
+                                                    <li>Miscellaneous resources: business object classes (e.g. Java Beans, EJB), support libraries, etc.</li>
+                                                </ul>
+                                            <li>XML-formatted descriptor and configuration files (web.xml, application.xml, context.xml, etc.)</li>
+                                                <ul>
+                                                    <li>Organized into a standard hierarchical structure and typically packaged and deployed as WAR or EAR files</li>
+                                                </ul>
                                         </ul>
                                     </div>
                                 </li>
@@ -50,12 +78,315 @@
 
                             <ul class="accordion" data-accordion data-allow-all-closed="true">
                                 <li class="accordion-item" data-accordion-item>
-                                    <a href="#" class="accordion-title">Who invented HTML?</a>
+                                    <a href="#" class="accordion-title">Java EE APIs</a>
                                     <div class="accordion-content" data-tab-content>
-                                        <p>Sir Tim Berners-Lee</p>
+                                        <ul>
+                                            <li>Enterprise JavaBeans Technology</li>
+                                            <li>Java Servlet Technology</li>
+                                            <li>Java Server Pages</li>
+                                            <li>Java Server Pages Standard Tag Library</li>
+                                            <li>Java Server Faces</li>
+                                            <li>Java Msg Service API</li>
+                                            <li>Java Transaction API</li>
+                                            <li>JavaMail API</li>
+                                            <li>JavaBeans Activation Framework</li>
+                                            <li>Java API for XML Processing </li>
+                                        </ul>
                                     </div>
                                 </li>
                             </ul>
+                            </div>
+                                </li>
+                            </ul>
+
+                            <ul class="accordion" data-accordion data-allow-all-closed="true">
+                                <li class="accordion-item" data-accordion-item>
+                                    <a href="#" class="accordion-title">Servlets</a>
+                                    <div class="accordion-content" data-tab-content>
+                                        <p>A servlet is a Java class that runs in a Java-enabled server. An HTTP servlet is a special type of servlet that handles an HTTP request and provides an HTTP response, usually in the form of an HTML page. The most common use of WebLogic HTTP servlets is to create interactive applications using standard Web browsers for the client-side presentation while WebLogic Server handles the business logic as a server-side process. WebLogic HTTP servlets can access databases, Enterprise JavaBeans, messaging APIs, HTTP sessions, and other facilities of WebLogic Server.</p>
+                                        <ul>
+                                            <li>Java Object based on the Servlet API</li>
+                                            <li>Runs in a server application to answer client requests; technically, servlets are not tied to a specific client-server protocol, but they are most commonly used with HTTP and the term "servlet" is often used in the context of an “HTTP Servlet”</li>
+                                        </ul>
+                                <br>
+                                <ul class="accordion" data-accordion data-allow-all-closed="true">
+                                    <li class="accordion-item" data-accordion-item>
+                                        <a href="#" class="accordion-title">Servlet Processing</a>
+                                        <div class="accordion-content" data-tab-content>
+                                        <ul>
+                                            <li>Client sends a request to a web server URL that is mapped to a servlet. Web server passes on the request to the servlet container</li>
+                                            <li>Servlet container checks if servlet is already loaded</li>
+                                            <li>If it is not yet loaded, servlet container loads the servlet class and instantiates the servlet, and calls its init method.</li>
+                                            <li>Servlet container invokes the servlet‟s service method, passing request and response objects as arguments</li>
+                                            <li>Servlet processes the request using the response object to create the response, which is returned by the servlet container to the web server, which in turn sends the response to the client</li>
+                                            <li>Subsequent request to the servlet will not require servlet re-instantiation, unless the servlet has been unloaded; before a servlet is unloaded, the servlet container invokes it’s destroy method.</li>
+                                        </ul>
+                                        </div>
+                                        <ul class="accordion" data-accordion data-allow-all-closed="true">
+                                            <li class="accordion-item" data-accordion-item>
+                                                <a href="#" class="accordion-title">Servlet Request Dispatching (RequestDispatcher)</a>
+                                                <div class="accordion-content" data-tab-content>
+                                                    <p>The problem with how some web pages implement request dispatching is that codes are not reusable (god class) and too many work are done by one servlet. Also, codes will be repeated through each pages and if there will be some changes, for example in the navigation bar, then every pages will have to be updated so it’s difficult to maintain.</p>
+    
+                                                <ul>
+                                                    <li>Obtain a RequestDispatcher to a resource (static or dynamic) from the request object 
+                                                    <br/>
+                                                        Syntax: <br>RequestDispatcher rqstDsp;<br>
+                                                        rqstDsp = request.getRequestDispatcher(res); 
+                                                    </li>
+                                                    <li><b>Forward Mechanism</b> – servlets are given roles/work to do and each output of servlets will be given to another servlet. Control is pass through and lost by a servlet and is given to another servlet.<br>
+                                                        Syntax: rqstDsp.forward(request, response); 
+                                                    </li>
+                                                    <li><b>Include Mechanism</b> – different servlets have their own role/work to do and one servlet will serve as the combinator of every output of the other servlets. Control is maintained in each servlet.<br>
+                                                        Syntax: rqstDsp.include(request, response);  
+                                                    </li>
+                                                </ul>
+                                                </div>
+                                            </li>
+                                            <li class="accordion-item" data-accordion-item>
+                                                <a href="#" class="accordion-title">Session Tracking(HttpSession)</a>
+                                                <div class="accordion-content" data-tab-content>
+                                                    <ul>
+                                                        <li>Session tracking support is implemented either cookies or URL-rewriting</li>
+                                                        <li>
+                                                            Obtaining session object from the current request 
+                                                            <br>
+                                                            Example: <br>
+                                                            HttpSession session; <br>
+                                                            session = request.getSession(createNew); 
+                                                        </li>
+                                                        <li>
+                                                            Obtaining session information (HttpSession)
+                                                            <br>
+                                                            <ul><li>getCreationTime()</li>
+                                                                <li>getLastAccessedTime()</li>
+                                                                <li>getMaxInactiveInternal()</li>
+                                                                <li>getId()</li>
+                                                                <li>isNew()</li>
+                                                                <li>setMaxInactiveInterval(int val)</li>
+                                                                </ul>
+                                                        </li>
+                                                        <li>
+                                                            Destroying sessions<br>
+                                                            Syntax: invalidate()
+                                                        </li>
+                                                        <li>
+                                                        URL-rewriting(HttpServletResponse)<br>
+                                                            Example: encodeURL(String url), encodeRedirectURL(String url)
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </li>
+                                            <li class="accordion-item" data-accordion-item>
+                                                <a href="#" class="accordion-title">Web Context (ServletContext) </a>
+                                                <div class="accordion-content" data-tab-content>
+                                                    <p>A web application is associated with a context, which is an object that provides methods that servlets use to communicate with the servlet container</p>
+                                                    <ul>
+                                                        <li>Obtaining the servlet context (HttpServlet)
+                                                            Example:  <br> ServletContext context;<br>
+                                                                context = this.getServletContext(); 
+                                                        </li>
+                                                        <li>
+                                                            Obtaining context information (ServletContext)
+                                                            <br>
+                                                            <ul>
+                                                                <li>getServerInfo()</li>
+                                                                <li>getContextPath()</li>
+                                                                <li>getRealPath()</li>
+                                                                <li>getResource()</li>
+                                                                <li>getResourceAsStream()</li>
+                                                                <li>getMimeType</li>
+                                                                <li>getInitParameter()</li>
+                                                                <li>getInitParameterNames()</li>
+                                                                <li>getRequestDispatcher()</li>
+                                                                <li>getContext()</li>
+                                                            </ul>
+                                                        </li>
+                                                        <li>
+                                                            Servlet Configuration (ServletConfig) 
+                                                            <ul>
+                                                                <li>getServletName()</li>
+                                                                <li>getServletContext()</li>
+                                                                <li>getInitParameter()</li>
+                                                                <li>getInitParameterNames()</li>
+                                                            </ul>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </li>   
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                                    </li>
+                            </ul>
+
+                            <ul class="accordion" data-accordion data-allow-all-closed="true">
+                            
+                            <li class="accordion-item" data-accordion-item>
+                                <a href="#" class="accordion-title">JavaServer Pages</a>
+                                <div class="accordion-content" data-tab-content>
+                                    <p>JavaServer Pages is a server-side programming that allows use of Java code to create dynamic web pages that are platform independent. JSP is able to use existing Java APIs like the jdbc for accessing databases.</p>
+                                
+                                    <p>JSP can be used in many ways such as collecting user input from a form, retrieving and updating databases, creating dynamic content and passing control through forward or inclusion mechanism.</p>
+                                
+                                    <p>JSP is an integral part of Java EE, a complete platform for enterprise application, which makes it very flexible in the sense that it can be used to create applications that are simple and also can be used for very complex requirements.</p>
+                                </div>
+                            </li>
+                            <li class="accordion-item" data-accordion-item>
+                                <a href="#" class="accordion-title">Elements of JSP</a>
+                                <div class="accordion-content" data-tab-content>
+                                    <ul class="accordion" data-accordion data-allow-all-closed="true">
+                                        <li class="accordion-item" data-accordion-item>
+                                        <a href="#" class="accordion-title">Scriplet</a>
+                                        <div class="accordion-content" data-tab-content>
+                                            <p>A piece of java code embedded in a html-like JSP code</p>
+                                            <ul>
+                                                <li>Syntax: <% arbitrary chunk of java code here%> </li>
+                                            </ul>
+                                        </div>
+                                        </li>
+                                        <li class="accordion-item" data-accordion-item>
+                                            <a href="#" class="accordion-title">Declaration</a>
+                                            <div class="accordion-content" data-tab-content>
+                                                <p>Use to declare variables and methods in a page’s scripting language</p>
+                                                <ul>
+                                                    <li>Syntax: <%! Scripting-language-declaration %></li>
+                                                        <li>
+                                                        Examples:   <%! int x = 0; %>;
+                                                                    <%! int var1, var2, var3; %>
+
+                                                        </li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        <li class="accordion-item" data-accordion-item>
+                                            <a href="#" class="accordion-title">Expression</a>
+                                            <div class="accordion-content" data-tab-content>
+                                                <p>Used to insert value of scripting language expression, converted into string, into the data stream returned to the client.</p>
+                                                <ul>
+                                                    <li>Syntax: <%= expression %></li>
+                                                        <li>
+                                                        Example:   <%= (new java.util.Date()).toLocaleString()%></p>
+                                                        </li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        <li class="accordion-item" data-accordion-item>
+                                            <a href="#" class="accordion-title">Comments</a>
+                                            <div class="accordion-content" data-tab-content>
+                                                <p>Used to put JSP comment that are ignored by JSP engine.</p>
+                                                <ul>
+                                                    <li>Syntax: <%-- This is a JSP comment --%></li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        <li class="accordion-item" data-accordion-item>
+                                            <a href="#" class="accordion-title">Directives</a>
+                                            <div class="accordion-content" data-tab-content>
+                                                <p>Instructions that tell the container how to translate JSP to servlet code</p>
+                                                <ul>
+                                                    <li>Syntax: <%@ directive attribute=”value” %></li>
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        <li class="accordion-item" data-accordion-item>
+                                            <a href="#" class="accordion-title">Actions</a>
+                                            <div class="accordion-content" data-tab-content>
+                                                <p>Used to control flow between pages and to use Java Bean</p>
+                                                <ul>
+                                                    <li>Syntax: <jsp:action_name attribute="value" /></li>
+                                                    <li>Examples: <br>
+                                                        <table style="border: 1px solid black;">
+                                                    <tr>
+                                                        <th style="text-align:center"><b>Syntax</b></th>
+                                                        <th style="text-align:center"><b>Purpose</b></th>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>jsp:include </td>
+                                                        <td>Includes another file </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>jsp:forward </td>
+                                                        <td>Forward request/response to another page</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>jsp:setProperty </td>
+                                                        <td>Sets the value of a JavaBean property</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>jsp:getProperty </td>
+                                                        <td>Retrieves and prints the value of a JavaBean property</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>jsp:useBean </td>
+                                                        <td>Creates or finds a bean object</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>jsp:plugin </td>
+                                                        <td>Embed another component</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>jsp:param </td>
+                                                        <td>Used to set parameter value</td>
+                                                    </tr>
+                                                </table>
+                                                    </li>   
+                                                </ul>
+                                            </div>
+                                        </li>
+                                        <li class="accordion-item" data-accordion-item>
+                                            <a href="#" class="accordion-title">Implicit Objects </a>
+                                            <div class="accordion-content" data-tab-content>
+                                                <p>Created by the JSP engine and are automatically defined</p>
+                                                <table style="display:table;border-collapse: separate;border-spacing: 2px;border-color: gray;"><br>
+                                                    <tr>
+                                                        <th style="text-align:center"><b>Object</b></th>
+                                                        <th style="text-align:center"><b>Description</b></th>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>request</td>
+                                                        <td><b>HttpServletRequest</b> object associate with the request</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>response</td>
+                                                        <td><b>HttpServletResponse</b> object associated with the response</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>out </td>
+                                                        <td><b>PrintWriter</b> object used to print output to the client</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>session </td>
+                                                        <td><b>HttpSession</b> object associated with the request</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>application </td>
+                                                        <td><b>ServletContext</b> object associated with the application context</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>config </td>
+                                                        <td><b>ServletConfig</b> object associated with the page</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>pageContext </td>
+                                                        <td><b>PageContext</b> object that encapsulates server-specific features</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>page </td>
+                                                        <td><b>Object</b> similar to <b>this</b> keyword</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>exception</td>
+                                                        <td><b>Exception</b> object that allows the exception data to be accessed by selected JSP.</td>
+                                                    </tr>
+                                                </table>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
 
                             <ul class="accordion" data-accordion data-allow-all-closed="true">
                                 <li class="accordion-item" data-accordion-item>

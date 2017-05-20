@@ -4430,3 +4430,16 @@ a.thumbnail {
 .tb2 {
     text-indent: 4em;
 }
+
+table {
+    border-collapse: collapse !important;
+}
+
+table, th, td {
+    border: 1px solid black !important;
+}
+
+th{
+        color: white;
+    background-color:navy !important;
+}
