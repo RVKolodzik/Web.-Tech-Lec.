@@ -227,95 +227,35 @@
                             
                             <ul class="accordion" data-accordion data-allow-all-closed="true">
                                 <li class="accordion-item" data-accordion-item>
-                                    <a href="#" class="accordion-title">Cascading Style Sheet</a>
+                                    <a href="#" class="accordion-title">What is PHP?</a>
                                     <div class="accordion-content" data-tab-content>
                                         <ul>
-                                            <li>language used to specify the presentation aspects (eg. layout and formatting) of structurally marked up documents</li>
-                                            <li>Developed by Hakon Wium Lie (CHSS) and Bert Bos (SSP)</li>
-                                            <li>Versions:</li>
+                                            <li>general purpose programming language</li>
+                                            <li>scripts are like java scriplets</li>
+                                            <li>dynamic language</li>
+                                            <li>associative in nature</li>
                                             <ul>
-                                                <li>CSS 1 (1996) - monolithic</li>
-                                                <li>CSS 2.1 (June 2011, updated 2016) - monolithic</li>
-                                                <p>Note: CSS1 and CSS 2.1 had centralized repositories</p>
-                                                <li>CSS 3 - modules (Last Version)</li>
-                                                <ul>
-                                                    <li>To allow browser vendors implement what they want to implement and features can become recommendations when they are already mature enough</li>
-                                                    <li>if not tagged with "level 3" it is entirely new which was not added in CSS 2.1</li>
-                                                </ul>
-                                            </ul>
-                                            <li>CSS Preprocessors and Frameworks</li>
-                                            <ul>
-                                                <li>Uses advance syntax, then convert it to flat hierarchy when compiled</li>
-                                                <li>Syntactically Awesome Style Sheet (SASS), LESS, 960 Grid System, Bootstrap, Foundation, Materialize, etc.</li>
-                                                <li>@mixin</li>
-                                                <ul>
-                                                    <li>mixing a block of properties in another block of properties</li>
-                                                    <li>used with @include</li>
-                                                </ul>
-                                                <li>CSS Frameworks</li>
-                                                <ul>
-                                                    <li>Bootstrap - getbootstrap.com</li>
-                                                </ul>
-                                            </ul>
-                                        </ul>
-                                    </div>
-                                </li>
-                            </ul>
-                                
-                            <ul class="accordion" data-accordion data-allow-all-closed="true">
-                                <li class="accordion-item" data-accordion-item>
-                                    <a href="#" class="accordion-title">HTML/XHTML Styelsheets</a>
-                                    <div class="accordion-content" data-tab-content>
-                                        <ul>
-                                            <li>Author Styles - CSS created by the author</li>
-                                            <ul>
-                                                <li>External Stylesheets (recommended)</li>
-                                                <ul>
-                                                    <li>Easier Management</li>
-                                                    <li>Faster (caching)</li>
-                                                    <li>Multiple html</li>
-                                                    <li>Minimize Bandwidth</li>
-                                                    <ul>
-                                                        <li>media (screen, print, speech, tv, projection)</li>
-                                                        <li>rel (alternate stylesheet, stylesheet)</li>
-                                                        <li>type</li>
-                                                        <li>href</li>
-                                                        <li>title</li>
-                                                    </ul>
-                                                </ul>
-                                                <li>Embedded Styles - uses style element, for quick prototyping</li>
-                                                <li>Inline Styles - uses style attribute</li>
-                                            </ul>
-                                            <li>User Style - used by the user</li>
-                                            <li>User Agent Styles - default stylesheet of browser (ex. Default CSS 2.1 stylesheet for HTML 4)</li>
-                                        </ul>
-                                    </div>
-                                </li>
-                            </ul>
-                            
-                            <ul class="accordion" data-accordion data-allow-all-closed="true">
-                                <li class="accordion-item" data-accordion-item>
-                                    <a href="#" class="accordion-title">CSS Statements</a>
-                                    <div class="accordion-content" data-tab-content>
-                                        <ul>
-                                            <li>At Rules</li>
-                                            <ul class="nb">
-                                                <li>@charset - specify character set</li>
-                                                <li>@import - import stylesheet</li>
-                                                <li>@media - media query</li>
-                                                <li>@font-face - key frame animation</li>
-                                                <li>@page - specifies dimensions, orientations, margins, etc., of  page box</li>
-                                                <li>@document - stylesheet for specific page/domain</li>
-                                                <li>@namespace - defines XML namespaces to be used and @namespace define the default namespace for the style sheet</li>
-                                                <li>@supports - gives CSS the ability to perform a feature query</li>
-                                                <li>@keyframes - controls the intermediate steps in a CSS animation sequence by defining styles for keyframes</li>
-                                                <li>@viewport - control viewport settings, primarily on mobile devices</li>
-                                                <li>@counter-style - defines how to convert a counter value into a string</li>
-                                                <li>@font-feature-values - allows authors to use a common name in font-variant-alternates for feature activated differently in OpenType</li>
-                                            </ul>
-                                            <li>CSS Rule Sets (a.k.a. CSS rules, Style Rules)</li>
-                                            <ul>
-                                                <p>Consists of a selector, followed by a brace-enclosed declaration block which contains zero or more semi-colon</p>
+
+                                                <p>constructors:</p>
+                                                <p>
+                                                    void __construct()
+                                                </p>
+
+                                                <p>destructor:</p>
+                                                <p>
+                                                    void __destruct()
+                                                </p>
+
+
+                                                <p>session_start()</p>
+                                                <p>
+                                                    creates a session or resumes the current one based on a session identifier passed via a GET or a POST request, or passed via a cookie.
+                                                </p>
+
+                                                <p>session_destroy()</p>
+                                                <p>
+                                                    destroys all of the data associated with the current session. It does not unset any of the global variables associated with the session, or unset the session cookie. 
+                                                </p>
                                             </ul>
                                         </ul>
                                     </div>
@@ -324,261 +264,294 @@
                             
                             <ul class="accordion" data-accordion data-allow-all-closed="true">
                                 <li class="accordion-item" data-accordion-item>
-                                    <a href="#" class="accordion-title">CSS Selector</a>
+                                    <a href="#" class="accordion-title">Arrays</a>
                                     <div class="accordion-content" data-tab-content>
-                                        <ul>
-                                            <li>Selector</li>
-                                            <ul>
-                                                <li>Structure used as a condition in a CSS rule to determine which elements in the document tree are matched by the selector and are thus targeted by the formatting specified in the CSS rule
-                                            </ul>
-                                            <li>Selector Syntax</li>
-                                            <ul>
-                                                <li>chain of one or more sequences or simple selectors separated by combinators, with one pseudo-element possibly appended to the last sequence</li>
-                                                <li>Sequence of simple selectors</li>
-                                                <ul>
-                                                    <li>chain of simple selectors but separated by combinators</li>
-                                                    <li>always start with a type selector or a universal selector</li>
-                                                    <li>cannot contain other type selectors or universal selectors</li>
-                                                </ul>
-                                                <li>Group selectors</li>
-                                                    <ul>
-                                                        <li>comma-separated list of selectors representing the union of all elements selected by each of the selectors in the list</li>
-                                                    </ul>
-                                                
-                                                <ul class="accordion" data-accordion data-allow-all-closed="true">
-                                                    <li class="accordion-item" data-accordion-item>
-                                                        <a href="#" class="accordion-title">Simple Selectors</a>
-                                                        <div class="accordion-content" data-tab-content>
-                                                            <ul>
-                                                                <li>type selectors (ex: p, div, span)</li>
-                                                                <li>universal selectors (ex: *)</li>
-                                                                <li>attribute selectors</li>
-                                                                    <ul class="nb">
-                                                                        <li>[attr]</li>
-                                                                        <ul class="nb">
-                                                                            <li>[attr = value]</li>
-                                                                            <li>[attr ~= value] (one value *class*)</li>
-                                                                            <li>[attr |= value] (lang attribute ex: [lang |= en])</li>
-                                                                            <li>[attr ^= value] (CSS 3)</li>
-                                                                            <li>[attr $= value] (CSS 3)</li>
-                                                                            <li>[attr * value] (CSS 3)</li>
-                                                                            <ul class="nb">
-                                                                                <li>^ = start</li>
-                                                                                <li>$ = end</li>
-                                                                                <li>* = anywhere between</li>
-                                                                            </ul>
-                                                                        </ul>
-                                                                    </ul>
-                                                                <li>class selectors (.)</li>
-                                                                <li>id selectors (#)</li>
-                                                                <li>pseudo-class</li>
-                                                                <ul>
-                                                                    <li>dynamic pseudo-class</li>
-                                                                    <ul>
-                                                                        <li> link pseudo-class</li>
-                                                                        <ul class="nb">
-                                                                            <li>:link</li>
-                                                                            <li>:visited</li>
-                                                                        </ul>
-                                                                        <li> user action pseudo-class</li>
-                                                                        <ul class="nb">
-                                                                            <li>:hover</li>
-                                                                            <li>:active</li>
-                                                                            <li>:focus</li>
-                                                                        </ul>
-                                                                        <li> target pseudo-class</li>
-                                                                        <ul class="nb">
-                                                                            <li>:target (CSS3)</li>
-                                                                        </ul>
-                                                                        <li> language pseudo-class</li>
-                                                                        <ul class="nb">
-                                                                            <li>:lang()</li>
-                                                                        </ul>
-                                                                        <li>UI element state pseudo-classes (interactive elements)</li>
-                                                                        <ul class="nb">
-                                                                            <li>:enabled (CSS3)</li>
-                                                                            <li>:disabled (CSS3)</li>
-                                                                            <li>:checked (CSS3)</li>
-                                                                            <li>:indeterminate (CSS3)</li>
-                                                                        </ul>
-                                                                        <li>structural pseudo-classes</li>
-                                                                        <ul class="nb">
-                                                                            <li>:root- root elements</li>
-                                                                            <li>:first-child (not CSS3)</li>
-                                                                            <li>:last-child</li>
-                                                                            <li>:only-child</li>
-                                                                            <li>:nth-child() (ex: nth-child(2n+1))</li>
-                                                                            <li>:first-of-type</li>
-                                                                            <li>:last-of-type</li>
-                                                                            <li>:only-of-type</li>
-                                                                            <li>:nth-of-type()</li>
-                                                                            <li>:nth-last-of-type()</li>
-                                                                            <li>:empty - no child</li>
-                                                                        </ul>
-                                                                        <li>negation pseudo-classes</li>
-                                                                        <ul class="nb">
-                                                                            <li>:not() (CSS3)</li>
-                                                                        </ul>
-                                                                    </ul>
-                                                                </ul>
-                                                            </ul>
-                                                        </div>
-                                                    </li>
-                                                </ul>
-                                                
-                                            <ul class="accordion" data-accordion data-allow-all-closed="true">
-                                                <li class="accordion-item" data-accordion-item>
-                                                    <a href="#" class="accordion-title">Combinators</a>
-                                                    <div class="accordion-content" data-tab-content>
-                                                        <ul>
-                                                            <li>descendant combinators (whitespace, ie. space, tab, line feed, carriage return, form feed)</li>
-                                                            <li>child combinators (>)</li>
-                                                            <li>sibling combinators</li>
-                                                            <ul>
-                                                                <li>adjacent sibling combinatory (+)</li>
-                                                                <ul>
-                                                                    <li>immediately followed</li>
-                                                                </ul>
-                                                                <li>general sibling combinatory (~) (CSS3)</li>
-                                                                <ul>
-                                                                    <li>anything that follows</li>
-                                                                </ul>
-                                                            </ul>
-                                                        </ul>
-                                                    </div>
-                                                </li>
-                                            </ul>   
-                                            
-                                            <ul class="accordion" data-accordion data-allow-all-closed="true">
-                                                <li class="accordion-item" data-accordion-item>
-                                                    <a href="#" class="accordion-title">Pseudo-Elements</a>
-                                                    <div class="accordion-content" data-tab-content>
-                                                        <ul>
-                                                            <li>CSS2</li>
-                                                            <ul class="nb">
-                                                                <li>:first-letter</li>
-                                                                <li>:first-line</li>
-                                                                <li>:before</li>
-                                                                <li>:after</li>
-                                                            </ul>
-                                                            <li>CSS3</li>
-                                                            <ul class="nb">
-                                                                <li>::first-letter</li>
-                                                                <li>::first-line</li>
-                                                                <li>::before</li>
-                                                                <li>::after</li>
-                                                            </ul>
-                                                        </ul>
-                                                    </div>
-                                                </li>
-                                            </ul>        
-                                                
-                                            </ul>
-                                        </ul>
-                                    
+                                        <p>
+                                            An array in PHP is actually an ordered map. A map is a type that associates values to keys. The key can either be an integer or a string. The value can be of any type.
+                                            </p>
+                                            <p>
+                                            ex:
+                                            simple array
+                                            <?php
+                                                $array = array[
+                                                    "fruit" => "apple",
+                                                    "apple" => "fruit",
+                                                ];
+                                            ?>
+
+                                            type casting and overwriting
+                                            <?php
+                                                $array = array[
+                                                    1 => "a",
+                                                    "1" => "b",
+                                                    1.5 => "c",
+                                                    true => "d",
+                                                ];
+                                            ?>
+                                            </p>
+                                            <p>
+                                            mixed integer and string keys
+                                            <?php
+                                                $array = array[
+                                                    "fruit" => "apple",
+                                                    "apple" => "fruit",
+                                                    100 => 100,
+                                                    -100 => -100,
+                                                ];
+                                            ?>
+                                            </p>
                                     </div>
                                 </li>
                             </ul>
-                                        
-                            <ul class="accordion" data-accordion data-allow-all-closed="true">
-                                <li class="accordion-item" data-accordion-item>
-                                    <a href="#" class="accordion-title">CSS Rule Precedence</a>
-                                    <div class="accordion-content" data-tab-content>
-                            <!--<p>Ways to refer and format an HTML element:</p>
-                            <ul>
-                                <li> div p{color:p;}</li>
-                                <li> div > p</li>
-                                <li> #x </li>
-                                <li> :y </li>
-                                <li> * </li>
-                                <li> p </li>
-                                <li> p#x </li>
-                                <li> p.y </li>
-                                <li> [id=x] </li>
-                                <li> [class=y] </li>
-                                <li> div p#x </li>
-                            </ul>-->
-                                        <ul class="accordion" data-accordion data-allow-all-closed="true">
-                                            <li class="accordion-item" data-accordion-item>
-                                                <a href="#" class="accordion-title">By origin and importance</a>
-                                                <div class="accordion-content" data-tab-content>
-                                                    <ul>
-                                                        <li>user agent important declaration</li>
-                                                        <li>user important declarations</li>
-                                                        <li>author important declarations</li>
-                                                        <li>author normal declarations</li>
-                                                        <li>user normal declarations</li>
-                                                        <li>user agent normal declarations</li>
-                                                    </ul>
-                                                </div>
-                                            </li>
-                                        </ul>
+                            
+                             <ul class="accordion" data-accordion data-allow-all-closed="true">
+                                    <li class="accordion-item" data-accordion-item>
+                                        <a href="#" class="accordion-title">Superglobals</a>
+                                        <div class="accordion-content" data-tab-content>
+                                            <p>Several predefined variables in PHP are "superglobals", which means that they are always accessible, regardles of scope and you can access them from any function, class or file without having to do anything special.</p>
 
-                                        <ul class="accordion" data-accordion data-allow-all-closed="true">
-                                            <li class="accordion-item" data-accordion-item>
-                                                <a href="#" class="accordion-title">By specificity</a>
-                                                <div class="accordion-content" data-tab-content>
-                                                    <ul>
-                                                        <li>inline style</li>
-                                                        <li>number of ID selectors</li>
-                                                        <li>number of class selectors, attribute selectors, and pseudo-classes</li>
-                                                        <li>number of type selectors and pseudo-elements</li>
-                                                    </ul>
-                                                </div>
-                                            </li>
-                                        </ul>
+                                            <p>$GLOBALS</p>
 
-                                        <ul class="accordion" data-accordion data-allow-all-closed="true">
-                                            <li class="accordion-item" data-accordion-item>
-                                                <a href="#" class="accordion-title">By order</a>
-                                                <div class="accordion-content" data-tab-content>
-                                                    <p>Last declaration has priority</p>
-                                                </div>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </li>
-                            </ul>
+                                            <p>
+                                                PHP stores all global variables in an array calleed $GLOBALS[index]. The index holds the name of the variable
+                                            </p>
+                                            <p>
+                                                ex:
+                                                    <?php
+                                                        $x = 75;
+                                                        $y = 25;
 
-                            <ul class="accordion" data-accordion data-allow-all-closed="true">
-                                <li class="accordion-item" data-accordion-item>
-                                    <a href="#" class="accordion-title">CSS Declarations</a>
-                                    <div class="accordion-content" data-tab-content>
-                                        <ul>
-                                            <li>Properties</li>
-                                            <ul>
-                                                <li>shorthand properties - single property representing many other</li>
-                                                <li>vendor-specific extensions (a.k.a. vendor prefixes)</li>
-                                                <li>initial - explicitly set the initial value of a property</li>
-                                                <li>inherit - explicitly setting property value inherited</li>
-                                                <li>unset - combination of the initial and inherit</li>
-                                                <li>revert - rolls back the cascade to no style</li>
-                                            </ul>
-                                            <li>Values (values and units)</li>
-                                            <ul>
-                                                <li>keywords</li>
-                                                <li>numbers (integers and reals in decimal notation)</li>
-                                                <li>dimensions</li>
-                                                <ul>
-                                                    <li>length, angle, duration, frequency, resolution</li>
-                                                    <li>length units</li>
-                                                    <ul>
-                                                        <li>font-relative: em, ex, ch, rem</li>
-                                                        <li>viewport-percentage: vw, vh, vmin, vmax</li>
-                                                        <li>absolute lengths: cm, mm, q, in, pt, pc, px</li>
-                                                    </ul>
-                                                    <li>angle units: deg, grad, rad, turn</li>
-                                                    <li>durations units: s, ms</li>
-                                                    <li>frequency units: hz, khz</li>
-                                                    <li>resolution units: dbi, dpcm, dppx</li>
-                                                </ul>
-                                                <li>Percentages</li>
-                                                <li>URLs and URIs</li>
-                                                <li>Colors</li>
-                                                <li>Strings</li>
-                                                <li>Functions: calc(), attr(), counter(), counters(), linear-gradient(), radial-gradient(), translate(), scale(), rotate(), etc.</li>
-                                            </ul>
-                                        </ul>
+                                                        function addition(){
+                                                            $GLOBALS['z'] = $GLOBALS[x] + $GLOBALS['y'];
+                                                        }
+                                                        addition();
+                                                    ?>
+                                            <p>
+
+                                            <p>$_SERVER</p>
+                                            <p>
+                                                super global variable which holds infromation about headers, paths, and script locations
+                                            </p>
+                                            <p>
+                                                ex:
+                                                    <?php
+                                                        echo $_SERVER['PHP_SELF'];
+                                                        echo $_SERVER['SERVER_NAME'];
+                                                    ?>
+                                            </p>
+
+                                            <p>
+                                                The following is a list of the most important elements that can go inside $_SERVER
+                                            </p>
+                                            <p>$_SERVER['PHP_SELF']</p>
+                                            <p>
+                                                Returns the filename of the currently executing script
+                                            </p>
+
+                                            <p>$SERVER['GATEWAY_INTERFACE']</p>
+                                            <p>	
+                                                Returns the versino of the Common Gateway Interface(CGI) the server is using
+
+                                            <p>$_SERVER['SERVER_ADDR']</p>
+                                            <p>
+                                                Returns the IP address of the host server
+                                            </p>
+
+                                            <p>$_SERVER['SERVER_NAME']</p>
+                                            <p>
+                                                Returns the name of the host server
+                                            </p>
+                                            <p>$_SERVER['SERVER_SOFTWARE']</p>
+                                            <p>
+                                                Returns the server identification string
+                                            </p>
+
+                                            <p>$_SERVER['SERVER_PROTOCOL']</p>
+                                            <p>
+                                                Returns the name and revision of the information protocol
+                                            </p>
+
+                                            <p>$_SERVER['REQUEST_METHOD']</p>
+                                            <p>
+                                                Returns the request method used to access the page
+                                            </p>
+                                            <p>$_SERVER['REQUEST_TIME']</p>
+                                            <p>
+                                                Returns the timestamp of the start of the request
+                                            </p>
+
+                                            <p>$_SERVER['QUERY_STRING']</p>
+                                            <p>
+                                                Returns the query string if the page is accessed via a query string
+                                            </p>
+
+                                            <p>$_SERVER['HTTP_ACCEPT']</p>
+                                            <p>
+                                                Returns the Accept header from the current request
+                                            </p>
+
+                                            <p>$_SERVER['HTTP_ACCEPT_CHARSET']</p>
+                                            <p>
+                                                Returns the Accept_Charset header from teh current request
+                                            </p>
+
+                                            <p>$_SERVER['HTTP_HOST']</p>
+                                            <p>
+                                                Returns the Host header form the current request
+                                            </p>
+
+                                            <p>$_SERVER['HTTP_REFERER']</p>
+                                            <p>
+                                                Returns the complete URL of the current page (not reliable becuase not all user-agents support it)
+                                            </p>
+
+                                            <p>$_SERVER['HTTPS']</p>
+                                            <p>
+                                                Is the script queried through a secure HTTP protocol
+                                            </p>
+                                            <p>$_SERVER['REMOTE_ADDR']</p>
+                                            <p>
+                                                Returns the IP address from where the user is vieweing the current page
+                                            </p>
+
+                                            <p>$_SERVER['REMOTE_HOST']</p>
+                                            <p>
+                                                Returns the Host name form where the user if viewing the current page
+                                            </p>
+
+                                            <p>$_SERVER['REMOTE_PORT']</p>
+                                            <p>
+                                                Returns teh port being used on the user's machien to communicate with the web server
+                                            </p>
+
+                                            <p>$_SERVER['SCRIPT_FILENAME']</p>
+                                            <p>
+                                                Returns the absolute pathname of the currently executing script
+                                            </p>
+
+                                            <p>$_SERVER['SERVER_ADMIN']</p>
+                                            <p>
+                                                Returns the value given to the SERVER_ADMIN directive in the web server configuration file
+                                            </p>
+
+                                            <p>$_SERVER['SERVER_PORT']</p>
+                                            <p>
+                                                Returns the port on the server machine being used by the web server for communication 
+                                            </p>
+
+                                            <p>$_SERVER['SERVER_SIGNATURE']</p>
+                                            <p>
+                                                Returns the server version and virtual host name which are added to server-generated pages
+                                            </p>
+
+                                            <p>$_SERVER['PATH_TRANSLATED']</p>
+                                            <p>
+                                                Returns the file system based path to the current script
+                                            </p>
+
+                                            <p>$_SERVER['SCRIPT_NAME']</p>
+                                            <p>
+                                                Returns the path of th current script
+                                            </p>
+
+                                            <p>$_SERVER['SCRIPT_URI']</p>
+                                            <p>
+                                                Returns the URI of the current page
+                                            </p>
+
+                                        <p>$_REQUEST</p>
+                                        <p>
+                                            used to collect data from submitting an html form.
+                                        </p>
+                                        <p>
+                                            ex:
+                                                <html>
+                                                <body>
+
+                                                <form method="post" action="<?php echo $_SERVER['PHP_SELF'];?>">
+                                                  Name: <input type="text" name="fname">
+                                                  <input type="submit">
+                                                </form>
+
+                                                <?php
+                                                if ($_SERVER["REQUEST_METHOD"] == "POST") {
+                                                    // collect value of input field
+                                                    $name = $_REQUEST['fname'];
+                                                    if (empty($name)) {
+                                                        echo "Name is empty";
+                                                    } else {
+                                                        echo $name;
+                                                    }
+                                                }
+                                                ?>
+
+                                                </body>
+                                                </html>
+                                        </p>
+
+                                        <p>$_POST</p>
+                                        <p>
+                                            is widely used to collect form data after submitting an HTML form with method="post". $_POST is also widely used to pass variables.
+                                        </p>
+                                        <p>
+                                            ex:
+                                                <html>
+                                                <body>
+
+                                                <form method="post" action="<?php echo $_SERVER['PHP_SELF'];?>">
+                                                  Name: <input type="text" name="fname">
+                                                  <input type="submit">
+                                                </form>
+
+                                                <?php
+                                                if ($_SERVER["REQUEST_METHOD"] == "POST") {
+                                                    // collect value of input field
+                                                    $name = $_POST['fname'];
+                                                    if (empty($name)) {
+                                                        echo "Name is empty";
+                                                    } else {
+                                                        echo $name;
+                                                    }
+                                                }
+                                                ?>
+
+                                                </body>
+                                                </html>
+                                        </p>
+
+                                        <p>$_GET</p>
+                                        <p>
+                                            can also be uased to collect form data after submitting an HTML form with method="get".
+                                            $_GET can also collect data sent in the URL
+                                        </p>
+                                        <p>
+                                            ex: 
+                                                <html>
+                                                <body>
+
+                                                <?php 
+                                                echo "Study " . $_GET['subject'] . " at " . $_GET['web'];
+                                                ?>
+
+                                                </body>
+                                                </html>
+                                        </p>
+                                        <p>$_FILES</p>
+                                        <p>
+                                            an associative array of items uploaded to the current script via the HTTP POST method.
+                                        </p>
+                                        <p>$_COOKIE</p>
+                                        <p>
+                                            an associative array of variables passed to the current script via HTTP Cookies
+                                        </p>
+                                        <p>$_SESSION</p>
+                                        <p>
+                                            An associative array containing session variables available to teh current script
+                                        <p>
+                                        <p>$_ENV</p>
+                                        <p>
+                                            An associative array of variables passed to the current script via the environment method
+                                        </p>
                                     </div>
                                 </li>
                             </ul>
